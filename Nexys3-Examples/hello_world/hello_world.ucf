@@ -1,0 +1,23 @@
+# This file defines how the ports in your top level
+# module connect to the FPGAs IO pins.
+# There are a LOT of configuration options for each 
+# pin, but we will only focus on a few on them.
+# For the purpose of this desin, we just need to explain
+# where to connect the signals.  ALL SIGNALS NEED TO BE
+# CONNECTED!!!  
+# One oddity is std_logic_vector's.  The signal 'leds' is
+# an 8 bit std_logic_vector.  We need to connect each of those
+# 8 signals to the FPGA's IO pins.  All you have to do
+# is put the index of the pin in '<>'.  So, leds<2> is the
+# third (1-based, or second 0-based) bit in the leds vector.
+
+net "clk" loc="V10";
+net "rst" loc="B8";
+NET "leds<0>" LOC = "U16";
+NET "leds<1>" LOC = "V16";
+NET "leds<2>" LOC = "U15";
+NET "leds<3>" LOC = "V15";
+NET "leds<4>" LOC = "M11";
+NET "leds<5>" LOC = "N11";
+NET "leds<6>" LOC = "R11";
+NET "leds<7>" LOC = "T11";

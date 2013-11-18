@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/main/FPGA_NIGHT/Nexys3-Examples/hello_world/hello_world.ncd
+OUTFILE=/home/main/FPGA_NIGHT/Nexys3-Examples/hello_world/hello_world.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/home/main/FPGA_NIGHT/Nexys3-Examples/hello_world
+LICENSE=ISE
+USER_INFO=210826213_0_0_741
