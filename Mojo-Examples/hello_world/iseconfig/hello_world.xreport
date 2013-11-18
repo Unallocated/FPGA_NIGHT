@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2013-11-18T09:26:38</DateModified>
+  <DateModified>2013-11-18T11:55:21</DateModified>
   <ModuleName>hello_world</ModuleName>
   <SummaryTimeStamp>2013-11-18T09:25:22</SummaryTimeStamp>
   <SavedFilePath>/home/main/FPGA_NIGHT/Mojo-Examples/hello_world/iseconfig/hello_world.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/main/FPGA_NIGHT/Mojo-Examples/hello_world</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/main/FPGA_NIGHT/Mojo-Examples/hello_world/</ImplementationReportsDirectory>
   <DateInitialized>2013-11-18T09:24:23</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
