@@ -9,7 +9,8 @@ entity sram_test is
 		clock_divider : integer := 100;
 		addr_width : integer := 5;
 		data_width : integer := 8;
-		number_of_leds : integer := 8
+		number_of_leds : integer := 8;
+		reset_active_state : std_logic := '1'
 	);
 	PORT(
 		clk : in std_logic;
@@ -49,7 +50,7 @@ begin
 		constant max : unsigned(31 downto 0) := to_unsigned(clock_speed / clock_divider, 32);
 		variable counter : unsigned(max'range) := (others => '0');
 	begin
-		if(rst = '1') then
+		if(rst = reset_active_state) then
 			counter := (others => '0');
 		elsif(rising_edge(clk)) then
 			if(is_test = '1') then
@@ -67,7 +68,7 @@ begin
 
 	process(slow_clk, rst)
 	begin
-		if(rst = '1') then
+		if(rst = reset_active_state) then
 			oe <= '1';
 			ce <= '1';
 			we <= '1';
