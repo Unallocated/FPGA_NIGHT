@@ -106,7 +106,6 @@ begin
 					if(addr_val = (2 ** addr_val'length) - 1) then
 						master_state <= READ_ALL;
 						addr_val <= (others => '0');
-						--data_val <= (others => '0');
 					else
 						addr_val <= addr_val + 1;
 						data_val <= data_val + 1;
@@ -134,8 +133,6 @@ begin
 					ce <= '1';
 					oe <= '1';
 
-
-
 					if(addr_val = (2 ** addr_val'length) - 1) then
 						master_state <= WRITE_ALL;
 						addr_val <= (others => '0');
@@ -154,7 +151,6 @@ begin
 				leds_buffer <= not leds_buffer;
 			
 			end case;
-
 		end if;
 	end process;
 
