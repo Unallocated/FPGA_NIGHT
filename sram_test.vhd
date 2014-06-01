@@ -3,7 +3,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-entity sram_test is
+entity ram_test is
 	GENERIC(
 		clock_speed : integer := 100_000_000;
 		clock_divider : integer := 100;
@@ -22,9 +22,9 @@ entity sram_test is
 		addr : out std_logic_vector(addr_width-1 downto 0);
 		leds : out std_logic_vector(number_of_leds-1 downto 0)
 	);
-end sram_test;
+end ram_test;
 
-architecture behavorial of sram_test is 
+architecture behavorial of ram_test is 
 
 	type master_state_t is (WRITE_ALL, READ_ALL, ERRORED);
 	type sub_state_t is (SET_SIGS, EN, CLOCK, DISABLE);
@@ -106,7 +106,7 @@ begin
 					if(addr_val = (2 ** addr_val'length) - 1) then
 						master_state <= READ_ALL;
 						addr_val <= (others => '0');
-						data_val <= (others => '0');
+						--data_val <= (others => '0');
 					else
 						addr_val <= addr_val + 1;
 						data_val <= data_val + 1;
@@ -139,10 +139,8 @@ begin
 					if(addr_val = (2 ** addr_val'length) - 1) then
 						master_state <= WRITE_ALL;
 						addr_val <= (others => '0');
-						data_val <= (others => '0');
 					else
 						addr_val <= addr_val + 1;
-						data_val <= data_val + 1;
 					end if;
 
 					if(ram(to_integer(addr_val)) /= data) then
