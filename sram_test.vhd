@@ -27,10 +27,10 @@ end ram_test;
 architecture behavorial of ram_test is 
 
 	type master_state_t is (WRITE_ALL, READ_ALL, ERRORED);
-	type sub_state_t is (SET_SIGS, EN, CLOCK, DISABLE);
+	type sub_state_t is (SET_ADDR, SET_CE, SET_WE, SET_DATA, SET_OE, DISABLE);
 
 	signal master_state : master_state_t := WRITE_ALL;
-	signal sub_state : sub_state_t := SET_SIGS;
+	signal sub_state : sub_state_t := SET_ADDR;
 
 	signal addr_val : unsigned(addr'range) := (others => '0');
 	signal data_val : unsigned(data'range) := (others => '0');
@@ -75,7 +75,7 @@ begin
 			data <= (others => 'Z');
 			addr <= (others => '0');
 			master_state <= WRITE_ALL;
-			sub_state <= SET_SIGS;
+			sub_state <= SET_ADDR;
 			addr_val <= (others => '0');
 			data_val <= (others => '0');
 			leds_buffer <= (others => '0');
@@ -84,22 +84,26 @@ begin
 			when WRITE_ALL =>
 				leds_buffer <= "10" & (leds'high-2 downto 0 => '0');
 				case sub_state is
-				when SET_SIGS =>
+				when SET_ADDR =>
 					addr <= std_logic_vector(addr_val);
-					data <= std_logic_vector(data_val);
+					data <= (others => 'Z');
 					we <= '1';
 					oe <= '1';
 
-					sub_state <= EN;
-				when EN =>
+					sub_state <= SET_CE;
+				when SET_CE =>
 					ce <= '0';
-					sub_state <= CLOCK;
-				when CLOCK =>
+					sub_state <= SET_WE;
+				when SET_WE =>
 					we <= '0';
+					sub_state <= SET_DATA;
+				when SET_DATA =>
+					data <= std_logic_vector(data_val);
 					sub_state <= DISABLE;
 				when DISABLE =>
 					ce <= '1';
 					we <= '1';
+					data <= (others => 'Z');
 					
 					ram(to_integer(addr_val)) <= std_logic_vector(data_val);
 
@@ -111,22 +115,24 @@ begin
 						data_val <= data_val + 1;
 					end if;
 
-					sub_state <= SET_SIGS;
+					sub_state <= SET_ADDR;
+				when others =>
+					null;
 				end case;
 			when READ_ALL =>
 				leds_buffer <= "01" & (leds'high-2 downto 0 => '0');
 				case sub_state is
-				when SET_SIGS =>
+				when SET_ADDR =>
 					addr <= std_logic_vector(addr_val);
 					data <= (others => 'Z');
 					we <= '1';
 					oe <= '1';
 
-					sub_state <= EN;
-				when EN =>
+					sub_state <= SET_CE;
+				when SET_CE =>
 					ce <= '0';
-					sub_state <= CLOCK;
-				when CLOCK =>
+					sub_state <= SET_OE;
+				when SET_OE =>
 					oe <= '0';
 					sub_state <= DISABLE;
 				when DISABLE =>
@@ -145,7 +151,9 @@ begin
 						leds_buffer <= (others => '0');
 					end if;
 
-					sub_state <= SET_SIGS;
+					sub_state <= SET_ADDR;
+				when others =>
+					null;
 				end case;
 			when ERRORED =>
 				leds_buffer <= not leds_buffer;
