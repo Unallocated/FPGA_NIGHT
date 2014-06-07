@@ -6,9 +6,9 @@ use IEEE.NUMERIC_STD.ALL;
 entity ram_test is
 	GENERIC(
 		clock_speed : integer := 100_000_000;
-		clock_divider : integer := 100;
 		addr_width : integer := 15;
 		data_width : integer := 8;
+		clock_divider : integer := 10000;
 		number_of_leds : integer := 8;
 		reset_active_state : std_logic := '1'
 	);
@@ -35,10 +35,6 @@ architecture behavorial of ram_test is
 	signal addr_val : unsigned(addr'range) := (others => '0');
 	signal data_val : unsigned(data'range) := (others => '0');
 	signal leds_buffer : std_logic_vector(leds'range) := (others => '0');
-
-	type ram_t is array(0 to 255) of std_logic_vector(data'range);
-	signal ram : ram_t := (others => (others => '0'));
-
 	signal slow_clk : std_logic := '0';
 
 	constant is_test : std_logic := '0';
@@ -47,7 +43,7 @@ begin
 	leds <= leds_buffer;
 
 	process(clk, rst)
-		constant max : unsigned(31 downto 0) := to_unsigned(clock_speed / clock_divider, 32);
+		constant max : unsigned(31 downto 0) := to_unsigned(clock_speed / (clock_divider * addr_width), 32);
 		variable counter : unsigned(max'range) := (others => '0');
 	begin
 		if(rst = reset_active_state) then
@@ -104,8 +100,6 @@ begin
 					ce <= '1';
 					we <= '1';
 					data <= (others => 'Z');
-					
-					ram(to_integer(addr_val)) <= std_logic_vector(addr_val(data'range));
 
 					if(addr_val = (2 ** addr_val'length) - 1) then
 						master_state <= READ_ALL;
@@ -146,7 +140,7 @@ begin
 						addr_val <= addr_val + 1;
 					end if;
 
-					if(ram(to_integer(addr_val)) /= data) then
+					if(std_logic_vector(addr_val(data'range)) /= data) then
 						master_state <= ERRORED;
 						leds_buffer <= (others => '0');
 					end if;
