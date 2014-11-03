@@ -1,0 +1,329 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Nov 02 13:04:46 2014
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "leds<0>" LOCATE = SITE "U16" LEVEL 1;
+COMP "leds<1>" LOCATE = SITE "V16" LEVEL 1;
+COMP "leds<2>" LOCATE = SITE "U15" LEVEL 1;
+COMP "leds<3>" LOCATE = SITE "V15" LEVEL 1;
+COMP "leds<4>" LOCATE = SITE "M11" LEVEL 1;
+COMP "leds<5>" LOCATE = SITE "N11" LEVEL 1;
+COMP "leds<6>" LOCATE = SITE "R11" LEVEL 1;
+COMP "rx" LOCATE = SITE "N17" LEVEL 1;
+COMP "leds<7>" LOCATE = SITE "T11" LEVEL 1;
+COMP "tx" LOCATE = SITE "N18" LEVEL 1;
+COMP "rst" LOCATE = SITE "C9" LEVEL 1;
+PIN
+        Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram_pins<26>
+        = BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram"
+        PINNAME CLKAWRCLK;
+PIN
+        Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram_pins<27>
+        = BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram"
+        PINNAME CLKBRDCLK;
+PIN
+        Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram_pins<26>
+        = BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram"
+        PINNAME CLKAWRCLK;
+PIN
+        Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram_pins<27>
+        = BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram"
+        PINNAME CLKBRDCLK;
+TIMEGRP sys_clk_pin = BEL "rd_en" BEL "leds_4" BEL "leds_5" BEL "leds_3" BEL
+        "leds_2" BEL "leds_1" BEL "leds_0" BEL "leds_6" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_state_FSM_FFd1" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_state_FSM_FFd2" BEL
+        "Inst_serial_master_fifo/serial_rx/din_7" BEL
+        "Inst_serial_master_fifo/serial_rx/din_6" BEL
+        "Inst_serial_master_fifo/serial_rx/din_5" BEL
+        "Inst_serial_master_fifo/serial_rx/din_4" BEL
+        "Inst_serial_master_fifo/serial_rx/din_3" BEL
+        "Inst_serial_master_fifo/serial_rx/din_2" BEL
+        "Inst_serial_master_fifo/serial_rx/din_1" BEL
+        "Inst_serial_master_fifo/serial_rx/din_0" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_counter_9" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_counter_8" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_counter_7" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_counter_6" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_counter_5" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_counter_4" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_counter_3" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_counter_2" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_counter_1" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_counter_0" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_data_buffer_7" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_data_buffer_6" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_data_buffer_5" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_data_buffer_4" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_data_buffer_3" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_data_buffer_2" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_data_buffer_1" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_data_buffer_0" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_buffer_n" BEL
+        "Inst_serial_master_fifo/serial_tx/state_FSM_FFd1" BEL
+        "Inst_serial_master_fifo/serial_tx/state_FSM_FFd2" BEL
+        "Inst_serial_master_fifo/serial_tx/bit_pos_2" BEL
+        "Inst_serial_master_fifo/serial_tx/bit_pos_1" BEL
+        "Inst_serial_master_fifo/serial_tx/bit_pos_0" BEL
+        "Inst_serial_master_fifo/serial_tx/counter_9" BEL
+        "Inst_serial_master_fifo/serial_tx/counter_8" BEL
+        "Inst_serial_master_fifo/serial_tx/counter_7" BEL
+        "Inst_serial_master_fifo/serial_tx/counter_6" BEL
+        "Inst_serial_master_fifo/serial_tx/counter_5" BEL
+        "Inst_serial_master_fifo/serial_tx/counter_4" BEL
+        "Inst_serial_master_fifo/serial_tx/counter_3" BEL
+        "Inst_serial_master_fifo/serial_tx/counter_2" BEL
+        "Inst_serial_master_fifo/serial_tx/counter_1" BEL
+        "Inst_serial_master_fifo/serial_tx/counter_0" BEL
+        "Inst_serial_master_fifo/serial_tx/tx_buffer_n" BEL
+        "Inst_serial_master_fifo/serial_rx/wr_en" BEL
+        "Inst_serial_master_fifo/serial_tx/rd_en" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_bit_pos_2" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_bit_pos_1" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_bit_pos_0" BEL
+        "Inst_serial_master_fifo/serial_rx/rx_state_FSM_FFd1_1" BEL
+        "clk_BUFGP/BUFG" BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/RST_FULL_GEN"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.rst_d3"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg_d2"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg_d2"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.rst_d2"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg_d1"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg_d1"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.rst_d1"
+        PIN
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram_pins<26>"
+        PIN
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram_pins<27>"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_3"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_2"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_1"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_0"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_0"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_2"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_3"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_reg_0"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_reg_1"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_reg_2"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_reg_3"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_reg_0"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_0"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_3"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_2"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_1"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_0"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_3"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_2"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_1"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0"
+        BEL
+        "Inst_serial_master_fifo/serial_tx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_0"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/RST_FULL_GEN"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.rst_d3"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg_d2"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg_d2"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.rst_d2"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg_d1"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg_d1"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.rst_d1"
+        PIN
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram_pins<26>"
+        PIN
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram_pins<27>"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_3"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_2"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_1"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_0"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_3"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_2"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_1"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_3"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_2"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_1"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_0"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_3"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_2"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_1"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_2"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_3"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_reg_0"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_reg_1"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_reg_2"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_reg_3"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_2"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_3"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_reg_0"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_reg_1"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_reg_2"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_reg_3"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_3"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_2"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_1"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_0"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_3"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_2"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_1"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_0"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_3"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_2"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_1"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1"
+        BEL
+        "Inst_serial_master_fifo/serial_rx/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_0";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

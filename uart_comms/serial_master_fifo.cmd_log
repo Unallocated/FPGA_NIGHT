@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "/home/xilinx/git/FPGA_NIGHT/uart_comms/serial_master_fifo.xst" -ofn "/home/xilinx/git/FPGA_NIGHT/uart_comms/serial_master_fifo.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx16-csg324-3 serial_master_fifo.ngc serial_master_fifo.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o serial_master_fifo_map.ncd serial_master_fifo.ngd serial_master_fifo.pcf 
+par -w -intstyle ise -ol high -mt off serial_master_fifo_map.ncd serial_master_fifo.ncd serial_master_fifo.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml serial_master_fifo.twx serial_master_fifo.ncd -o serial_master_fifo.twr serial_master_fifo.pcf 
+bitgen -intstyle ise -f serial_master_fifo.ut serial_master_fifo.ncd 
+vhdtdtfi -prj uart_comms -o /home/xilinx/git/FPGA_NIGHT/uart_comms/serial_master_fifo.vhi -module serial_master_fifo -template /opt/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work fifo.vhd -lib work serial_tx_fifo.vhd -lib work serial_rx_fifo.vhd -lib work serial_master_fifo.vhd 
+vhdtdtfi -prj uart_comms -o /home/xilinx/git/FPGA_NIGHT/uart_comms/serial_master_fifo.vhi -module serial_master_fifo -template /opt/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work fifo.vhd -lib work serial_tx_fifo.vhd -lib work serial_rx_fifo.vhd -lib work serial_master_fifo.vhd 

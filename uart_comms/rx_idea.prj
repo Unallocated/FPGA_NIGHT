@@ -1,0 +1,3 @@
+vhdl work "fifo.vhd"
+vhdl work "serial_rx_fifo.vhd"
+vhdl work "rx_idea.vhd"
