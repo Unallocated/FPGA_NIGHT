@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/main/git/FPGA_NIGHT/uart_comms/rx_idea_tb_isim_beh.exe" -prj "/home/main/git/FPGA_NIGHT/uart_comms/rx_idea_tb_beh.prj" "work.rx_idea_tb" 

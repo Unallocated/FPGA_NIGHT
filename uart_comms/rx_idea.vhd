@@ -31,7 +31,8 @@ architecture behave of rx_idea is
   signal state : state_t := IDLE;
 
   constant max_data_length : integer := 32;
-
+	constant preamble : std_logic_vector(15 downto 0) := x"5555";
+	constant postamble : std_logic_vector(15 downto 0) := x"aaaa";
   type data_type_t is record
     len : integer range 0 to max_data_length-1;
   end record data_type_t;
@@ -43,21 +44,51 @@ architecture behave of rx_idea is
     (len => 1) -- display on leds
   );
 
-  signal buff : std_logic_vector((8 * max_data_length)-1 downto 0);
+	type buffer_elements_t is array(0 to max_data_length-1) of std_logic_vector(7 downto 0);
+  signal buff : buffer_elements_t;
   signal pos : integer range 0 to max_data_length - 1 := 0;
+	signal leds_buffer : std_logic_vector(leds'range) := (others => '0');
+	signal read_delay : integer range 0 to 2 := 0;
 begin
+
+	leds <= leds_buffer;
 
   process(clk, rst)
   begin
     if(rst = '1') then
       pos <= 0;
     elsif(rising_edge(clk)) then
-      if(pos > 6 and buff(1 downto 0) = x"5555" and buff(pos downto pos-1) = x"aaaa") then
-        if(unsigned(buff(2)) /= to_unsigned(pos + 4, 8)) then
-          pos <= 0;
-        end if;
-      else
-
+			rx_rd_en <= '0';
+			if(pos >= 6 and buff(0) & buff(1) = preamble and buff(pos-1) & buff(pos-2) = postamble) then
+				pos <= 0;
+				--leds_buffer <= not leds_buffer;
+				--if(buff(2) = std_logic_vector(to_unsigned(pos-5, 8))) then
+					case to_integer(unsigned(buff(3))) is
+						when 0 =>
+							leds_buffer <= (others => '0');
+						when 1 =>
+							leds_buffer <= (others => '1');
+						when 2 =>
+							leds_buffer <= "00001111";
+						when 3 =>
+							leds_buffer <= "11110000";
+						when others =>
+							leds_buffer <= "01010101";
+					end case;
+				--end if;
+			else
+				if(read_delay = 0) then
+					if(rx_empty = '0') then
+						rx_rd_en <= '1';
+						read_delay <= 2;
+					end if;
+				else
+					read_delay <= read_delay - 1;
+					if(read_delay = 1) then
+						buff(pos) <= rx_data;
+						pos <= pos + 1;
+					end if;
+				end if;
       end if;
     end if;
   end process;

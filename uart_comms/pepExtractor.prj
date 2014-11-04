@@ -1,2 +1,3 @@
 work	"fifo.vhd"
+work	"rx_idea.vhd"
 work	"serial_rx_fifo.vhd"

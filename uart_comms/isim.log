@@ -1,0 +1,77 @@
+ISim log file
+Running: /home/main/git/FPGA_NIGHT/uart_comms/rx_idea_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/main/git/FPGA_NIGHT/uart_comms/rx_idea_tb_isim_beh.wdb 
+ISim P.20131013 (signature 0xfbc00daa)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps: Note: WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information. (/rx_idea_tb/uut/Inst_serial_rx_fifo/fifo_inst/U0/gconvfifo/inst_conv_fifo/).
+Finished circuit initialization process.
+# run 100.00us
+# restart
+# run 100.00us
+Simulator is doing circuit initialization process.
+at 0 ps: Note: WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information. (/rx_idea_tb/uut/Inst_serial_rx_fifo/fifo_inst/U0/gconvfifo/inst_conv_fifo/).
+Finished circuit initialization process.
+# run 78214ns
+# restart
+# run 78214ns
+Simulator is doing circuit initialization process.
+at 0 ps: Note: WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information. (/rx_idea_tb/uut/Inst_serial_rx_fifo/fifo_inst/U0/gconvfifo/inst_conv_fifo/).
+Finished circuit initialization process.
+# step
+Stopped at time : 78215 ns : File "/home/main/git/FPGA_NIGHT/uart_comms/rx_idea_tb.vhd" Line 71
+# step
+Stopped at time : 78215 ns : File "/home/main/git/FPGA_NIGHT/uart_comms/rx_idea_tb.vhd" Line 72
+# step
+Stopped at time : 78215 ns : File "/home/main/git/FPGA_NIGHT/uart_comms/rx_idea.vhd" Line 57
+# step
+Stopped at time : 78215 ns : File "/home/main/git/FPGA_NIGHT/uart_comms/rx_idea.vhd" Line 60
+# step
+Stopped at time : 78215 ns : File "/home/main/git/FPGA_NIGHT/uart_comms/rx_idea.vhd" Line 61
+# step
+Stopped at time : 78215 ns : File "/home/main/git/FPGA_NIGHT/uart_comms/rx_idea.vhd" Line 79
+# step
+Stopped at time : 78215 ns : File "/home/main/git/FPGA_NIGHT/uart_comms/rx_idea.vhd" Line 84
+ISim P.20131013 (signature 0xfbc00daa)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps: Note: WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information. (/rx_idea_tb/uut/Inst_serial_rx_fifo/fifo_inst/U0/gconvfifo/inst_conv_fifo/).
+Finished circuit initialization process.
+# run 78214ns
+# run 78214ns
+ISim P.20131013 (signature 0xfbc00daa)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps: Note: WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information. (/rx_idea_tb/uut/Inst_serial_rx_fifo/fifo_inst/U0/gconvfifo/inst_conv_fifo/).
+Finished circuit initialization process.
+# run 800us
+# run 100us
+ISim P.20131013 (signature 0xfbc00daa)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps: Note: WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information. (/rx_idea_tb/uut/Inst_serial_rx_fifo/fifo_inst/U0/gconvfifo/inst_conv_fifo/).
+Finished circuit initialization process.
+# run 100us
+# run 100us
+# run 100us
+# run 100us
+# run 100us
+# run 100us

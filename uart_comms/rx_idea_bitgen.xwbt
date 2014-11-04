@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/main/git/FPGA_NIGHT/uart_comms/rx_idea.ncd
+OUTFILE=/home/main/git/FPGA_NIGHT/uart_comms/rx_idea.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/home/main/git/FPGA_NIGHT/uart_comms
+LICENSE=WebPack
+USER_INFO=210861346_0_0_275
