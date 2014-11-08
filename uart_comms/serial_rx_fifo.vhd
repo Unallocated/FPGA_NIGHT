@@ -3,6 +3,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity serial_rx_fifo is
+    Generic ( clk_rate : natural := 100_000_000;
+              baud_rate : natural := 115_200
+    );
     Port ( clk : in  STD_LOGIC;
            rst : in  STD_LOGIC;
            rx : in  STD_LOGIC;
@@ -36,7 +39,7 @@ architecture Behavioral of serial_rx_fifo is
 	type state_t is (IDLE, START_BIT, HANDLE_DATA, STOP_BIT);
 	signal rx_state : state_t := IDLE;
 	
-	constant counter_max : unsigned(9 downto 0) := to_unsigned(867, 10);
+	constant counter_max : unsigned(31 downto 0) := to_unsigned((clk_rate/baud_rate)-1, 32);
 	signal rx_counter : unsigned(counter_max'range) := (others => '0');
 	
 	signal rx_bit_pos : unsigned(2 downto 0) := (others => '0');
