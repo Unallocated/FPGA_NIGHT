@@ -49,6 +49,7 @@ architecture behave of rx_idea is
   signal pos : integer range 0 to max_data_length - 1 := 0;
 	signal leds_buffer : std_logic_vector(leds'range) := (others => '0');
 	signal read_delay : integer range 0 to 2 := 0;
+  signal data_xor : std_logic_vector(7 downto 0) := (others => '0');
 begin
 
 	leds <= leds_buffer;
@@ -61,21 +62,18 @@ begin
 			rx_rd_en <= '0';
 			if(pos >= 6 and buff(0) & buff(1) = preamble and buff(pos-1) & buff(pos-2) = postamble) then
 				pos <= 0;
-				--leds_buffer <= not leds_buffer;
-				--if(buff(2) = std_logic_vector(to_unsigned(pos-5, 8))) then
-					case to_integer(unsigned(buff(3))) is
-						when 0 =>
-							leds_buffer <= (others => '0');
-						when 1 =>
-							leds_buffer <= (others => '1');
-						when 2 =>
-							leds_buffer <= "00001111";
-						when 3 =>
-							leds_buffer <= "11110000";
-						when others =>
-							leds_buffer <= "01010101";
-					end case;
-				--end if;
+        case to_integer(unsigned(buff(3))) is
+          when 0 =>
+            leds_buffer <= (others => '0');
+          when 1 =>
+            leds_buffer <= (others => '1');
+          when 2 =>
+            leds_buffer <= "00001111";
+          when 3 =>
+            leds_buffer <= "11110000";
+          when others =>
+            leds_buffer <= "01010101";
+        end case;
 			else
 				if(read_delay = 0) then
 					if(rx_empty = '0') then
