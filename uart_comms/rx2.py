@@ -2,18 +2,15 @@ import serial
 import struct
 import time
 
-#s = serial.Serial("/dev/ttyUSB0", 115200)
-s = serial.Serial("/dev/ttyUSB0", 1000000)
-
+s = serial.Serial("/dev/ttyUSB0", 115200)
 
 derf = ''
-for i in range(0, 27):
+for i in range(0, 2):
 	derf += '\xff'
 
 val = 0;
 
 while 1:
-
   s.write('\x55\x55')
 
   payload = struct.pack('B', val)+derf
