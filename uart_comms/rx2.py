@@ -1,14 +1,26 @@
 import serial
 import struct
 import time
+import sys
 
-s = serial.Serial("/dev/ttyUSB0", 115200)
+if len(sys.argv) != 4:
+  print "Usage: ",sys.argv[0]," <serial_port> <baud_rate> <number_of_extra_payload_bytes>"
+  sys.exit(1)
+
+port = sys.argv[1]
+baudRate = int(sys.argv[2])
+payloadByteCount = int(sys.argv[3])
+
+s = serial.Serial(port, baudRate)
+
 
 derf = ''
-for i in range(0, 2):
+for i in range(0, payloadByteCount):
 	derf += '\xff'
 
 val = 0;
+
+print "Each frame will have", len(derf), "extra byte(s) attached"
 
 while 1:
   s.write('\x55\x55')
