@@ -1,0 +1,15 @@
+# Output products list for <sine_generator>
+_xmsgs/pn_parser.xmsgs
+sine_generator/doc/dds_compiler_v4_0_vinfo.html
+sine_generator/doc/dds_ds558.pdf
+sine_generator.asy
+sine_generator.gise
+sine_generator.ngc
+sine_generator.sym
+sine_generator.vhd
+sine_generator.vho
+sine_generator.xco
+sine_generator.xise
+sine_generator_flist.txt
+sine_generator_readme.txt
+sine_generator_xmdf.tcl

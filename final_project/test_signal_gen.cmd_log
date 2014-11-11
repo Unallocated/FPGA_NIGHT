@@ -1,0 +1,1 @@
+vhdtdtfi -prj final_project -o /home/xilinx/git/FPGA_NIGHT/final_project/test_signal_gen.vhi -module test_signal_gen -template /opt/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ipcore_dir/sine_generator.vhd -lib work test_signal_gen.vhd 

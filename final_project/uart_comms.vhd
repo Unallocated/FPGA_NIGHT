@@ -7,7 +7,8 @@ entity uart_comms is
   port( clk  : in  std_logic;
         rst  : in  std_logic;
         rx   : in  std_logic;
-        leds : out std_logic_vector(7 downto 0) );
+        leds : out std_logic_vector(7 downto 0);
+        phase_inc : out std_logic_vector(13 downto 0));
 end uart_comms;
 
 architecture Behavioral of uart_comms is
@@ -37,11 +38,35 @@ architecture Behavioral of uart_comms is
   subtype byte is std_logic_vector(7 downto 0);
   type frame_t is array(0 to 31) of byte;
   signal current_frame : frame_t := (others => (others => '0'));
+  signal last_frame : frame_t := (others => (others => '0'));
 
   signal current_frame_pos : integer range 0 to 31 := 0;
-
   signal current_frame_checksum : std_logic_vector(7 downto 0) := (others => '0');
+
+  signal last_frame_valid : std_logic := '0';
 begin
+
+  process(clk, rst)
+    variable prev_last_frame_valid : std_logic := '0';
+  begin
+    if(rst = '1') then
+      phase_inc <= (others => '0');
+      leds <= (others => '0');
+    elsif(rising_edge(clk)) then
+      if(prev_last_frame_valid = '0' and last_frame_valid = '1') then
+        case last_frame(3) is
+          when x"00" =>
+            leds <= last_frame(4);
+          when x"01" =>
+            phase_inc <= last_frame(5)(5 downto 0) & last_frame(4);
+          when others =>
+            null;
+        end case;
+      end if;
+
+      prev_last_frame_valid := last_frame_valid;
+    end if;
+  end process;
 
   process(clk, rst)
   begin
@@ -51,9 +76,12 @@ begin
       frame_state <= PREAMBLE;
       current_frame_pos <= 0;
       current_frame <= (others => (others => '0'));
+      last_frame <= (others => (others => '0'));
       current_frame_checksum <= (others => '0');
-      leds <= (others => '0');
+      last_frame_valid <= '0';
     elsif(rising_edge(clk)) then
+      last_frame_valid <= '0';
+
       case reading_state is
         when WAIT_FOR_DATA =>
           if(rx_empty = '0') then
@@ -95,7 +123,8 @@ begin
               frame_state <= PREAMBLE;
 
               if(rx_data = current_frame_checksum) then
-                leds <= current_frame(3);
+                last_frame <= current_frame;
+                last_frame_valid <= '1';
               end if;
           end case;
       end case;
