@@ -13,12 +13,10 @@ end master;
 architecture Behavioral of master is
 
   component dcm
-  port
-   (-- Clock in ports
-    CLK_IN1           : in     std_logic;
-    -- Clock out ports
-    clk_100mhz          : out    std_logic;
-    clk_10mhz          : out    std_logic
+  port(
+    CLK_IN1    : in  std_logic;
+    clk_100mhz : out std_logic;
+    clk_10mhz  : out std_logic
    );
   end component;
 
@@ -48,13 +46,11 @@ begin
 
   leds <= phase_inc(7 downto 0);
 
-  dcm_inst : dcm
-  port map
-   (-- Clock in ports
+  dcm_inst : dcm port map (
     CLK_IN1 => clk,
-    -- Clock out ports
     clk_100mhz => buffered_clk,
-    clk_10mhz => dds_clk);
+    clk_10mhz => dds_clk
+  );
 
 
   Inst_test_signal_gen: test_signal_gen PORT MAP(
