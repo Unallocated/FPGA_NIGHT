@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-11-13T19:01:36</DateModified>
+  <DateModified>2014-11-16T00:25:58</DateModified>
   <ModuleName>master</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2014-11-16T00:25:18</SummaryTimeStamp>
   <SavedFilePath>/home/xilinx/git/FPGA_NIGHT/final_project/iseconfig/master.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/home/xilinx/git/FPGA_NIGHT/final_project/</ImplementationReportsDirectory>
   <DateInitialized>2014-11-13T18:40:15</DateInitialized>

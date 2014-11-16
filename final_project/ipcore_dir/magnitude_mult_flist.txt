@@ -1,0 +1,15 @@
+# Output products list for <magnitude_mult>
+_xmsgs/pn_parser.xmsgs
+magnitude_mult/doc/mult_gen_ds255.pdf
+magnitude_mult/doc/mult_gen_v11_2_readme.txt
+magnitude_mult/doc/mult_gen_v11_2_vinfo.html
+magnitude_mult.asy
+magnitude_mult.gise
+magnitude_mult.ngc
+magnitude_mult.sym
+magnitude_mult.vhd
+magnitude_mult.vho
+magnitude_mult.xco
+magnitude_mult.xise
+magnitude_mult_flist.txt
+magnitude_mult_xmdf.tcl
