@@ -42,6 +42,7 @@ LIBRARY XilinxCoreLib;
 -- synthesis translate_on
 ENTITY magnitude_mult IS
   PORT (
+    clk : IN STD_LOGIC;
     a : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     b : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     p : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
@@ -52,6 +53,7 @@ ARCHITECTURE magnitude_mult_a OF magnitude_mult IS
 -- synthesis translate_off
 COMPONENT wrapped_magnitude_mult
   PORT (
+    clk : IN STD_LOGIC;
     a : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     b : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     p : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
@@ -71,7 +73,7 @@ END COMPONENT;
       c_has_ce => 0,
       c_has_sclr => 0,
       c_has_zero_detect => 0,
-      c_latency => 0,
+      c_latency => 1,
       c_model_type => 0,
       c_mult_type => 0,
       c_optimize_goal => 1,
@@ -87,6 +89,7 @@ BEGIN
 -- synthesis translate_off
 U0 : wrapped_magnitude_mult
   PORT MAP (
+    clk => clk,
     a => a,
     b => b,
     p => p

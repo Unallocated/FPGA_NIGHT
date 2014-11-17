@@ -27,33 +27,27 @@
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
---    Generated from core with identifier: xilinx.com:ip:mult_gen:11.2        --
+--    Generated from core with identifier: xilinx.com:ip:cordic:4.0           --
 --                                                                            --
---    Multiplication is a fundamental DSP operation.  This core allows        --
---    parallel and constant-coefficient multipliers to be generated.  The     --
---    user can specify if dedicated hardware multipliers, slice logic or a    --
---    combination of resources should be utilized.                            --
+--    The Xilinx CORDIC LogiCORE is a module for generation of the            --
+--    generalized coordinate rotational digital computer (CORDIC) algorithm   --
+--    which iteratively solves trigonometric, hyperbolic and square root      --
+--    equations. The core is fully synchronous using a single clock.          --
+--    Options include parameterizable data width and control signals. The     --
+--    core supports either serial architecture for minimal area               --
+--    implementations, or parallel architecture for speed optimization. The   --
+--    core is delivered through the Xilinx CORE Generator System and          --
+--    integrates seamlessly with the Xilinx design flow.                      --
 --------------------------------------------------------------------------------
-
--- Interfaces:
---    a_intf
---    clk_intf
---    sclr_intf
---    ce_intf
---    b_intf
---    zero_detect_intf
---    p_intf
---    pcasc_intf
 
 -- The following code must appear in the VHDL architecture header:
 
 ------------- Begin Cut here for COMPONENT Declaration ------ COMP_TAG
-COMPONENT magnitude_mult
+COMPONENT mag_sqrt
   PORT (
-    clk : IN STD_LOGIC;
-    a : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    b : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    p : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+    x_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    x_out : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
+    clk : IN STD_LOGIC
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -62,17 +56,16 @@ END COMPONENT;
 -- body. Substitute your own instance name and net names.
 
 ------------- Begin Cut here for INSTANTIATION Template ----- INST_TAG
-your_instance_name : magnitude_mult
+your_instance_name : mag_sqrt
   PORT MAP (
-    clk => clk,
-    a => a,
-    b => b,
-    p => p
+    x_in => x_in,
+    x_out => x_out,
+    clk => clk
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ------------
 
--- You must compile the wrapper file magnitude_mult.vhd when simulating
--- the core, magnitude_mult. When compiling the wrapper file, be sure to
+-- You must compile the wrapper file mag_sqrt.vhd when simulating
+-- the core, mag_sqrt. When compiling the wrapper file, be sure to
 -- reference the XilinxCoreLib VHDL simulation library. For detailed
 -- instructions, please refer to the "CORE Generator Help".
 

@@ -25,54 +25,80 @@
 --    (c) Copyright 1995-2014 Xilinx, Inc.                                    --
 --    All rights reserved.                                                    --
 --------------------------------------------------------------------------------
-
 --------------------------------------------------------------------------------
---    Generated from core with identifier: xilinx.com:ip:mult_gen:11.2        --
---                                                                            --
---    Multiplication is a fundamental DSP operation.  This core allows        --
---    parallel and constant-coefficient multipliers to be generated.  The     --
---    user can specify if dedicated hardware multipliers, slice logic or a    --
---    combination of resources should be utilized.                            --
---------------------------------------------------------------------------------
-
--- Interfaces:
---    a_intf
---    clk_intf
---    sclr_intf
---    ce_intf
---    b_intf
---    zero_detect_intf
---    p_intf
---    pcasc_intf
-
--- The following code must appear in the VHDL architecture header:
-
-------------- Begin Cut here for COMPONENT Declaration ------ COMP_TAG
-COMPONENT magnitude_mult
-  PORT (
-    clk : IN STD_LOGIC;
-    a : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    b : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    p : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
-  );
-END COMPONENT;
--- COMP_TAG_END ------ End COMPONENT Declaration ------------
-
--- The following code must appear in the VHDL architecture
--- body. Substitute your own instance name and net names.
-
-------------- Begin Cut here for INSTANTIATION Template ----- INST_TAG
-your_instance_name : magnitude_mult
-  PORT MAP (
-    clk => clk,
-    a => a,
-    b => b,
-    p => p
-  );
--- INST_TAG_END ------ End INSTANTIATION Template ------------
-
--- You must compile the wrapper file magnitude_mult.vhd when simulating
--- the core, magnitude_mult. When compiling the wrapper file, be sure to
+-- You must compile the wrapper file mag_sqrt.vhd when simulating
+-- the core, mag_sqrt. When compiling the wrapper file, be sure to
 -- reference the XilinxCoreLib VHDL simulation library. For detailed
 -- instructions, please refer to the "CORE Generator Help".
 
+-- The synthesis directives "translate_off/translate_on" specified
+-- below are supported by Xilinx, Mentor Graphics and Synplicity
+-- synthesis tools. Ensure they are correct for your synthesis tool(s).
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+-- synthesis translate_off
+LIBRARY XilinxCoreLib;
+-- synthesis translate_on
+ENTITY mag_sqrt IS
+  PORT (
+    x_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    x_out : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
+    clk : IN STD_LOGIC
+  );
+END mag_sqrt;
+
+ARCHITECTURE mag_sqrt_a OF mag_sqrt IS
+-- synthesis translate_off
+COMPONENT wrapped_mag_sqrt
+  PORT (
+    x_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    x_out : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
+    clk : IN STD_LOGIC
+  );
+END COMPONENT;
+
+-- Configuration specification
+  FOR ALL : wrapped_mag_sqrt USE ENTITY XilinxCoreLib.cordic_v4_0(behavioral)
+    GENERIC MAP (
+      c_architecture => 2,
+      c_coarse_rotate => 0,
+      c_cordic_function => 6,
+      c_data_format => 2,
+      c_family => "spartan6",
+      c_has_ce => 0,
+      c_has_clk => 1,
+      c_has_nd => 0,
+      c_has_phase_in => 0,
+      c_has_phase_out => 0,
+      c_has_rdy => 0,
+      c_has_rfd => 0,
+      c_has_sclr => 0,
+      c_has_x_in => 1,
+      c_has_x_out => 1,
+      c_has_y_in => 0,
+      c_has_y_out => 0,
+      c_input_width => 16,
+      c_iterations => 0,
+      c_output_width => 9,
+      c_phase_format => 0,
+      c_pipeline_mode => -1,
+      c_precision => 0,
+      c_reg_inputs => 0,
+      c_reg_outputs => 1,
+      c_round_mode => 0,
+      c_scale_comp => 0,
+      c_xdevicefamily => "spartan6"
+    );
+-- synthesis translate_on
+BEGIN
+-- synthesis translate_off
+U0 : wrapped_mag_sqrt
+  PORT MAP (
+    x_in => x_in,
+    x_out => x_out,
+    clk => clk
+  );
+-- synthesis translate_on
+
+END mag_sqrt_a;

@@ -117,6 +117,7 @@ architecture Behavioral of master is
   signal fft_state : fft_state_t := FFT_WAITING;
 
   signal setup_delay : integer := 10;
+
 begin
 
   leds <= fft_fifo_data_in(7 downto 0);
@@ -234,7 +235,6 @@ begin
     clk_100mhz => buffered_clk,
     clk_10mhz => dds_clk
   );
-
 
   Inst_test_signal_gen: test_signal_gen PORT MAP(
     clk => dds_clk,
