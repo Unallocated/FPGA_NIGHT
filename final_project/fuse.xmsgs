@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="960" delta="unknown" >"/home/xilinx/git/FPGA_NIGHT/final_project/mag.vhd" Line 90: Expression has incompatible type
+<msg type="warning" file="Simulator" num="0" delta="unknown" >Unable to copy libPortabilityNOSH.dll to the simulation executable directory: <arg fmt="%s" index="1">boost::filesystem::copy_file: The system cannot find the path specified, &quot;isim\master_tb_isim_beh.exe.sim\libPortability.dll&quot;</arg>.
 </msg>
 
 </messages>

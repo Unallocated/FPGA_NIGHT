@@ -28,15 +28,6 @@ architecture behave of mag is
 
   signal parts_summed : std_logic_vector(re_squared'high downto 0) := (others => '0');
 
-  COMPONENT magnitude_mult
-    PORT (
-      clk : in STD_LOGIC;
-      a : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-      b : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-      p : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
-    );
-  END COMPONENT;
-
   COMPONENT mag_sqrt
   PORT (
     x_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -46,7 +37,7 @@ architecture behave of mag is
   END COMPONENT;
 
   signal sqrt_in : std_logic_vector(parts_summed'range) := (others => '0');
-  signal sqrt_out : std_logic_vector(parts_summed'length / 2 downto 0) := (others => '0');
+  signal sqrt_out : std_logic_vector((parts_summed'length / 2) downto 0) := (others => '0');
 
   type sqrt_delay_t is array(0 to 5) of std_logic_vector(parts_summed'range);
   signal sqrt_delay : sqrt_delay_t := (others => (others => '0'));
@@ -87,7 +78,7 @@ begin
       sqrt_delay(0) <= parts_summed;
 
       output_valid <= valid_array(valid_array'high);
-      mag <= sqrt_out;
+      mag <= sqrt_out(7 downto 0);
       idx_out <= idx_buffer_array(idx_buffer_array'high);
     end if;
   end process;
@@ -98,20 +89,5 @@ begin
     x_out => sqrt_out,
     clk => clk
   );
---  re_squaring_mult : magnitude_mult
---  PORT MAP (
---    clk => clk,
---    a => re_buffer,
---    b => re_buffer,
---    p => re_squared
---  );
---
---  im_squaring_mult : magnitude_mult
---  PORT MAP (
---    clk => clk,
---    a => im_buffer,
---    b => im_buffer,
---    p => im_squared
---  );
 
 end behave;

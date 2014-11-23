@@ -110,6 +110,23 @@ architecture Behavioral of master is
   );
   END COMPONENT;
 
+	signal mag_input_valid, mag_output_valid : std_logic := '0';
+	signal mag_idx_in, mag_idx_out : std_logic_vector(8 downto 0) := (others => '0');
+	signal mag_out, mag_re, mag_im : std_logic_vector(7 downto 0) := (others => '0');
+	COMPONENT mag
+	PORT(
+		clk : IN std_logic;
+		rst : IN std_logic;
+		input_valid : IN std_logic;
+		re : IN std_logic_vector(7 downto 0);
+		im : IN std_logic_vector(7 downto 0);
+		idx_in : IN std_logic_vector(8 downto 0);          
+		idx_out : OUT std_logic_vector(8 downto 0);
+		mag : OUT std_logic_vector(7 downto 0);
+		output_valid : OUT std_logic
+		);
+	END COMPONENT;
+
   type adc_state_t is (ADC_WRITING, ADC_WAITING);
   signal adc_state : adc_state_t := ADC_WAITING;
 
@@ -286,6 +303,18 @@ begin
     empty => fft_fifo_empty,
     prog_full => fft_fifo_prog_full
   );
+
+	Inst_mag: mag PORT MAP(
+		clk => buffered_clk,
+		rst => rst,
+		input_valid => mag_input_valid,
+		re => mag_re,
+		im => mag_im,
+		idx_in => mag_idx_in,
+		idx_out => mag_idx_out,
+		mag => mag_out,
+		output_valid => mag_output_valid
+	);
 
 end Behavioral;
 

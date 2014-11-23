@@ -1,2 +1,3 @@
 vhdtdtfi -prj final_project -o /home/xilinx/git/FPGA_NIGHT/final_project/mag.vhi -module mag -template /opt/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work mag.vhd 
 vhdtdtfi -prj final_project -o /home/xilinx/git/FPGA_NIGHT/final_project/mag.vhi -module mag -template /opt/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work mag.vhd 
+vhdtdtfi -prj final_project -o C:/Users/main-local/Documents/GitHub/FPGA_NIGHT/final_project/mag.vhi -module mag -template C:/Xilinx/14.6/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ipcore_dir/mag_sqrt.vhd -lib work mag.vhd 

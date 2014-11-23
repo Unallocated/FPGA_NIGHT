@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-11-16T23:02:19</DateModified>
+  <DateModified>2014-11-23T09:22:20</DateModified>
   <ModuleName>master</ModuleName>
-  <SummaryTimeStamp>2014-11-16T00:25:18</SummaryTimeStamp>
-  <SavedFilePath>/home/xilinx/git/FPGA_NIGHT/final_project/iseconfig/master.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/xilinx/git/FPGA_NIGHT/final_project/</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2014-11-23T09:16:20</SummaryTimeStamp>
+  <SavedFilePath>C:/Users/main-local/Documents/GitHub/FPGA_NIGHT/final_project/iseconfig/master.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/main-local/Documents/GitHub/FPGA_NIGHT/final_project\</ImplementationReportsDirectory>
   <DateInitialized>2014-11-13T18:40:15</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
