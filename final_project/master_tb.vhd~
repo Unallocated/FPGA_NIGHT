@@ -39,7 +39,6 @@ ARCHITECTURE behavior OF master_tb IS
    signal sine_out : std_logic_vector(7 downto 0);
 	 signal red, green : std_logic_vector(2 downto 0);
 	 signal blue : std_logic_vector(1 downto 0);
-	 signal hs, vs : std_logic;
 
    -- Clock period definitions
    constant clk_period : time := 10 ns;

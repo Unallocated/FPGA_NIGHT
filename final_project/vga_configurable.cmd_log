@@ -1,0 +1,1 @@
+vhdtdtfi -prj final_project -o C:/Users/main-local/Documents/GitHub/FPGA_NIGHT/final_project/vga_configurable.vhi -module vga_configurable -template C:/Xilinx/14.6/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work lib.vhd -lib work vga_configurable.vhd 

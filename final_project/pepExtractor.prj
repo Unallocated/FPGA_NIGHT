@@ -1,2 +1,2 @@
-work	"ipcore_dir/mag_sqrt.vhd"
-work	"mag.vhd"
+work	"lib.vhd"
+work	"vga_configurable.vhd"
