@@ -5,10 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"C:/Users/main-local/Documents/GitHub/FPGA_NIGHT/final_project/master.vhd" Line 351: Actual for formal port <arg fmt="%s" index="1">wea</arg> is neither a static name nor a globally static expression
-</msg>
-
-<msg type="warning" file="Simulator" num="0" delta="unknown" >Unable to copy libPortabilityNOSH.dll to the simulation executable directory: <arg fmt="%s" index="1">boost::filesystem::copy_file: The system cannot find the path specified, &quot;isim\master_tb_isim_beh.exe.sim\libPortability.dll&quot;</arg>.
+<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"/home/xilinx/FPGA_NIGHT/final_project/master.vhd" Line 376: Actual for formal port <arg fmt="%s" index="1">wea</arg> is neither a static name nor a globally static expression
 </msg>
 
 </messages>

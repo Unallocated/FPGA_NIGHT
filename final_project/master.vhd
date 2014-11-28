@@ -140,6 +140,7 @@ architecture Behavioral of master is
 	signal vga_red_in : std_logic_vector(red'range);
 	signal vga_blue_in : std_logic_vector(blue'range);
 	signal vga_x_pos, vga_y_pos : integer;
+  signal vga_vs, last_vga_vs : std_logic;
 	COMPONENT vga_configurable
 	PORT(
 		clk : IN std_logic;
@@ -160,16 +161,35 @@ architecture Behavioral of master is
   type adc_state_t is (ADC_WRITING, ADC_WAITING);
   signal adc_state : adc_state_t := ADC_WAITING;
 
-  type fft_state_t is (FFT_WAITING, FFT_READING, FFT_WAIT_FOR_EDONE, FFT_WAIT_FOR_DV, FFT_UNLOAD_DATA);
+  type fft_state_t is (FFT_WAITING, FFT_READING, FFT_WAIT_FOR_EDONE, FFT_WAIT_FOR_VSYNC, FFT_WAIT_FOR_DV, FFT_UNLOAD_DATA);
   signal fft_state : fft_state_t := FFT_WAITING;
 
   signal setup_delay : integer := 10;
-
+  signal adc_clk_buff : std_logic := '0';
+  signal adc_clk_counter : integer := 0;
 begin
-	leds <= (others => '0');
-  adc_clk <= dds_clk;
+
+  leds <= adc_in;
+  --leds <= "10"&adc_clk_buff&vga_vs&vga_ram_in_we&(vga_ram_in_we(0) and vga_vs)&mag_output_valid&mag_input_valid;
+  adc_clk <= adc_clk_buff;
   sine_out <= adc_fifo_data_out;
-  
+  vs <= vga_vs;
+
+
+  process(dds_clk, rst)
+  begin
+    if(rst = '1') then
+      adc_clk_counter <= 0;
+    elsif(rising_edge(dds_clk)) then
+      if(adc_clk_counter = 4_000_000 / 4_000_000) then
+        adc_clk_buff <= not adc_clk_buff;
+        adc_clk_counter <= 0;
+      else
+        adc_clk_counter <= adc_clk_counter + 1;
+      end if;
+    end if;
+  end process;
+
 	process(dds_clk, rst)
   begin
     if(rst = '1') then
@@ -212,7 +232,9 @@ begin
       fft_unload <= '0';
       adc_fifo_rd_en <= '0';
       mag_input_valid <= '0';
+      last_vga_vs <= '0';
     elsif(rising_edge(buffered_clk)) then
+      last_vga_vs <= vga_vs;
       if(setup_delay = 0) then
         case fft_state is 
           when FFT_WAITING =>
@@ -230,6 +252,10 @@ begin
             end if;
           when FFT_WAIT_FOR_EDONE =>
             if(fft_edone = '1') then
+              fft_state <= FFT_WAIT_FOR_VSYNC;
+            end if;
+          when FFT_WAIT_FOR_VSYNC =>
+            if(vga_vs = '0') then
               fft_state <= FFT_WAIT_FOR_DV;
               fft_unload <= '1';
             end if;
@@ -276,10 +302,10 @@ begin
   adc_fifo_inst : adc_fifo
   PORT MAP (
     rst => rst,
-    wr_clk => dds_clk,
+    wr_clk => adc_clk_buff,
     rd_clk => buffered_clk,
-    --din => adc_in,
-    din => sine_buffer,
+    din => adc_in,
+    --din => sine_buffer,
     wr_en => adc_fifo_wr_en,
     rd_en => adc_fifo_rd_en,
     dout => adc_fifo_data_out,
@@ -363,7 +389,7 @@ begin
 		clk => vga_clk,
 		rst => rst,
 		hs => hs,
-		vs => vs,
+		vs => vga_vs,
 		green => green,
 		red => red,
 		blue => blue,
