@@ -14,7 +14,9 @@ entity master is
 					 vs : out STD_LOGIC;
 	         green : out std_logic_vector(2 downto 0);
 	         red : out std_logic_vector(2 downto 0);
-	         blue : out std_logic_vector(1 downto 0));
+	         blue : out std_logic_vector(1 downto 0);
+           sw : in std_logic_vector(7 downto 0);
+           antenna : out std_logic);
 end master;
 
 architecture Behavioral of master is
@@ -25,17 +27,22 @@ architecture Behavioral of master is
     CLK_IN1    : in  std_logic;
     clk_100mhz : out std_logic;
     clk_10mhz  : out std_logic;
-		vga_25mhz  : out std_logic
+		vga_25mhz  : out std_logic;
+    clk_out4   : out std_logic
    );
   end component;
 
+  signal adc_divider : std_logic_vector(23 downto 0) := (others => '0');
+  signal fft_scaler : std_logic_vector(7 downto 0) := "01000000";
   COMPONENT uart_comms
   PORT(
     clk : IN std_logic;
     rst : IN std_logic;
     rx : IN std_logic;          
     leds : OUT std_logic_vector(7 downto 0);
-    phase_inc : OUT std_logic_vector(13 downto 0)
+    phase_inc : OUT std_logic_vector(13 downto 0);
+    adc_divider : OUT std_logic_vector(23 downto 0);
+    fft_scaler : OUT std_logic_vector(7 downto 0)
     );
   END COMPONENT;
 
@@ -50,7 +57,7 @@ architecture Behavioral of master is
   END COMPONENT;
 
   signal phase_inc : std_logic_vector(13 downto 0) := (others => '0');
-  signal dds_clk, buffered_clk : std_logic := '0';
+  signal dds_clk, buffered_clk, buffered_clk2 : std_logic := '0';
 
   signal adc_fifo_wr_en, adc_fifo_rd_en, adc_fifo_empty, adc_fifo_prog_full : std_logic := '0';
   signal adc_fifo_data_out : std_logic_vector(7 downto 0);
@@ -72,9 +79,11 @@ architecture Behavioral of master is
 
 
   signal fft_rst, fft_start, fft_unload, fft_rfd, fft_busy, fft_edone, fft_done, fft_dv : std_logic := '0';
-  signal fft_xn_re, fft_xk_re, fft_xk_im : std_logic_vector(7 downto 0) := (others => '0');
+  signal fft_xn_re : std_logic_vector(7 downto 0) := (others => '0');
   signal fft_xk_index, fft_xn_index : std_logic_vector(8 downto 0) := (others => '0');
   signal fft_blk_exp : std_logic_vector(4 downto 0) := (others => '0');
+  signal fft_xk_re, fft_xk_im : std_logic_vector(17 downto 0);
+  signal fft_xk_re_selected, fft_xk_im_selected : std_logic_vector(7 downto 0);
 
   COMPONENT fft
   PORT (
@@ -93,9 +102,8 @@ architecture Behavioral of master is
     done : OUT STD_LOGIC;
     dv : OUT STD_LOGIC;
     xk_index : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
-    xk_re : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    xk_im : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    blk_exp : OUT STD_LOGIC_VECTOR(4 DOWNTO 0)
+    xk_re : OUT STD_LOGIC_VECTOR(17 DOWNTO 0);
+    xk_im : OUT STD_LOGIC_VECTOR(17 DOWNTO 0)
   );
   END COMPONENT;
 
@@ -158,6 +166,29 @@ architecture Behavioral of master is
 		);
 	END COMPONENT;
 
+  signal cic_in, cic_out : std_logic_vector(7 downto 0) := (others => '0');
+  signal cic_nd, cic_rdy, cic_rfd, cic_clk : std_logic := '0';
+  COMPONENT cic_compiler_v2_0
+  PORT(
+    din : IN std_logic_vector(7 downto 0);
+    nd : IN std_logic;
+    sclr : IN std_logic;
+    clk : IN std_logic;          
+    dout : OUT std_logic_vector(7 downto 0);
+    rdy : OUT std_logic;
+    rfd : OUT std_logic
+    );
+  END COMPONENT;
+
+  component fm_dcm
+port
+ (-- Clock in ports
+  CLK_IN1           : in     std_logic;
+  -- Clock out ports
+  CLK_OUT1          : out    std_logic
+ );
+end component;
+
   type adc_state_t is (ADC_WRITING, ADC_WAITING);
   signal adc_state : adc_state_t := ADC_WAITING;
 
@@ -167,25 +198,68 @@ architecture Behavioral of master is
   signal setup_delay : integer := 10;
   signal adc_clk_buff : std_logic := '0';
   signal adc_clk_counter : integer := 0;
-begin
 
-  leds <= adc_in;
+  signal max : integer := 0;
+  signal last_adc_divider : std_logic_vector(adc_divider'range) := (others => '0');
+
+  signal clk320            : std_logic;
+   signal shift_ctr         : unsigned (4 downto 0) := (others => '0');
+   signal phase_accumulator : unsigned (31 downto 0) := (others => '0');
+   signal beep_counter      : unsigned (19 downto 0):= (others => '0'); -- gives a 305Hz beep signal
+   signal message           : std_logic_vector(33 downto 0) := "1111000011110000111100001111000011";
+begin
+  fft_xk_re_selected <= fft_xk_re(max downto max-7);
+  fft_xk_im_selected <= fft_xk_im(max downto max-7);
+  max <= to_integer(unsigned(sw)) + 7;
+  leds <= adc_divider(15 downto 8);
   --leds <= "10"&adc_clk_buff&vga_vs&vga_ram_in_we&(vga_ram_in_we(0) and vga_vs)&mag_output_valid&mag_input_valid;
   adc_clk <= adc_clk_buff;
   sine_out <= adc_fifo_data_out;
   vs <= vga_vs;
 
+  antenna <= std_logic(phase_accumulator(31));
+
+  process(clk320)
+   begin
+      if rising_edge(clk320) then
+         if beep_counter = x"00FFFF" then
+            if shift_ctr = "00000" then
+               message <= message(0) & message(33 downto 1);
+            end if;
+            shift_ctr <= shift_ctr + 1;
+         end if;      
+         
+         -- The constants are calculated as (desired freq)/320Mhz*2^32
+         if message(0) = '1' then
+            if beep_counter(16) = '1' then
+               phase_accumulator <= phase_accumulator + 1222387958; -- gives a 91075kHz signal               
+            else
+               phase_accumulator <= phase_accumulator + 1220374692; -- gives 90925kHz signal
+            end if;
+         else 
+            phase_accumulator <= phase_accumulator + 1221381325; -- gives 91000kHz signal
+         end if;
+         
+         beep_counter <= beep_counter+1;
+      end if;
+   end process;
 
   process(dds_clk, rst)
   begin
     if(rst = '1') then
       adc_clk_counter <= 0;
     elsif(rising_edge(dds_clk)) then
-      if(adc_clk_counter = 4_000_000 / 4_000_000) then
-        adc_clk_buff <= not adc_clk_buff;
+      last_adc_divider <= adc_divider;
+
+      if(last_adc_divider /= adc_divider) then
         adc_clk_counter <= 0;
       else
-        adc_clk_counter <= adc_clk_counter + 1;
+        if(adc_clk_counter = to_integer(unsigned(adc_divider))) then
+          adc_clk_buff <= not adc_clk_buff;
+          adc_clk_counter <= 0;
+        else
+          adc_clk_counter <= adc_clk_counter + 1;
+        end if;
       end if;
     end if;
   end process;
@@ -269,7 +343,9 @@ begin
             if(fft_dv = '0') then
               fft_unload <= '0';
               mag_input_valid <= '0';
-              fft_state <= FFT_WAITING;
+              if(vga_vs = '1') then
+                fft_state <= FFT_WAITING;
+              end if;
             end if;
         end case;
       end if;
@@ -277,16 +353,19 @@ begin
   end process;
 
 	process(vga_clk, rst)
+    variable scaled : unsigned(15 downto 0) := (others => '0');
 	begin
 		if(rst = '1') then
 			vga_blue_in <= (others => '0');
 			vga_red_in <= (others => '0');
 			vga_green_in <= (others => '0');
+      scaled := (others => '0');
 		elsif(rising_edge(vga_clk)) then
 			vga_ram_out_addr <= std_logic_vector(to_unsigned(vga_x_pos + 1, fft_xk_index'length));
 
 			if(vga_x_pos < 2 ** fft_xk_index'length and vga_y_pos < 2 ** fft_xk_im'length) then
-				if(256 - to_integer(unsigned(vga_ram_out_data)) >= vga_y_pos) then
+        scaled := unsigned(vga_ram_out_data) * unsigned(fft_scaler);
+				if(256 - to_integer(scaled(13 downto 6)) >= vga_y_pos) then
 					vga_blue_in <= (others => '1');
 				else
 					vga_blue_in <= (others => '0');
@@ -318,7 +397,8 @@ begin
     CLK_IN1 => clk,
     clk_100mhz => buffered_clk,
     clk_10mhz => dds_clk,
-		vga_25mhz => vga_clk
+		vga_25mhz => vga_clk,
+    clk_out4 => buffered_clk2
   );
 
   Inst_test_signal_gen: test_signal_gen PORT MAP(
@@ -333,7 +413,9 @@ begin
     rst => rst,
     rx => rx,
     leds => open,
-    phase_inc => phase_inc
+    phase_inc => phase_inc,
+    adc_divider => adc_divider,
+    fft_scaler => fft_scaler
   );
 
   fft_instance : fft
@@ -354,16 +436,16 @@ begin
     dv => fft_dv,
     xk_index => fft_xk_index,
     xk_re => fft_xk_re,
-    xk_im => fft_xk_im,
-    blk_exp => fft_blk_exp
+    xk_im => fft_xk_im
+ --   blk_exp => fft_blk_exp
   );
 
 	Inst_mag: mag PORT MAP(
 		clk => buffered_clk,
 		rst => rst,
 		input_valid => fft_dv,
-		re => fft_xk_re,
-		im => fft_xk_im,
+		re => fft_xk_re_selected,
+		im => fft_xk_im_selected,
 		idx_in => fft_xk_index,
 		idx_out => mag_idx_out,
 		mag => mag_out,
@@ -399,6 +481,23 @@ begin
 		red_in => vga_red_in,
 		green_in => vga_green_in
 	);
+
+  fm_dcm_mgr : fm_dcm
+  port map
+   (-- Clock in ports
+    CLK_IN1 => buffered_clk2,
+    -- Clock out ports
+    CLK_OUT1 => clk320);
+
+--  Inst_cic_compiler_v2_0: cic_compiler_v2_0 PORT MAP(
+--    din => adc_in,
+--    nd => '1',
+--    sclr => rst,
+--    clk => adc_clk_buff,
+--    dout => cic_out,
+--    rdy => cic_rdy,
+--    rfd => cic_rfd
+--  );
 
 end Behavioral;
 

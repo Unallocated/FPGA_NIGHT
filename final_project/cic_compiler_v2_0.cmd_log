@@ -1,0 +1,1 @@
+vhdtdtfi -prj final_project -o /home/xilinx/FPGA_NIGHT/final_project/cic_compiler_v2_0.vhi -module cic_compiler_v2_0 -template /opt/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ipcore_dir/cic_compiler_v2_0.vhd 

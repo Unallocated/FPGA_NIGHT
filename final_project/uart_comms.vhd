@@ -8,7 +8,9 @@ entity uart_comms is
         rst  : in  std_logic;
         rx   : in  std_logic;
         leds : out std_logic_vector(7 downto 0);
-        phase_inc : out std_logic_vector(13 downto 0));
+        phase_inc : out std_logic_vector(13 downto 0);
+        adc_divider : out std_logic_vector(23 downto 0);
+        fft_scaler : out std_logic_vector(7 downto 0));
 end uart_comms;
 
 architecture Behavioral of uart_comms is
@@ -51,7 +53,9 @@ begin
   begin
     if(rst = '1') then
       phase_inc <= (others => '0');
+      adc_divider <= (others => '0');
       leds <= (others => '0');
+      fft_scaler <= "01000000";
     elsif(rising_edge(clk)) then
       if(prev_last_frame_valid = '0' and last_frame_valid = '1') then
         case last_frame(3) is
@@ -59,6 +63,10 @@ begin
             leds <= last_frame(4);
           when x"01" =>
             phase_inc <= last_frame(5)(5 downto 0) & last_frame(4);
+          when x"02" =>
+            adc_divider <= last_frame(6) & last_frame(5) & last_frame(4);
+          when x"03" =>
+            fft_scaler <= last_frame(4);
           when others =>
             null;
         end case;

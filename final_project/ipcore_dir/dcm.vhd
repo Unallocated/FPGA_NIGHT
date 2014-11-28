@@ -56,8 +56,9 @@
 -- "Clock    Freq (MHz) (degrees) Cycle (%) Jitter (ps)  Error (ps)"
 ------------------------------------------------------------------------------
 -- CLK_OUT1___100.000______0.000______50.0______172.490____235.738
--- CLK_OUT2_____4.000______0.000______50.0______330.210____235.738
+-- CLK_OUT2____80.000______0.000______50.0______180.347____235.738
 -- CLK_OUT3____25.000______0.000______50.0______228.777____235.738
+-- CLK_OUT4___100.000______0.000______50.0______172.490____235.738
 --
 ------------------------------------------------------------------------------
 -- "Input Clock   Freq (MHz)    Input Jitter (UI)"
@@ -80,13 +81,14 @@ port
   -- Clock out ports
   clk_100mhz          : out    std_logic;
   clk_10mhz          : out    std_logic;
-  vga_25mhz          : out    std_logic
+  vga_25mhz          : out    std_logic;
+  CLK_OUT4          : out    std_logic
  );
 end dcm;
 
 architecture xilinx of dcm is
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of xilinx : architecture is "dcm,clk_wiz_v3_6,{component_name=dcm,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,feedback_source=FDBK_AUTO,primtype_sel=PLL_BASE,num_out_clk=3,clkin1_period=10.0,clkin2_period=10.0,use_power_down=false,use_reset=false,use_locked=false,use_inclk_stopped=false,use_status=false,use_freeze=false,use_clk_valid=false,feedback_type=SINGLE,clock_mgr_type=AUTO,manual_override=false}";
+  attribute CORE_GENERATION_INFO of xilinx : architecture is "dcm,clk_wiz_v3_6,{component_name=dcm,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,feedback_source=FDBK_AUTO,primtype_sel=PLL_BASE,num_out_clk=4,clkin1_period=10.0,clkin2_period=10.0,use_power_down=false,use_reset=false,use_locked=false,use_inclk_stopped=false,use_status=false,use_freeze=false,use_clk_valid=false,feedback_type=SINGLE,clock_mgr_type=AUTO,manual_override=false}";
   -- Input clock buffering / unused connectors
   signal clkin1      : std_logic;
   -- Output clock buffering / unused connectors
@@ -95,7 +97,7 @@ architecture xilinx of dcm is
   signal clkout0          : std_logic;
   signal clkout1          : std_logic;
   signal clkout2          : std_logic;
-  signal clkout3_unused   : std_logic;
+  signal clkout3          : std_logic;
   signal clkout4_unused   : std_logic;
   signal clkout5_unused   : std_logic;
   -- Unused status signals
@@ -129,12 +131,15 @@ begin
     CLKOUT0_DIVIDE       => 4,
     CLKOUT0_PHASE        => 0.000,
     CLKOUT0_DUTY_CYCLE   => 0.500,
-    CLKOUT1_DIVIDE       => 100,
+    CLKOUT1_DIVIDE       => 5,
     CLKOUT1_PHASE        => 0.000,
     CLKOUT1_DUTY_CYCLE   => 0.500,
     CLKOUT2_DIVIDE       => 16,
     CLKOUT2_PHASE        => 0.000,
     CLKOUT2_DUTY_CYCLE   => 0.500,
+    CLKOUT3_DIVIDE       => 4,
+    CLKOUT3_PHASE        => 0.000,
+    CLKOUT3_DUTY_CYCLE   => 0.500,
     CLKIN_PERIOD         => 10.0,
     REF_JITTER           => 0.010)
   port map
@@ -143,7 +148,7 @@ begin
     CLKOUT0             => clkout0,
     CLKOUT1             => clkout1,
     CLKOUT2             => clkout2,
-    CLKOUT3             => clkout3_unused,
+    CLKOUT3             => clkout3,
     CLKOUT4             => clkout4_unused,
     CLKOUT5             => clkout5_unused,
     LOCKED              => locked_unused,
@@ -176,5 +181,10 @@ begin
   port map
    (O   => vga_25mhz,
     I   => clkout2);
+
+  clkout4_buf : BUFG
+  port map
+   (O   => CLK_OUT4,
+    I   => clkout3);
 
 end xilinx;

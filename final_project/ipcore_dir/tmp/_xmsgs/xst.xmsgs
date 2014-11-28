@@ -5,313 +5,674 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="UtilitiesC" num="159" delta="new" >Message file &quot;<arg fmt="%s" index="1">usenglish/ip.msg</arg>&quot; wasn&apos;t found.
+<msg type="warning" file="HDLCompiler" num="746" delta="old" >"/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/decimate.vhd" Line 232: Range is empty (null range)
 </msg>
 
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">0</arg>: (<arg fmt="%d" index="2">0</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">18</arg>x<arg fmt="%d" index="5">512</arg> 	u:<arg fmt="%d" index="6">8</arg>
+<msg type="warning" file="HDLCompiler" num="746" delta="old" >"/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/delay_bit.vhd" Line 92: Range is empty (null range)
 </msg>
 
-<msg type="info" file="ip" num="0" delta="new" ><arg fmt="%d" index="1">0</arg>: (<arg fmt="%d" index="2">0</arg>,<arg fmt="%d" index="3">0</arg>) 	: <arg fmt="%d" index="4">18</arg>x<arg fmt="%d" index="5">512</arg> 	u:<arg fmt="%d" index="6">8</arg>
+<msg type="warning" file="HDLCompiler" num="746" delta="old" >"/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd" Line 398: Range is empty (null range)
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="321" delta="new" >"C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\blk_mem_gen_v7_3\blk_mem_input_block.vhd" Line 691: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+<msg type="warning" file="HDLCompiler" num="220" delta="old" >"/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd" Line 398: Assignment ignored
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="321" delta="new" >"C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\blk_mem_gen_v7_3\blk_mem_input_block.vhd" Line 707: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd" Line 1241: Assignment to <arg fmt="%s" index="1">d_in</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="746" delta="old" >"C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\blk_mem_gen_v7_3\blk_mem_gen_prim_width.vhd" Line 978: Range is empty (null range)
+<msg type="warning" file="HDLCompiler" num="746" delta="old" >"/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd" Line 1013: Range is empty (null range)
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="220" delta="old" >"C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\blk_mem_gen_v7_3\blk_mem_gen_prim_width.vhd" Line 978: Assignment ignored
+<msg type="warning" file="HDLCompiler" num="746" delta="old" >"/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/fir_compiler_v5_0/toolbox/delay_bit.vhd" Line 98: Range is empty (null range)
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="746" delta="old" >"C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\blk_mem_gen_v7_3\blk_mem_gen_prim_width.vhd" Line 979: Range is empty (null range)
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd" Line 354: Net &lt;<arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.sum_in_casc[22]</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="220" delta="old" >"C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\blk_mem_gen_v7_3\blk_mem_gen_prim_width.vhd" Line 979: Assignment ignored
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd" Line 379: Net &lt;<arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.cin_sel[2]</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="746" delta="old" >"C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\blk_mem_gen_v7_3\blk_mem_gen_prim_wrapper_s6.vhd" Line 1846: Range is empty (null range)
+<msg type="warning" file="HDLCompiler" num="746" delta="old" >"/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_folded.vhd" Line 485: Range is empty (null range)
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="220" delta="old" >"C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\blk_mem_gen_v7_3\blk_mem_gen_prim_wrapper_s6.vhd" Line 1846: Assignment ignored
+<msg type="warning" file="HDLCompiler" num="220" delta="old" >"/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_folded.vhd" Line 485: Assignment ignored
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="746" delta="old" >"C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\blk_mem_gen_v7_3\blk_mem_gen_prim_wrapper_s6.vhd" Line 1847: Range is empty (null range)
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_folded.vhd" Line 443: Net &lt;<arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.sum_in_casc[11]</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="220" delta="old" >"C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\blk_mem_gen_v7_3\blk_mem_gen_prim_wrapper_s6.vhd" Line 1847: Assignment ignored
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_folded.vhd" Line 464: Net &lt;<arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.cin_sel[2]</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\blk_mem_gen_v7_3\blk_mem_gen_prim_width.vhd" Line 430: Net &lt;<arg fmt="%s" index="1">dina_pad[17]</arg>&gt; does not have a driver.
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd</arg>&quot; line <arg fmt="%d" index="2">168</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">gen_split_accum[0].gen_en_src</arg>&gt; of block &lt;<arg fmt="%s" index="4">delay_bit</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">int_comb_stage_unfolded_1</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\blk_mem_gen_v7_3\blk_mem_gen_prim_width.vhd" Line 434: Net &lt;<arg fmt="%s" index="1">dinb_pad[17]</arg>&gt; does not have a driver.
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%d" index="2">1150</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">gen_structural.gen_no_dsp48.gen_a_extra_dly</arg>&gt; of block &lt;<arg fmt="%s" index="4">delay</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">emb_calc_1</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="321" delta="new" >"C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\blk_mem_gen_v7_3\blk_mem_gen_generic_cstr.vhd" Line 1546: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%d" index="2">1166</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">gen_structural.gen_no_dsp48.gen_b_extra_dly</arg>&gt; of block &lt;<arg fmt="%s" index="4">delay</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">emb_calc_1</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="321" delta="new" >"C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\blk_mem_gen_v7_3\blk_mem_gen_generic_cstr.vhd" Line 1559: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%d" index="2">1182</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">gen_structural.gen_no_dsp48.gen_d_extra_dly</arg>&gt; of block &lt;<arg fmt="%s" index="4">delay</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">emb_calc_1</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\VGA_RAM.vhd</arg>&quot; line <arg fmt="%s" index="2">163</arg>: Output port &lt;<arg fmt="%s" index="3">rdaddrecc</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%d" index="2">1444</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">gen_structural.gen_no_dsp48.gen_cin_sel</arg>&gt; of block &lt;<arg fmt="%s" index="4">delay_bit</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">emb_calc_1</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\VGA_RAM.vhd</arg>&quot; line <arg fmt="%s" index="2">163</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_bid</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd</arg>&quot; line <arg fmt="%d" index="2">168</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">gen_split_accum[0].gen_en_src</arg>&gt; of block &lt;<arg fmt="%s" index="4">delay_bit</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">int_comb_stage_unfolded_2</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\VGA_RAM.vhd</arg>&quot; line <arg fmt="%s" index="2">163</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_bresp</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%d" index="2">1150</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">gen_structural.gen_no_dsp48.gen_a_extra_dly</arg>&gt; of block &lt;<arg fmt="%s" index="4">delay</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">emb_calc_2</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\VGA_RAM.vhd</arg>&quot; line <arg fmt="%s" index="2">163</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_rid</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%d" index="2">1166</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">gen_structural.gen_no_dsp48.gen_b_extra_dly</arg>&gt; of block &lt;<arg fmt="%s" index="4">delay</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">emb_calc_2</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\VGA_RAM.vhd</arg>&quot; line <arg fmt="%s" index="2">163</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_rdata</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%d" index="2">1182</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">gen_structural.gen_no_dsp48.gen_d_extra_dly</arg>&gt; of block &lt;<arg fmt="%s" index="4">delay</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">emb_calc_2</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\VGA_RAM.vhd</arg>&quot; line <arg fmt="%s" index="2">163</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_rresp</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%d" index="2">1444</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">gen_structural.gen_no_dsp48.gen_cin_sel</arg>&gt; of block &lt;<arg fmt="%s" index="4">delay_bit</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">emb_calc_2</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\VGA_RAM.vhd</arg>&quot; line <arg fmt="%s" index="2">163</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_rdaddrecc</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd</arg>&quot; line <arg fmt="%d" index="2">168</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">gen_split_accum[0].gen_en_src</arg>&gt; of block &lt;<arg fmt="%s" index="4">delay_bit</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">int_comb_stage_unfolded_3</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\VGA_RAM.vhd</arg>&quot; line <arg fmt="%s" index="2">163</arg>: Output port &lt;<arg fmt="%s" index="3">sbiterr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%d" index="2">1150</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">gen_structural.gen_no_dsp48.gen_a_extra_dly</arg>&gt; of block &lt;<arg fmt="%s" index="4">delay</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">emb_calc_3</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\VGA_RAM.vhd</arg>&quot; line <arg fmt="%s" index="2">163</arg>: Output port &lt;<arg fmt="%s" index="3">dbiterr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%d" index="2">1166</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">gen_structural.gen_no_dsp48.gen_b_extra_dly</arg>&gt; of block &lt;<arg fmt="%s" index="4">delay</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">emb_calc_3</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\VGA_RAM.vhd</arg>&quot; line <arg fmt="%s" index="2">163</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_awready</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%d" index="2">1182</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">gen_structural.gen_no_dsp48.gen_d_extra_dly</arg>&gt; of block &lt;<arg fmt="%s" index="4">delay</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">emb_calc_3</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\VGA_RAM.vhd</arg>&quot; line <arg fmt="%s" index="2">163</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_wready</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%d" index="2">1444</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">gen_structural.gen_no_dsp48.gen_cin_sel</arg>&gt; of block &lt;<arg fmt="%s" index="4">delay_bit</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">emb_calc_3</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\VGA_RAM.vhd</arg>&quot; line <arg fmt="%s" index="2">163</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_bvalid</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%d" index="2">1150</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">gen_structural.gen_no_dsp48.gen_a_extra_dly</arg>&gt; of block &lt;<arg fmt="%s" index="4">delay</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">emb_calc_4</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\VGA_RAM.vhd</arg>&quot; line <arg fmt="%s" index="2">163</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_arready</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%d" index="2">1166</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">gen_structural.gen_no_dsp48.gen_b_extra_dly</arg>&gt; of block &lt;<arg fmt="%s" index="4">delay</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">emb_calc_4</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\VGA_RAM.vhd</arg>&quot; line <arg fmt="%s" index="2">163</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_rlast</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%d" index="2">1182</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">gen_structural.gen_no_dsp48.gen_d_extra_dly</arg>&gt; of block &lt;<arg fmt="%s" index="4">delay</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">emb_calc_4</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\VGA_RAM.vhd</arg>&quot; line <arg fmt="%s" index="2">163</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_rvalid</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%d" index="2">1444</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">gen_structural.gen_no_dsp48.gen_cin_sel</arg>&gt; of block &lt;<arg fmt="%s" index="4">delay_bit</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">emb_calc_4</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\VGA_RAM.vhd</arg>&quot; line <arg fmt="%s" index="2">163</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_sbiterr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\VGA_RAM.vhd</arg>&quot; line <arg fmt="%s" index="2">163</arg>: Output port &lt;<arg fmt="%s" index="3">s_axi_dbiterr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">RATE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">S_AXI_AWID</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">RATE_WE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">S_AXI_AWADDR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/decimate.vhd</arg>&quot; line <arg fmt="%s" index="2">600</arg>: Output port &lt;<arg fmt="%s" index="3">EN_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">int</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">S_AXI_AWLEN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/decimate.vhd</arg>&quot; line <arg fmt="%s" index="2">881</arg>: Output port &lt;<arg fmt="%s" index="3">EN_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">comb</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">S_AXI_AWSIZE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="2404" delta="new" > FFs/Latches &lt;<arg fmt="%s" index="1">CHAN_SYNC</arg>&lt;<arg fmt="%d" index="2">0</arg>:<arg fmt="%d" index="3">0</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">decimate</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">S_AXI_AWBURST</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">WE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">S_AXI_WDATA</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">S_AXI_WSTRB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SCLR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">S_AXI_ARID</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CLK</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">S_AXI_ARADDR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_section.vhd</arg>&quot; line <arg fmt="%s" index="2">216</arg>: Output port &lt;<arg fmt="%s" index="3">CLR_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_stages[2].gen_unfolded.int_comb_stage</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">S_AXI_ARLEN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd</arg>&quot; line <arg fmt="%s" index="2">168</arg>: Output port &lt;<arg fmt="%s" index="3">D_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_split_accum[0].gen_en_src</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">S_AXI_ARSIZE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd</arg>&quot; line <arg fmt="%s" index="2">400</arg>: Output port &lt;<arg fmt="%s" index="3">PC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_split_accum[0].gen_sum_struct.gen_sum</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">S_AXI_ARBURST</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd</arg>&quot; line <arg fmt="%s" index="2">400</arg>: Output port &lt;<arg fmt="%s" index="3">AC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_split_accum[0].gen_sum_struct.gen_sum</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">S_AClk</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd</arg>&quot; line <arg fmt="%s" index="2">400</arg>: Output port &lt;<arg fmt="%s" index="3">PAT_DET</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_split_accum[0].gen_sum_struct.gen_sum</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">S_ARESETN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd</arg>&quot; line <arg fmt="%s" index="2">400</arg>: Output port &lt;<arg fmt="%s" index="3">PAT_DET_B</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_split_accum[0].gen_sum_struct.gen_sum</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">S_AXI_AWVALID</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd</arg>&quot; line <arg fmt="%s" index="2">400</arg>: Output port &lt;<arg fmt="%s" index="3">CARRYCASCOUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_split_accum[0].gen_sum_struct.gen_sum</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">S_AXI_WLAST</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.sum_in_casc</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">S_AXI_WVALID</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.cin_sel</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">int_comb_stage_unfolded_1</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">S_AXI_BREADY</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="2404" delta="new" > FFs/Latches &lt;<arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.addsub</arg>&lt;<arg fmt="%d" index="2">0</arg>:<arg fmt="%d" index="3">0</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">int_comb_stage_unfolded_1</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">S_AXI_ARVALID</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">WE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">S_AXI_RREADY</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">S_AXI_INJECTSBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SCLR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">S_AXI_INJECTDBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CLK</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">S_AXI_BID</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_v7_3_xst</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000</arg>).
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">WE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">S_AXI_BRESP</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">S_AXI_RID</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_v7_3_xst</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000</arg>).
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SCLR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">S_AXI_RDATA</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CLK</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">S_AXI_RRESP</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PCIN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">S_AXI_RDADDRECC</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CIN_SEL&lt;2:1&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">S_AXI_AWREADY</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PRE_ADDSUB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">S_AXI_WREADY</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PRE_ADD_BYPASS</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">S_AXI_BVALID</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CARRYCASCIN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">S_AXI_ARREADY</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%s" index="2">1150</arg>: Output port &lt;<arg fmt="%s" index="3">D_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_structural.gen_no_dsp48.gen_a_extra_dly</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">S_AXI_RLAST</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%s" index="2">1166</arg>: Output port &lt;<arg fmt="%s" index="3">D_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_structural.gen_no_dsp48.gen_b_extra_dly</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">S_AXI_RVALID</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%s" index="2">1182</arg>: Output port &lt;<arg fmt="%s" index="3">D_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_structural.gen_no_dsp48.gen_d_extra_dly</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">S_AXI_SBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%s" index="2">1444</arg>: Output port &lt;<arg fmt="%s" index="3">D_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_structural.gen_no_dsp48.gen_cin_sel</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">S_AXI_DBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">AC</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ENA</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">PAT_DET</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">REGCEA</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">PAT_DET_B</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">RSTB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">CARRYCASCOUT</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">emb_calc_1</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ENB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">WE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">REGCEB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">INJECTDBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SCLR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">INJECTSBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CLK</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">INJECTDBITERR_I</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">WE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">INJECTSBITERR_I</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">REGCEA</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SCLR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">REGCEB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CLK</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">INJECTSBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd</arg>&quot; line <arg fmt="%s" index="2">168</arg>: Output port &lt;<arg fmt="%s" index="3">D_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_split_accum[0].gen_en_src</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">INJECTDBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd</arg>&quot; line <arg fmt="%s" index="2">400</arg>: Output port &lt;<arg fmt="%s" index="3">PC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_split_accum[0].gen_sum_struct.gen_sum</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\blk_mem_gen_v7_3\blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1342</arg>: Output port &lt;<arg fmt="%s" index="3">SBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[0].ram.r</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd</arg>&quot; line <arg fmt="%s" index="2">400</arg>: Output port &lt;<arg fmt="%s" index="3">AC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_split_accum[0].gen_sum_struct.gen_sum</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\main-local\Documents\GitHub\FPGA_NIGHT\final_project\ipcore_dir\tmp\_cg\_dbg\blk_mem_gen_v7_3\blk_mem_gen_generic_cstr.vhd</arg>&quot; line <arg fmt="%s" index="2">1342</arg>: Output port &lt;<arg fmt="%s" index="3">DBITERR</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ramloop[0].ram.r</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd</arg>&quot; line <arg fmt="%s" index="2">400</arg>: Output port &lt;<arg fmt="%s" index="3">PAT_DET</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_split_accum[0].gen_sum_struct.gen_sum</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">RDADDRECC</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd</arg>&quot; line <arg fmt="%s" index="2">400</arg>: Output port &lt;<arg fmt="%s" index="3">PAT_DET_B</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_split_accum[0].gen_sum_struct.gen_sum</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">SBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd</arg>&quot; line <arg fmt="%s" index="2">400</arg>: Output port &lt;<arg fmt="%s" index="3">CARRYCASCOUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_split_accum[0].gen_sum_struct.gen_sum</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">DBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.sum_in_casc</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">INJECTSBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.cin_sel</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">int_comb_stage_unfolded_2</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">INJECTDBITERR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="2404" delta="new" > FFs/Latches &lt;<arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.addsub</arg>&lt;<arg fmt="%d" index="2">0</arg>:<arg fmt="%d" index="3">0</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">int_comb_stage_unfolded_2</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">dina_pad&lt;17:13&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_width</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000</arg>).
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">WE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">dina_pad&lt;8:4&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_width</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000</arg>).
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">dinb_pad&lt;17:13&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_width</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000</arg>).
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SCLR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">dinb_pad&lt;8:4&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">blk_mem_gen_prim_width</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000</arg>).
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CLK</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">SBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PCIN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">DBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CIN_SEL&lt;2:1&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">RDADDRECC_I</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PRE_ADDSUB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CLKB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PRE_ADD_BYPASS</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">SBITERR_I</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CARRYCASCIN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">DBITERR_I</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%s" index="2">1150</arg>: Output port &lt;<arg fmt="%s" index="3">D_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_structural.gen_no_dsp48.gen_a_extra_dly</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">RDADDRECC</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%s" index="2">1166</arg>: Output port &lt;<arg fmt="%s" index="3">D_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_structural.gen_no_dsp48.gen_b_extra_dly</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">SBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%s" index="2">1182</arg>: Output port &lt;<arg fmt="%s" index="3">D_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_structural.gen_no_dsp48.gen_d_extra_dly</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">DBITERR</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%s" index="2">1444</arg>: Output port &lt;<arg fmt="%s" index="3">D_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_structural.gen_no_dsp48.gen_cin_sel</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">AC</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">PAT_DET</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">PAT_DET_B</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">CARRYCASCOUT</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">emb_calc_2</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd</arg>&quot; line <arg fmt="%s" index="2">168</arg>: Output port &lt;<arg fmt="%s" index="3">D_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_split_accum[0].gen_en_src</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd</arg>&quot; line <arg fmt="%s" index="2">400</arg>: Output port &lt;<arg fmt="%s" index="3">PC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_split_accum[0].gen_sum_struct.gen_sum</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd</arg>&quot; line <arg fmt="%s" index="2">400</arg>: Output port &lt;<arg fmt="%s" index="3">AC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_split_accum[0].gen_sum_struct.gen_sum</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd</arg>&quot; line <arg fmt="%s" index="2">400</arg>: Output port &lt;<arg fmt="%s" index="3">PAT_DET</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_split_accum[0].gen_sum_struct.gen_sum</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd</arg>&quot; line <arg fmt="%s" index="2">400</arg>: Output port &lt;<arg fmt="%s" index="3">PAT_DET_B</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_split_accum[0].gen_sum_struct.gen_sum</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_unfolded.vhd</arg>&quot; line <arg fmt="%s" index="2">400</arg>: Output port &lt;<arg fmt="%s" index="3">CARRYCASCOUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_split_accum[0].gen_sum_struct.gen_sum</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.sum_in_casc</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.cin_sel</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">int_comb_stage_unfolded_3</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2404" delta="new" > FFs/Latches &lt;<arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.addsub</arg>&lt;<arg fmt="%d" index="2">0</arg>:<arg fmt="%d" index="3">0</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">int_comb_stage_unfolded_3</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">WE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SCLR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CLK</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PCIN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CIN_SEL&lt;2:1&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PRE_ADDSUB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PRE_ADD_BYPASS</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CARRYCASCIN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%s" index="2">1150</arg>: Output port &lt;<arg fmt="%s" index="3">D_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_structural.gen_no_dsp48.gen_a_extra_dly</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%s" index="2">1166</arg>: Output port &lt;<arg fmt="%s" index="3">D_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_structural.gen_no_dsp48.gen_b_extra_dly</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%s" index="2">1182</arg>: Output port &lt;<arg fmt="%s" index="3">D_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_structural.gen_no_dsp48.gen_d_extra_dly</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%s" index="2">1444</arg>: Output port &lt;<arg fmt="%s" index="3">D_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_structural.gen_no_dsp48.gen_cin_sel</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">AC</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">PAT_DET</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">PAT_DET_B</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">CARRYCASCOUT</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">emb_calc_3</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SCLR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_section.vhd</arg>&quot; line <arg fmt="%s" index="2">146</arg>: Output port &lt;<arg fmt="%s" index="3">CLR_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_stages[0].gen_folded.int_comb_stage</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_folded.vhd</arg>&quot; line <arg fmt="%s" index="2">488</arg>: Output port &lt;<arg fmt="%s" index="3">PC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_split_accum[0].gen_sum_struct.gen_sum</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_folded.vhd</arg>&quot; line <arg fmt="%s" index="2">488</arg>: Output port &lt;<arg fmt="%s" index="3">AC</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_split_accum[0].gen_sum_struct.gen_sum</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_folded.vhd</arg>&quot; line <arg fmt="%s" index="2">488</arg>: Output port &lt;<arg fmt="%s" index="3">PAT_DET</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_split_accum[0].gen_sum_struct.gen_sum</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_folded.vhd</arg>&quot; line <arg fmt="%s" index="2">488</arg>: Output port &lt;<arg fmt="%s" index="3">PAT_DET_B</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_split_accum[0].gen_sum_struct.gen_sum</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/int_comb_stage_folded.vhd</arg>&quot; line <arg fmt="%s" index="2">488</arg>: Output port &lt;<arg fmt="%s" index="3">CARRYCASCOUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_split_accum[0].gen_sum_struct.gen_sum</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.sum_in_casc</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.cin_sel</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">int_comb_stage_folded</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">WE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CE</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SCLR</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">CLK</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PCIN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CIN_SEL&lt;2:1&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PRE_ADDSUB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PRE_ADD_BYPASS</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">CARRYCASCIN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%s" index="2">1150</arg>: Output port &lt;<arg fmt="%s" index="3">D_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_structural.gen_no_dsp48.gen_a_extra_dly</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%s" index="2">1166</arg>: Output port &lt;<arg fmt="%s" index="3">D_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_structural.gen_no_dsp48.gen_b_extra_dly</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%s" index="2">1182</arg>: Output port &lt;<arg fmt="%s" index="3">D_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_structural.gen_no_dsp48.gen_d_extra_dly</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/xilinx/FPGA_NIGHT/final_project/ipcore_dir/tmp/_cg/_dbg/cic_compiler_v2_0/emb_calc.vhd</arg>&quot; line <arg fmt="%s" index="2">1444</arg>: Output port &lt;<arg fmt="%s" index="3">D_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gen_structural.gen_no_dsp48.gen_cin_sel</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">AC</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">PAT_DET</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">PAT_DET_B</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">CARRYCASCOUT</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">emb_calc_4</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="1989" delta="new" >Unit &lt;<arg fmt="%s" index="1">int_comb_stage_folded</arg>&gt;: instances &lt;<arg fmt="%s" index="2">gen_split_accum[0].gen_comb_mem_src.gen_en_dly</arg>&gt;, &lt;<arg fmt="%s" index="3">gen_split_accum[0].gen_mem_we</arg>&gt; of unit &lt;<arg fmt="%s" index="4">delay_bit_2</arg>&gt; are equivalent, second instance is removed
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">CHAN_OUT_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">decimate</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.sum_ab_concat_init</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">int_comb_stage_unfolded_1</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.opcode_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">int_comb_stage_unfolded_1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.sum_ab_concat_init</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">int_comb_stage_unfolded_2</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.opcode_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">int_comb_stage_unfolded_2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.sum_ab_concat_init</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">int_comb_stage_unfolded_3</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.opcode_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">int_comb_stage_unfolded_3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.sum_ab_concat_init</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">int_comb_stage_folded</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">0</arg>.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.opcode_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">int_comb_stage_unfolded_1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;gen_split_accum[0].gen_sum_struct.opcode_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.opcode_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">int_comb_stage_unfolded_2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;gen_split_accum[0].gen_sum_struct.opcode_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">gen_split_accum[0].gen_sum_struct.opcode_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">int_comb_stage_unfolded_3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;gen_split_accum[0].gen_sum_struct.opcode_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">gen_en_out_dly/gen_rtl.delay_bus_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">int_comb_stage_unfolded_1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;gen_nd_out_dly/gen_rtl.delay_bus_0&gt; &lt;gen_split_accum[0].gen_mem_we/gen_rtl.gen_reg.d_reg&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">gen_en_out_dly/gen_rtl.delay_bus_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">int_comb_stage_unfolded_1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;gen_nd_out_dly/gen_rtl.delay_bus_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">gen_reg.d_reg_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">delay_5</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">16 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;gen_reg.d_reg_7&gt; &lt;gen_reg.d_reg_8&gt; &lt;gen_reg.d_reg_9&gt; &lt;gen_reg.d_reg_10&gt; &lt;gen_reg.d_reg_11&gt; &lt;gen_reg.d_reg_12&gt; &lt;gen_reg.d_reg_13&gt; &lt;gen_reg.d_reg_14&gt; &lt;gen_reg.d_reg_15&gt; &lt;gen_reg.d_reg_16&gt; &lt;gen_reg.d_reg_17&gt; &lt;gen_reg.d_reg_18&gt; &lt;gen_reg.d_reg_19&gt; &lt;gen_reg.d_reg_20&gt; &lt;gen_reg.d_reg_21&gt; &lt;gen_reg.d_reg_22&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">gen_nd_out_dly/gen_rtl.delay_bus_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">int_comb_stage_unfolded_2</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;gen_split_accum[0].gen_mem_we/gen_rtl.gen_reg.d_reg&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">gen_nd_out_dly/gen_rtl.delay_bus_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">int_comb_stage_unfolded_3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;gen_split_accum[0].gen_mem_we/gen_rtl.gen_reg.d_reg&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">gen_split_accum[0].gen_comb_mem_src.gen_en_dly/gen_rtl.gen_reg.d_reg</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">int_comb_stage_folded</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;gen_en_out_dly/gen_rtl.delay_bus_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">gen_split_accum[0].gen_comb_mem_src.gen_nd_dly/gen_rtl.gen_reg.d_reg</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">int_comb_stage_folded</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;gen_nd_out_dly/gen_rtl.delay_bus_0&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">data_in_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">decimate</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">gen_structural.gen_no_dsp48.gen_cin_reg/gen_rtl.gen_reg.d_reg</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">emb_calc_1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">gen_structural.gen_no_dsp48.gen_cin_reg/gen_rtl.gen_reg.d_reg</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">emb_calc_2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">gen_structural.gen_no_dsp48.gen_cin_reg/gen_rtl.gen_reg.d_reg</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">emb_calc_3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">gen_structural.gen_no_dsp48.gen_cin_reg/gen_rtl.gen_reg.d_reg</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">emb_calc_4</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/int/gen_stages[0].gen_unfolded.int_comb_stage/gen_split_accum[0].gen_sum_struct.sum_ab_concat_init</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/int/gen_stages[1].gen_unfolded.int_comb_stage/gen_en_out_dly/gen_rtl.delay_bus_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/int/gen_stages[1].gen_unfolded.int_comb_stage/gen_en_out_dly/gen_rtl.delay_bus_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/int/gen_stages[1].gen_unfolded.int_comb_stage/gen_split_accum[0].gen_sum_struct.sum_ab_concat_init</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/int/gen_stages[2].gen_unfolded.int_comb_stage/gen_en_out_dly/gen_rtl.delay_bus_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/int/gen_stages[2].gen_unfolded.int_comb_stage/gen_en_out_dly/gen_rtl.delay_bus_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/int/gen_stages[2].gen_unfolded.int_comb_stage/gen_clr_out_dly/gen_rtl.delay_bus_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/int/gen_stages[2].gen_unfolded.int_comb_stage/gen_clr_out_dly/gen_rtl.delay_bus_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/int/gen_stages[2].gen_unfolded.int_comb_stage/gen_split_accum[0].gen_sum_struct.sum_ab_concat_init</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_en_out_dly/gen_rtl.delay_bus_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_en_out_dly/gen_rtl.delay_bus_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_en_out_dly/gen_rtl.delay_bus_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_clr_out_dly/gen_rtl.delay_bus_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_clr_out_dly/gen_rtl.delay_bus_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_clr_out_dly/gen_rtl.delay_bus_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_clr_out_dly/gen_rtl.delay_bus_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/int/gen_stages&lt;0&gt;.gen_unfolded.gen_clr_counter.sclr_count_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/int/gen_stages[0].gen_unfolded.int_comb_stage/gen_split_accum[0].gen_sum_struct.opcode_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/int/gen_stages[1].gen_unfolded.int_comb_stage/gen_split_accum[0].gen_sum_struct.opcode_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/int/gen_stages[2].gen_unfolded.int_comb_stage/gen_split_accum[0].gen_sum_struct.opcode_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/int/gen_stages[0].gen_unfolded.int_comb_stage/gen_clr_out_dly/gen_rtl.delay_bus_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/int/gen_stages[0].gen_unfolded.int_comb_stage/gen_clr_out_dly/gen_rtl.delay_bus_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/int/gen_stages[1].gen_unfolded.int_comb_stage/gen_clr_out_dly/gen_rtl.delay_bus_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/int/gen_stages[1].gen_unfolded.int_comb_stage/gen_clr_out_dly/gen_rtl.delay_bus_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="638" delta="new" >in unit <arg fmt="%s" index="1">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg> Conflict on KEEP property on signal <arg fmt="%s" index="2">U0/decimator.decimation_filter/int/gen_stages[0].gen_unfolded.int_comb_stage/gen_split_accum[0].gen_sum_struct.gen_sum/gen_structural.gen_no_dsp48.opcode&lt;1&gt;</arg> and <arg fmt="%s" index="3">U0/decimator.decimation_filter/int/gen_stages[1].gen_unfolded.int_comb_stage/gen_split_accum[0].gen_sum_struct.gen_sum/gen_structural.gen_no_dsp48.opcode&lt;1&gt;</arg> <arg fmt="%s" index="4">U0/decimator.decimation_filter/int/gen_stages[1].gen_unfolded.int_comb_stage/gen_split_accum[0].gen_sum_struct.gen_sum/gen_structural.gen_no_dsp48.opcode&lt;1&gt;</arg> signal will be lost.
+</msg>
+
+<msg type="warning" file="Xst" num="638" delta="new" >in unit <arg fmt="%s" index="1">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg> Conflict on KEEP property on signal <arg fmt="%s" index="2">U0/decimator.decimation_filter/int/gen_stages[0].gen_unfolded.int_comb_stage/gen_split_accum[0].gen_sum_struct.gen_sum/gen_structural.gen_no_dsp48.opcode&lt;1&gt;</arg> and <arg fmt="%s" index="3">U0/decimator.decimation_filter/int/gen_stages[2].gen_unfolded.int_comb_stage/gen_split_accum[0].gen_sum_struct.gen_sum/gen_structural.gen_no_dsp48.opcode&lt;1&gt;</arg> <arg fmt="%s" index="4">U0/decimator.decimation_filter/int/gen_stages[2].gen_unfolded.int_comb_stage/gen_split_accum[0].gen_sum_struct.gen_sum/gen_structural.gen_no_dsp48.opcode&lt;1&gt;</arg> signal will be lost.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_comb_mem_src.gen_d_dly/gen_reg.d_reg_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.gen_sum/gen_structural.gen_no_dsp48.gen_cin/gen_reg.d_reg_9&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_comb_mem_src.gen_d_dly/gen_reg.d_reg_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.gen_sum/gen_structural.gen_no_dsp48.gen_cin/gen_reg.d_reg_10&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_comb_mem_src.gen_d_dly/gen_reg.d_reg_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.gen_sum/gen_structural.gen_no_dsp48.gen_cin/gen_reg.d_reg_11&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.gen_clr_counter.sclr_count_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.gen_clr_counter.sclr_count_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_comb_mem_src.gen_d_dly/gen_reg.d_reg_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.gen_sum/gen_structural.gen_no_dsp48.gen_cin/gen_reg.d_reg_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_comb_mem_src.gen_d_dly/gen_reg.d_reg_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.gen_sum/gen_structural.gen_no_dsp48.gen_cin/gen_reg.d_reg_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_comb_mem_src.gen_d_dly/gen_reg.d_reg_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.gen_sum/gen_structural.gen_no_dsp48.gen_cin/gen_reg.d_reg_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_comb_mem_src.gen_d_dly/gen_reg.d_reg_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.gen_sum/gen_structural.gen_no_dsp48.gen_cin/gen_reg.d_reg_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_comb_mem_src.gen_d_dly/gen_reg.d_reg_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.gen_sum/gen_structural.gen_no_dsp48.gen_cin/gen_reg.d_reg_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_comb_mem_src.gen_d_dly/gen_reg.d_reg_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.gen_sum/gen_structural.gen_no_dsp48.gen_cin/gen_reg.d_reg_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_comb_mem_src.gen_d_dly/gen_reg.d_reg_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.gen_sum/gen_structural.gen_no_dsp48.gen_cin/gen_reg.d_reg_6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_comb_mem_src.gen_d_dly/gen_reg.d_reg_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.gen_sum/gen_structural.gen_no_dsp48.gen_cin/gen_reg.d_reg_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_comb_mem_src.gen_d_dly/gen_reg.d_reg_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">cic_compiler_v2_0_cic_compiler_v2_0_xst_1</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;U0/decimator.decimation_filter/comb/gen_stages[0].gen_folded.int_comb_stage/gen_split_accum[0].gen_sum_struct.gen_sum/gen_structural.gen_no_dsp48.gen_cin/gen_reg.d_reg_8&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.

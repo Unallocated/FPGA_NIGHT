@@ -1,2 +1,1 @@
-work	"lib.vhd"
-work	"vga_configurable.vhd"
+work	"ipcore_dir/cic_compiler_v2_0.vhd"

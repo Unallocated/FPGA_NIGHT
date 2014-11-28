@@ -214,9 +214,8 @@ COMPONENT fft
     done : OUT STD_LOGIC;
     dv : OUT STD_LOGIC;
     xk_index : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
-    xk_re : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    xk_im : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    blk_exp : OUT STD_LOGIC_VECTOR(4 DOWNTO 0)
+    xk_re : OUT STD_LOGIC_VECTOR(17 DOWNTO 0);
+    xk_im : OUT STD_LOGIC_VECTOR(17 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -243,8 +242,7 @@ your_instance_name : fft
     dv => dv,
     xk_index => xk_index,
     xk_re => xk_re,
-    xk_im => xk_im,
-    blk_exp => blk_exp
+    xk_im => xk_im
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ------------
 

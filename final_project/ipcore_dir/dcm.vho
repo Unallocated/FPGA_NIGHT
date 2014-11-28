@@ -55,8 +55,9 @@
 -- "Clock    Freq (MHz) (degrees) Cycle (%) Jitter (ps)  Error (ps)"
 ------------------------------------------------------------------------------
 -- CLK_OUT1___100.000______0.000______50.0______172.490____235.738
--- CLK_OUT2_____4.000______0.000______50.0______330.210____235.738
+-- CLK_OUT2____80.000______0.000______50.0______180.347____235.738
 -- CLK_OUT3____25.000______0.000______50.0______228.777____235.738
+-- CLK_OUT4___100.000______0.000______50.0______172.490____235.738
 --
 ------------------------------------------------------------------------------
 -- "Input Clock   Freq (MHz)    Input Jitter (UI)"
@@ -73,7 +74,8 @@ port
   -- Clock out ports
   clk_100mhz          : out    std_logic;
   clk_10mhz          : out    std_logic;
-  vga_25mhz          : out    std_logic
+  vga_25mhz          : out    std_logic;
+  CLK_OUT4          : out    std_logic
  );
 end component;
 
@@ -88,5 +90,6 @@ your_instance_name : dcm
     -- Clock out ports
     clk_100mhz => clk_100mhz,
     clk_10mhz => clk_10mhz,
-    vga_25mhz => vga_25mhz);
+    vga_25mhz => vga_25mhz,
+    CLK_OUT4 => CLK_OUT4);
 -- INST_TAG_END ------ End INSTANTIATION Template ------------

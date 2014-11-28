@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Sat Nov 15 19:38:27 2014
+# Date: Fri Nov 28 05:56:23 2014
 #
 ##############################################################
 #
@@ -46,7 +46,7 @@ CSET complex_mult_type=use_mults_resources
 CSET component_name=fft
 CSET cyclic_prefix_insertion=false
 CSET data_format=fixed_point
-CSET implementation_options=radix_2_burst_io
+CSET implementation_options=radix_4_burst_io
 CSET input_data_offset=no_offset
 CSET input_width=8
 CSET memory_options_data=block_ram
@@ -59,7 +59,7 @@ CSET ovflo=false
 CSET phase_factor_width=8
 CSET rounding_modes=truncation
 CSET run_time_configurable_transform_length=false
-CSET scaling_options=block_floating_point
+CSET scaling_options=unscaled
 CSET sclr=true
 CSET target_clock_frequency=250
 CSET target_data_throughput=50
@@ -69,4 +69,4 @@ CSET transform_length=512
 MISC pkg_timestamp=2012-08-28T14:48:07Z
 # END Extra information
 GENERATE
-# CRC: a6169584
+# CRC: adbebf30

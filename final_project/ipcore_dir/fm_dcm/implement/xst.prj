@@ -1,0 +1,2 @@
+vhdl work ../../fm_dcm.vhd
+vhdl work ../example_design/fm_dcm_exdes.vhd
