@@ -1,0 +1,1467 @@
+Release 14.7 Map P.20131013 (lin64)
+Xilinx Mapping Report File for Design 'master'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt 2 -ir off -pr
+off -lc off -power off -o master_map.ncd master.ngd master.pcf 
+Target Device  : xc6slx16
+Target Package : csg324
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Sun Dec  1 00:27:43 2013
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:   16
+Slice Logic Utilization:
+  Number of Slice Registers:                 2,361 out of  18,224   12%
+    Number used as Flip Flops:               2,359
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                2
+  Number of Slice LUTs:                      1,880 out of   9,112   20%
+    Number used as logic:                    1,621 out of   9,112   17%
+      Number using O6 output only:           1,123
+      Number using O5 output only:              98
+      Number using O5 and O6:                  400
+      Number used as ROM:                        0
+    Number used as Memory:                     108 out of   2,176    4%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:           108
+        Number using O6 output only:            25
+        Number using O5 output only:             0
+        Number using O5 and O6:                 83
+    Number used exclusively as route-thrus:    151
+      Number with same-slice register load:    143
+      Number with same-slice carry load:         8
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   757 out of   2,278   33%
+  Number of MUXCYs used:                       776 out of   4,556   17%
+  Number of LUT Flip Flop pairs used:        2,330
+    Number with an unused Flip Flop:           361 out of   2,330   15%
+    Number with an unused LUT:                 450 out of   2,330   19%
+    Number of fully used LUT-FF pairs:       1,519 out of   2,330   65%
+    Number of unique control sets:              57
+    Number of slice register sites lost
+      to control set restrictions:             178 out of  18,224    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        47 out of     232   20%
+    Number of LOCed IOBs:                       47 out of      47  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      32    0%
+  Number of RAMB8BWERs:                         10 out of      64   15%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             1 out of      32    3%
+    Number used as BUFIO2FBs:                    1
+    Number used as BUFIO2FB_2CLKs:               0
+  Number of BUFG/BUFGMUXs:                       8 out of      16   50%
+    Number used as BUFGs:                        8
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     1 out of       4   25%
+    Number used as DCMs:                         1
+    Number used as DCM_CLKGENs:                  0
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     248    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                           15 out of      32   46%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            1 out of       2   50%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                2.79
+
+Peak Memory Usage:  842 MB
+Total REAL time to MAP completion:  59 secs 
+Total CPU time to MAP completion (all processors):   53 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Pack:2238 - Function generator symbol "fft_instance/blk00000de2" (Output
+   Signal = fft_instance/sig00000ad3) has an invalid use of the LUTNM
+   constraint. There are no other function generator symbols with a matching
+   LUTNM constraint value (LUTNM=fft_instance/hlutnm000000a0). The constraint
+   will be ignored.
+WARNING:Pack:2238 - Function generator symbol "fft_instance/blk00000de4" (Output
+   Signal = fft_instance/sig00000ad4) has an invalid use of the LUTNM
+   constraint. There are no other function generator symbols with a matching
+   LUTNM constraint value (LUTNM=fft_instance/hlutnm000000a1). The constraint
+   will be ignored.
+WARNING:Pack:2238 - Function generator symbol "fft_instance/blk00000de6" (Output
+   Signal = fft_instance/sig00000ad5) has an invalid use of the LUTNM
+   constraint. There are no other function generator symbols with a matching
+   LUTNM constraint value (LUTNM=fft_instance/hlutnm000000a2). The constraint
+   will be ignored.
+WARNING:Pack:2238 - Function generator symbol "fft_instance/blk00000df4" (Output
+   Signal = fft_instance/sig00000add) has an invalid use of the LUTNM
+   constraint. There are no other function generator symbols with a matching
+   LUTNM constraint value (LUTNM=fft_instance/hlutnm000000a3). The constraint
+   will be ignored.
+WARNING:Pack:2238 - Function generator symbol "fft_instance/blk00000d70" (Output
+   Signal = fft_instance/sig00000aa0) has an invalid use of the LUTNM
+   constraint. There are no other function generator symbols with a matching
+   LUTNM constraint value (LUTNM=fft_instance/hlutnm00000085). The constraint
+   will be ignored.
+WARNING:Pack:2238 - Function generator symbol "fft_instance/blk00000d72" (Output
+   Signal = fft_instance/sig00000aa1) has an invalid use of the LUTNM
+   constraint. There are no other function generator symbols with a matching
+   LUTNM constraint value (LUTNM=fft_instance/hlutnm00000086). The constraint
+   will be ignored.
+WARNING:Pack:2238 - Function generator symbol "fft_instance/blk00000d74" (Output
+   Signal = fft_instance/sig00000aa2) has an invalid use of the LUTNM
+   constraint. There are no other function generator symbols with a matching
+   LUTNM constraint value (LUTNM=fft_instance/hlutnm00000087). The constraint
+   will be ignored.
+WARNING:Pack:2238 - Function generator symbol "fft_instance/blk00000d7a" (Output
+   Signal = fft_instance/sig00000aa3) has an invalid use of the LUTNM
+   constraint. There are no other function generator symbols with a matching
+   LUTNM constraint value (LUTNM=fft_instance/hlutnm00000088). The constraint
+   will be ignored.
+WARNING:Pack:2238 - Function generator symbol "fft_instance/blk00000d7c" (Output
+   Signal = fft_instance/sig00000aa4) has an invalid use of the LUTNM
+   constraint. There are no other function generator symbols with a matching
+   LUTNM constraint value (LUTNM=fft_instance/hlutnm00000089). The constraint
+   will be ignored.
+WARNING:Pack:2238 - Function generator symbol "fft_instance/blk00000d7e" (Output
+   Signal = fft_instance/sig00000aa5) has an invalid use of the LUTNM
+   constraint. There are no other function generator symbols with a matching
+   LUTNM constraint value (LUTNM=fft_instance/hlutnm0000008a). The constraint
+   will be ignored.
+WARNING:Pack:2238 - Function generator symbol "fft_instance/blk00000dca" (Output
+   Signal = fft_instance/sig00000ac9) has an invalid use of the LUTNM
+   constraint. There are no other function generator symbols with a matching
+   LUTNM constraint value (LUTNM=fft_instance/hlutnm0000009a). The constraint
+   will be ignored.
+WARNING:Pack:2238 - Function generator symbol "fft_instance/blk00000dcc" (Output
+   Signal = fft_instance/sig00000aca) has an invalid use of the LUTNM
+   constraint. There are no other function generator symbols with a matching
+   LUTNM constraint value (LUTNM=fft_instance/hlutnm0000009b). The constraint
+   will be ignored.
+WARNING:Pack:2238 - Function generator symbol "fft_instance/blk00000dce" (Output
+   Signal = fft_instance/sig00000acb) has an invalid use of the LUTNM
+   constraint. There are no other function generator symbols with a matching
+   LUTNM constraint value (LUTNM=fft_instance/hlutnm0000009c). The constraint
+   will be ignored.
+WARNING:Place:1137 - This design is not guaranteed to be routable! This design
+   contains a global buffer instance, <dcm_inst/clkout4_buf>, driving the net,
+   <buffered_clk2>, that is driving the following (first 30) non-clock load
+   pins.
+   < PIN: fm_dcm_mgr/clkin1_buf.I0; >
+   This is not a recommended design practice in Spartan-6 due to limitations in
+   the global routing that may cause excessive delay, skew or unroutable
+   situations.  It is recommended to only use a BUFG resource to drive clock
+   loads. Please pay extra attention to the timing and routing of this path to
+   ensure the design goals are met. This is normally an ERROR but the
+   CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN
+   <dcm_inst/clkout4_buf.O> allowing your design to continue. This constraint
+   disables all clock placer rules related to the specified COMP.PIN.
+WARNING:PhysDesignRules:2212 - Async clocking for BRAM (comp
+   your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/val
+   id.cstr/ramloop[0].ram.r/s6_noinit.ram/TRUE_DP.PRIM9.ram) port(s) with
+   READ_FIRST mode has certain restrictions. Make sure that there is no address
+   collision. A read/write on one port and a write operation from the other port
+   at the same address is not allowed.RAMB8BWER in all configurations, A12-6
+   including A4 cannot be the same. Violating this restriction may result in the
+   incorrect operation of the BRAM.
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+
+Section 3 - Informational
+-------------------------
+INFO:Map:284 - Map is running with the multi-threading option on. Map currently
+   supports the use of up to 2 processors. Based on the the user options and
+   machine load, Map will use 2 processors during this run.
+INFO:LIT:243 - Logical network sw<7>_IBUF has no load.
+INFO:LIT:395 - The above info message is repeated 60 more times for the
+   following (max. 5 shown):
+   sw<6>_IBUF,
+   sw<5>_IBUF,
+   sw<4>_IBUF,
+   adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0
+   .wr/gwas.wsts/ram_full_i,
+   your_instance_name/douta<7>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+INFO:PhysDesignRules:1861 - To achieve optimal frequency synthesis performance
+   with the CLKFX and CLKFX180 outputs of the DCM comp fm_dcm_mgr/dcm_sp_inst,
+   consult the device Data Sheet.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 323 block(s) removed
+  87 block(s) optimized away
+ 324 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "fft_instance/blk00000583/blk00000585" (XOR) removed.
+Loadless block "fft_instance/blk00000583/blk00000586" (XOR) removed.
+ The signal "fft_instance/blk00000583/sig000010c7" is loadless and has been
+removed.
+  Loadless block "fft_instance/blk00000583/blk0000059d" (MUX) removed.
+   The signal "fft_instance/blk00000583/sig000010c8" is loadless and has been
+removed.
+    Loadless block "fft_instance/blk00000583/blk0000059e" (MUX) removed.
+     The signal "fft_instance/blk00000583/sig000010c9" is loadless and has been
+removed.
+      Loadless block "fft_instance/blk00000583/blk0000059f" (MUX) removed.
+     The signal "fft_instance/sig00000484" is loadless and has been removed.
+      Loadless block "fft_instance/blk0000049f/blk000004e4" (FF) removed.
+       The signal "fft_instance/blk0000049f/sig00000f61" is loadless and has been
+removed.
+        Loadless block "fft_instance/blk0000049f/blk000004a0" (XOR) removed.
+         The signal "fft_instance/blk0000049f/sig00000f64" is loadless and has been
+removed.
+          Loadless block "fft_instance/blk0000049f/blk000004a3" (MUX) removed.
+           The signal "fft_instance/blk0000049f/sig00000f8b" is loadless and has been
+removed.
+            Loadless block "fft_instance/blk0000049f/blk000004ca" (AND) removed.
+         The signal "fft_instance/blk0000049f/sig00000fba" is loadless and has been
+removed.
+          Loadless block "fft_instance/blk0000049f/blk00000510" (ROM) removed.
+           The signal "fft_instance/sig000006a1" is loadless and has been removed.
+            Loadless block "fft_instance/blk000001bd" (FF) removed.
+             The signal "fft_instance/sig0000070f" is loadless and has been removed.
+     The signal "fft_instance/blk00000583/sig000010b1" is loadless and has been
+removed.
+      Loadless block "fft_instance/blk00000583/blk000005db" (ROM) removed.
+       The signal "fft_instance/sig000004e0" is loadless and has been removed.
+        Loadless block "fft_instance/blk0000042d/blk00000472" (FF) removed.
+         The signal "fft_instance/blk0000042d/sig00000ec1" is loadless and has been
+removed.
+          Loadless block "fft_instance/blk0000042d/blk0000042e" (XOR) removed.
+           The signal "fft_instance/blk0000042d/sig00000ec4" is loadless and has been
+removed.
+            Loadless block "fft_instance/blk0000042d/blk00000431" (MUX) removed.
+             The signal "fft_instance/blk0000042d/sig00000eeb" is loadless and has been
+removed.
+              Loadless block "fft_instance/blk0000042d/blk00000458" (AND) removed.
+           The signal "fft_instance/blk0000042d/sig00000f1a" is loadless and has been
+removed.
+            Loadless block "fft_instance/blk0000042d/blk0000049e" (ROM) removed.
+             The signal "fft_instance/sig000006b7" is loadless and has been removed.
+              Loadless block "fft_instance/blk000001d3" (FF) removed.
+               The signal "fft_instance/sig00000725" is loadless and has been removed.
+             The signal "fft_instance/sig0000043e" is loadless and has been removed.
+              Loadless block "fft_instance/blk00000f12" (ROM) removed.
+               The signal "fft_instance/sig0000065f" is loadless and has been removed.
+                Loadless block "fft_instance/blk0000017b" (FF) removed.
+                 The signal "fft_instance/sig000006cd" is loadless and has been removed.
+               The signal "fft_instance/sig00000675" is loadless and has been removed.
+                Loadless block "fft_instance/blk00000191" (FF) removed.
+                 The signal "fft_instance/sig000006e3" is loadless and has been removed.
+   The signal "fft_instance/sig00000483" is loadless and has been removed.
+    Loadless block "fft_instance/blk0000049f/blk000004e3" (FF) removed.
+     The signal "fft_instance/blk0000049f/sig00000f89" is loadless and has been
+removed.
+      Loadless block "fft_instance/blk0000049f/blk000004c8" (XOR) removed.
+       The signal "fft_instance/blk0000049f/sig00000f62" is loadless and has been
+removed.
+        Loadless block "fft_instance/blk0000049f/blk000004a1" (MUX) removed.
+         The signal "fft_instance/blk0000049f/sig00000f8a" is loadless and has been
+removed.
+          Loadless block "fft_instance/blk0000049f/blk000004c9" (AND) removed.
+       The signal "fft_instance/blk0000049f/sig00000fa4" is loadless and has been
+removed.
+        Loadless block "fft_instance/blk0000049f/blk00000507" (ROM) removed.
+   The signal "fft_instance/blk00000583/sig000010de" is loadless and has been
+removed.
+    Loadless block "fft_instance/blk00000583/blk000005dd" (ROM) removed.
+     The signal "fft_instance/sig000004df" is loadless and has been removed.
+      Loadless block "fft_instance/blk0000042d/blk00000471" (FF) removed.
+       The signal "fft_instance/blk0000042d/sig00000ee9" is loadless and has been
+removed.
+        Loadless block "fft_instance/blk0000042d/blk00000456" (XOR) removed.
+         The signal "fft_instance/blk0000042d/sig00000ec2" is loadless and has been
+removed.
+          Loadless block "fft_instance/blk0000042d/blk0000042f" (MUX) removed.
+           The signal "fft_instance/blk0000042d/sig00000eea" is loadless and has been
+removed.
+            Loadless block "fft_instance/blk0000042d/blk00000457" (AND) removed.
+         The signal "fft_instance/blk0000042d/sig00000f04" is loadless and has been
+removed.
+          Loadless block "fft_instance/blk0000042d/blk00000495" (ROM) removed.
+ The signal "fft_instance/blk00000583/sig000010b0" is loadless and has been
+removed.
+  Loadless block "fft_instance/blk00000583/blk000005dc" (ROM) removed.
+Loadless block "fft_instance/blk00000583/blk00000587" (XOR) removed.
+Loadless block "fft_instance/blk00000583/blk00000588" (XOR) removed.
+Loadless block "fft_instance/blk00000583/blk0000059b" (XOR) removed.
+Loadless block "fft_instance/blk00000583/blk0000059c" (XOR) removed.
+Loadless block "fft_instance/blk000005de/blk000005e0" (XOR) removed.
+Loadless block "fft_instance/blk000005de/blk000005e1" (XOR) removed.
+ The signal "fft_instance/blk000005de/sig0000114b" is loadless and has been
+removed.
+  Loadless block "fft_instance/blk000005de/blk000005f8" (MUX) removed.
+   The signal "fft_instance/blk000005de/sig0000114c" is loadless and has been
+removed.
+    Loadless block "fft_instance/blk000005de/blk000005f9" (MUX) removed.
+     The signal "fft_instance/blk000005de/sig0000114d" is loadless and has been
+removed.
+      Loadless block "fft_instance/blk000005de/blk000005fa" (MUX) removed.
+     The signal "fft_instance/sig0000049b" is loadless and has been removed.
+      Loadless block "fft_instance/blk00000511/blk00000556" (FF) removed.
+       The signal "fft_instance/blk00000511/sig00001001" is loadless and has been
+removed.
+        Loadless block "fft_instance/blk00000511/blk00000512" (XOR) removed.
+         The signal "fft_instance/blk00000511/sig00001004" is loadless and has been
+removed.
+          Loadless block "fft_instance/blk00000511/blk00000515" (MUX) removed.
+           The signal "fft_instance/blk00000511/sig0000102b" is loadless and has been
+removed.
+            Loadless block "fft_instance/blk00000511/blk0000053c" (AND) removed.
+         The signal "fft_instance/blk00000511/sig0000105a" is loadless and has been
+removed.
+          Loadless block "fft_instance/blk00000511/blk00000582" (ROM) removed.
+           The signal "fft_instance/sig0000068b" is loadless and has been removed.
+            Loadless block "fft_instance/blk000001e9" (FF) removed.
+             The signal "fft_instance/sig000006f9" is loadless and has been removed.
+     The signal "fft_instance/blk000005de/sig00001135" is loadless and has been
+removed.
+      Loadless block "fft_instance/blk000005de/blk00000636" (ROM) removed.
+       The signal "fft_instance/sig000004f7" is loadless and has been removed.
+        Loadless block "fft_instance/blk000003bb/blk00000400" (FF) removed.
+         The signal "fft_instance/blk000003bb/sig00000e21" is loadless and has been
+removed.
+          Loadless block "fft_instance/blk000003bb/blk000003bc" (XOR) removed.
+           The signal "fft_instance/blk000003bb/sig00000e24" is loadless and has been
+removed.
+            Loadless block "fft_instance/blk000003bb/blk000003bf" (MUX) removed.
+             The signal "fft_instance/blk000003bb/sig00000e4b" is loadless and has been
+removed.
+              Loadless block "fft_instance/blk000003bb/blk000003e6" (AND) removed.
+           The signal "fft_instance/blk000003bb/sig00000e7a" is loadless and has been
+removed.
+            Loadless block "fft_instance/blk000003bb/blk0000042c" (ROM) removed.
+             The signal "fft_instance/sig00000428" is loadless and has been removed.
+              Loadless block "fft_instance/blk00000efc" (ROM) removed.
+               The signal "fft_instance/sig00000649" is loadless and has been removed.
+                Loadless block "fft_instance/blk000001a7" (FF) removed.
+                 The signal "fft_instance/sig0000073b" is loadless and has been removed.
+   The signal "fft_instance/sig0000049a" is loadless and has been removed.
+    Loadless block "fft_instance/blk00000511/blk00000555" (FF) removed.
+     The signal "fft_instance/blk00000511/sig00001029" is loadless and has been
+removed.
+      Loadless block "fft_instance/blk00000511/blk0000053a" (XOR) removed.
+       The signal "fft_instance/blk00000511/sig00001002" is loadless and has been
+removed.
+        Loadless block "fft_instance/blk00000511/blk00000513" (MUX) removed.
+         The signal "fft_instance/blk00000511/sig0000102a" is loadless and has been
+removed.
+          Loadless block "fft_instance/blk00000511/blk0000053b" (AND) removed.
+       The signal "fft_instance/blk00000511/sig00001044" is loadless and has been
+removed.
+        Loadless block "fft_instance/blk00000511/blk00000579" (ROM) removed.
+   The signal "fft_instance/blk000005de/sig00001162" is loadless and has been
+removed.
+    Loadless block "fft_instance/blk000005de/blk00000638" (ROM) removed.
+     The signal "fft_instance/sig000004f6" is loadless and has been removed.
+      Loadless block "fft_instance/blk000003bb/blk000003ff" (FF) removed.
+       The signal "fft_instance/blk000003bb/sig00000e49" is loadless and has been
+removed.
+        Loadless block "fft_instance/blk000003bb/blk000003e4" (XOR) removed.
+         The signal "fft_instance/blk000003bb/sig00000e22" is loadless and has been
+removed.
+          Loadless block "fft_instance/blk000003bb/blk000003bd" (MUX) removed.
+           The signal "fft_instance/blk000003bb/sig00000e4a" is loadless and has been
+removed.
+            Loadless block "fft_instance/blk000003bb/blk000003e5" (AND) removed.
+         The signal "fft_instance/blk000003bb/sig00000e64" is loadless and has been
+removed.
+          Loadless block "fft_instance/blk000003bb/blk00000423" (ROM) removed.
+ The signal "fft_instance/blk000005de/sig00001134" is loadless and has been
+removed.
+  Loadless block "fft_instance/blk000005de/blk00000637" (ROM) removed.
+Loadless block "fft_instance/blk000005de/blk000005e2" (XOR) removed.
+Loadless block "fft_instance/blk000005de/blk000005e3" (XOR) removed.
+Loadless block "fft_instance/blk000005de/blk000005f6" (XOR) removed.
+Loadless block "fft_instance/blk000005de/blk000005f7" (XOR) removed.
+Loadless block "fft_instance/blk00000639/blk0000063b" (XOR) removed.
+Loadless block "fft_instance/blk00000639/blk0000063c" (XOR) removed.
+ The signal "fft_instance/blk00000639/sig000011cf" is loadless and has been
+removed.
+  Loadless block "fft_instance/blk00000639/blk00000653" (MUX) removed.
+   The signal "fft_instance/blk00000639/sig000011d0" is loadless and has been
+removed.
+    Loadless block "fft_instance/blk00000639/blk00000654" (MUX) removed.
+     The signal "fft_instance/blk00000639/sig000011d1" is loadless and has been
+removed.
+      Loadless block "fft_instance/blk00000639/blk00000655" (MUX) removed.
+     The signal "fft_instance/sig00000456" is loadless and has been removed.
+      Loadless block "fft_instance/blk00000301/blk00000331" (FF) removed.
+       The signal "fft_instance/blk00000301/sig00000d0c" is loadless and has been
+removed.
+        Loadless block "fft_instance/blk00000301/blk00000303" (XOR) removed.
+         The signal "fft_instance/blk00000301/sig00000d23" is loadless and has been
+removed.
+          Loadless block "fft_instance/blk00000301/blk0000031a" (MUX) removed.
+         The signal "fft_instance/blk00000301/sig00000d4f" is loadless and has been
+removed.
+          Loadless block "fft_instance/blk00000301/blk0000035d" (ROM) removed.
+     The signal "fft_instance/blk00000639/sig000011b9" is loadless and has been
+removed.
+      Loadless block "fft_instance/blk00000639/blk00000691" (ROM) removed.
+       The signal "fft_instance/sig000004b2" is loadless and has been removed.
+        Loadless block "fft_instance/blk000002a4/blk000002d4" (FF) removed.
+         The signal "fft_instance/blk000002a4/sig00000c81" is loadless and has been
+removed.
+          Loadless block "fft_instance/blk000002a4/blk000002a6" (XOR) removed.
+           The signal "fft_instance/blk000002a4/sig00000c98" is loadless and has been
+removed.
+            Loadless block "fft_instance/blk000002a4/blk000002bd" (MUX) removed.
+           The signal "fft_instance/blk000002a4/sig00000cc4" is loadless and has been
+removed.
+            Loadless block "fft_instance/blk000002a4/blk00000300" (ROM) removed.
+   The signal "fft_instance/sig00000455" is loadless and has been removed.
+    Loadless block "fft_instance/blk00000301/blk00000330" (FF) removed.
+     The signal "fft_instance/blk00000301/sig00000d21" is loadless and has been
+removed.
+      Loadless block "fft_instance/blk00000301/blk00000318" (XOR) removed.
+       The signal "fft_instance/blk00000301/sig00000d22" is loadless and has been
+removed.
+        Loadless block "fft_instance/blk00000301/blk00000319" (MUX) removed.
+       The signal "fft_instance/blk00000301/sig00000d39" is loadless and has been
+removed.
+        Loadless block "fft_instance/blk00000301/blk00000354" (ROM) removed.
+   The signal "fft_instance/blk00000639/sig000011e6" is loadless and has been
+removed.
+    Loadless block "fft_instance/blk00000639/blk00000693" (ROM) removed.
+     The signal "fft_instance/sig000004b1" is loadless and has been removed.
+      Loadless block "fft_instance/blk000002a4/blk000002d3" (FF) removed.
+       The signal "fft_instance/blk000002a4/sig00000c96" is loadless and has been
+removed.
+        Loadless block "fft_instance/blk000002a4/blk000002bb" (XOR) removed.
+         The signal "fft_instance/blk000002a4/sig00000c97" is loadless and has been
+removed.
+          Loadless block "fft_instance/blk000002a4/blk000002bc" (MUX) removed.
+         The signal "fft_instance/blk000002a4/sig00000cae" is loadless and has been
+removed.
+          Loadless block "fft_instance/blk000002a4/blk000002f7" (ROM) removed.
+ The signal "fft_instance/blk00000639/sig000011b8" is loadless and has been
+removed.
+  Loadless block "fft_instance/blk00000639/blk00000692" (ROM) removed.
+Loadless block "fft_instance/blk00000639/blk0000063d" (XOR) removed.
+Loadless block "fft_instance/blk00000639/blk0000063e" (XOR) removed.
+Loadless block "fft_instance/blk00000639/blk00000651" (XOR) removed.
+Loadless block "fft_instance/blk00000639/blk00000652" (XOR) removed.
+Loadless block "fft_instance/blk00000694/blk00000696" (XOR) removed.
+Loadless block "fft_instance/blk00000694/blk00000697" (XOR) removed.
+ The signal "fft_instance/blk00000694/sig00001253" is loadless and has been
+removed.
+  Loadless block "fft_instance/blk00000694/blk000006ae" (MUX) removed.
+   The signal "fft_instance/blk00000694/sig00001254" is loadless and has been
+removed.
+    Loadless block "fft_instance/blk00000694/blk000006af" (MUX) removed.
+     The signal "fft_instance/blk00000694/sig00001255" is loadless and has been
+removed.
+      Loadless block "fft_instance/blk00000694/blk000006b0" (MUX) removed.
+     The signal "fft_instance/sig0000046d" is loadless and has been removed.
+      Loadless block "fft_instance/blk0000035e/blk0000038e" (FF) removed.
+       The signal "fft_instance/blk0000035e/sig00000d97" is loadless and has been
+removed.
+        Loadless block "fft_instance/blk0000035e/blk00000360" (XOR) removed.
+         The signal "fft_instance/blk0000035e/sig00000dae" is loadless and has been
+removed.
+          Loadless block "fft_instance/blk0000035e/blk00000377" (MUX) removed.
+         The signal "fft_instance/blk0000035e/sig00000dda" is loadless and has been
+removed.
+          Loadless block "fft_instance/blk0000035e/blk000003ba" (ROM) removed.
+     The signal "fft_instance/blk00000694/sig0000123d" is loadless and has been
+removed.
+      Loadless block "fft_instance/blk00000694/blk000006ec" (ROM) removed.
+       The signal "fft_instance/sig000004c9" is loadless and has been removed.
+        Loadless block "fft_instance/blk00000247/blk00000277" (FF) removed.
+         The signal "fft_instance/blk00000247/sig00000bf6" is loadless and has been
+removed.
+          Loadless block "fft_instance/blk00000247/blk00000249" (XOR) removed.
+           The signal "fft_instance/blk00000247/sig00000c0d" is loadless and has been
+removed.
+            Loadless block "fft_instance/blk00000247/blk00000260" (MUX) removed.
+           The signal "fft_instance/blk00000247/sig00000c39" is loadless and has been
+removed.
+            Loadless block "fft_instance/blk00000247/blk000002a3" (ROM) removed.
+   The signal "fft_instance/sig0000046c" is loadless and has been removed.
+    Loadless block "fft_instance/blk0000035e/blk0000038d" (FF) removed.
+     The signal "fft_instance/blk0000035e/sig00000dac" is loadless and has been
+removed.
+      Loadless block "fft_instance/blk0000035e/blk00000375" (XOR) removed.
+       The signal "fft_instance/blk0000035e/sig00000dad" is loadless and has been
+removed.
+        Loadless block "fft_instance/blk0000035e/blk00000376" (MUX) removed.
+       The signal "fft_instance/blk0000035e/sig00000dc4" is loadless and has been
+removed.
+        Loadless block "fft_instance/blk0000035e/blk000003b1" (ROM) removed.
+   The signal "fft_instance/blk00000694/sig0000126a" is loadless and has been
+removed.
+    Loadless block "fft_instance/blk00000694/blk000006ee" (ROM) removed.
+     The signal "fft_instance/sig000004c8" is loadless and has been removed.
+      Loadless block "fft_instance/blk00000247/blk00000276" (FF) removed.
+       The signal "fft_instance/blk00000247/sig00000c0b" is loadless and has been
+removed.
+        Loadless block "fft_instance/blk00000247/blk0000025e" (XOR) removed.
+         The signal "fft_instance/blk00000247/sig00000c0c" is loadless and has been
+removed.
+          Loadless block "fft_instance/blk00000247/blk0000025f" (MUX) removed.
+         The signal "fft_instance/blk00000247/sig00000c23" is loadless and has been
+removed.
+          Loadless block "fft_instance/blk00000247/blk0000029a" (ROM) removed.
+ The signal "fft_instance/blk00000694/sig0000123c" is loadless and has been
+removed.
+  Loadless block "fft_instance/blk00000694/blk000006ed" (ROM) removed.
+Loadless block "fft_instance/blk00000694/blk00000698" (XOR) removed.
+Loadless block "fft_instance/blk00000694/blk00000699" (XOR) removed.
+Loadless block "fft_instance/blk00000694/blk000006ac" (XOR) removed.
+Loadless block "fft_instance/blk00000694/blk000006ad" (XOR) removed.
+Loadless block "fft_instance/blk000006ef/blk00000703" (XOR) removed.
+Loadless block "fft_instance/blk000006ef/blk00000704" (XOR) removed.
+ The signal "fft_instance/blk000006ef/sig000012d7" is loadless and has been
+removed.
+  Loadless block "fft_instance/blk000006ef/blk0000071b" (MUX) removed.
+   The signal "fft_instance/blk000006ef/sig000012d8" is loadless and has been
+removed.
+    Loadless block "fft_instance/blk000006ef/blk0000071c" (MUX) removed.
+     The signal "fft_instance/blk000006ef/sig000012d9" is loadless and has been
+removed.
+      Loadless block "fft_instance/blk000006ef/blk0000071d" (MUX) removed.
+     The signal "fft_instance/blk000006ef/sig000012c1" is loadless and has been
+removed.
+      Loadless block "fft_instance/blk000006ef/blk00000747" (ROM) removed.
+   The signal "fft_instance/blk000006ef/sig000012ee" is loadless and has been
+removed.
+    Loadless block "fft_instance/blk000006ef/blk00000749" (ROM) removed.
+ The signal "fft_instance/blk000006ef/sig000012c0" is loadless and has been
+removed.
+  Loadless block "fft_instance/blk000006ef/blk00000748" (ROM) removed.
+Loadless block "fft_instance/blk000006ef/blk00000705" (XOR) removed.
+Loadless block "fft_instance/blk000006ef/blk00000706" (XOR) removed.
+Loadless block "fft_instance/blk000006ef/blk00000719" (XOR) removed.
+Loadless block "fft_instance/blk000006ef/blk0000071a" (XOR) removed.
+Loadless block "fft_instance/blk0000074a/blk0000075e" (XOR) removed.
+Loadless block "fft_instance/blk0000074a/blk0000075f" (XOR) removed.
+ The signal "fft_instance/blk0000074a/sig0000135b" is loadless and has been
+removed.
+  Loadless block "fft_instance/blk0000074a/blk00000776" (MUX) removed.
+   The signal "fft_instance/blk0000074a/sig0000135c" is loadless and has been
+removed.
+    Loadless block "fft_instance/blk0000074a/blk00000777" (MUX) removed.
+     The signal "fft_instance/blk0000074a/sig0000135d" is loadless and has been
+removed.
+      Loadless block "fft_instance/blk0000074a/blk00000778" (MUX) removed.
+     The signal "fft_instance/blk0000074a/sig00001345" is loadless and has been
+removed.
+      Loadless block "fft_instance/blk0000074a/blk000007a2" (ROM) removed.
+   The signal "fft_instance/blk0000074a/sig00001372" is loadless and has been
+removed.
+    Loadless block "fft_instance/blk0000074a/blk000007a4" (ROM) removed.
+ The signal "fft_instance/blk0000074a/sig00001344" is loadless and has been
+removed.
+  Loadless block "fft_instance/blk0000074a/blk000007a3" (ROM) removed.
+Loadless block "fft_instance/blk0000074a/blk00000760" (XOR) removed.
+Loadless block "fft_instance/blk0000074a/blk00000761" (XOR) removed.
+Loadless block "fft_instance/blk0000074a/blk00000774" (XOR) removed.
+Loadless block "fft_instance/blk0000074a/blk00000775" (XOR) removed.
+Loadless block "fft_instance/blk000007a5/blk000007b9" (XOR) removed.
+Loadless block "fft_instance/blk000007a5/blk000007ba" (XOR) removed.
+ The signal "fft_instance/blk000007a5/sig000013df" is loadless and has been
+removed.
+  Loadless block "fft_instance/blk000007a5/blk000007d1" (MUX) removed.
+   The signal "fft_instance/blk000007a5/sig000013e0" is loadless and has been
+removed.
+    Loadless block "fft_instance/blk000007a5/blk000007d2" (MUX) removed.
+     The signal "fft_instance/blk000007a5/sig000013e1" is loadless and has been
+removed.
+      Loadless block "fft_instance/blk000007a5/blk000007d3" (MUX) removed.
+     The signal "fft_instance/blk000007a5/sig000013c9" is loadless and has been
+removed.
+      Loadless block "fft_instance/blk000007a5/blk000007fd" (ROM) removed.
+   The signal "fft_instance/blk000007a5/sig000013f6" is loadless and has been
+removed.
+    Loadless block "fft_instance/blk000007a5/blk000007ff" (ROM) removed.
+ The signal "fft_instance/blk000007a5/sig000013c8" is loadless and has been
+removed.
+  Loadless block "fft_instance/blk000007a5/blk000007fe" (ROM) removed.
+Loadless block "fft_instance/blk000007a5/blk000007bb" (XOR) removed.
+Loadless block "fft_instance/blk000007a5/blk000007bc" (XOR) removed.
+Loadless block "fft_instance/blk000007a5/blk000007cf" (XOR) removed.
+Loadless block "fft_instance/blk000007a5/blk000007d0" (XOR) removed.
+Loadless block "fft_instance/blk00000800/blk00000814" (XOR) removed.
+Loadless block "fft_instance/blk00000800/blk00000815" (XOR) removed.
+ The signal "fft_instance/blk00000800/sig00001463" is loadless and has been
+removed.
+  Loadless block "fft_instance/blk00000800/blk0000082c" (MUX) removed.
+   The signal "fft_instance/blk00000800/sig00001464" is loadless and has been
+removed.
+    Loadless block "fft_instance/blk00000800/blk0000082d" (MUX) removed.
+     The signal "fft_instance/blk00000800/sig00001465" is loadless and has been
+removed.
+      Loadless block "fft_instance/blk00000800/blk0000082e" (MUX) removed.
+     The signal "fft_instance/blk00000800/sig0000144d" is loadless and has been
+removed.
+      Loadless block "fft_instance/blk00000800/blk00000858" (ROM) removed.
+   The signal "fft_instance/blk00000800/sig0000147a" is loadless and has been
+removed.
+    Loadless block "fft_instance/blk00000800/blk0000085a" (ROM) removed.
+ The signal "fft_instance/blk00000800/sig0000144c" is loadless and has been
+removed.
+  Loadless block "fft_instance/blk00000800/blk00000859" (ROM) removed.
+Loadless block "fft_instance/blk00000800/blk00000816" (XOR) removed.
+Loadless block "fft_instance/blk00000800/blk00000817" (XOR) removed.
+Loadless block "fft_instance/blk00000800/blk0000082a" (XOR) removed.
+Loadless block "fft_instance/blk00000800/blk0000082b" (XOR) removed.
+Loadless block "fft_instance/blk00000d6f" (ROM) removed.
+Loadless block "fft_instance/blk00000d71" (ROM) removed.
+Loadless block "fft_instance/blk00000d73" (ROM) removed.
+Loadless block "fft_instance/blk00000d75" (ROM) removed.
+Loadless block "fft_instance/blk00000d79" (ROM) removed.
+Loadless block "fft_instance/blk00000d7b" (ROM) removed.
+Loadless block "fft_instance/blk00000d7d" (ROM) removed.
+Loadless block "fft_instance/blk00000d7f" (ROM) removed.
+Loadless block "fft_instance/blk00000dc9" (ROM) removed.
+Loadless block "fft_instance/blk00000dcb" (ROM) removed.
+Loadless block "fft_instance/blk00000dcd" (ROM) removed.
+Loadless block "fft_instance/blk00000dcf" (ROM) removed.
+Loadless block "fft_instance/blk00000de1" (ROM) removed.
+Loadless block "fft_instance/blk00000de3" (ROM) removed.
+Loadless block "fft_instance/blk00000de5" (ROM) removed.
+Loadless block "fft_instance/blk00000de7" (ROM) removed.
+Loadless block "fft_instance/blk00000df2" (ROM) removed.
+Loadless block "fft_instance/blk00000df3" (ROM) removed.
+The signal
+"adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.w
+r/gwas.wsts/ram_full_i" is sourceless and has been removed.
+The signal "your_instance_name/douta<7>" is sourceless and has been removed.
+The signal "your_instance_name/douta<6>" is sourceless and has been removed.
+The signal "your_instance_name/douta<5>" is sourceless and has been removed.
+The signal "your_instance_name/douta<4>" is sourceless and has been removed.
+The signal "your_instance_name/douta<3>" is sourceless and has been removed.
+The signal "your_instance_name/douta<2>" is sourceless and has been removed.
+The signal "your_instance_name/douta<1>" is sourceless and has been removed.
+The signal "your_instance_name/douta<0>" is sourceless and has been removed.
+The signal
+"fft_instance/U0/i_synth/non_floating_point.arch_b.xfft_inst/control/control/don
+e_pr_d_1" is sourceless and has been removed.
+The signal "fft_instance/sig000009da" is sourceless and has been removed.
+The signal "fft_instance/sig000009db" is sourceless and has been removed.
+The signal "fft_instance/sig000009dc" is sourceless and has been removed.
+The signal "fft_instance/sig000009dd" is sourceless and has been removed.
+The signal "fft_instance/sig000009de" is sourceless and has been removed.
+The signal "fft_instance/sig000009df" is sourceless and has been removed.
+The signal "fft_instance/sig000009e0" is sourceless and has been removed.
+The signal "fft_instance/sig00000a5b" is sourceless and has been removed.
+The signal "fft_instance/sig00000b9d" is sourceless and has been removed.
+The signal
+"Inst_test_signal_gen/sine_gen_inst/U0/i_synth/I_SINCOS.i_rom/asyn_sin_RAM_op<7>
+" is sourceless and has been removed.
+The signal
+"Inst_test_signal_gen/sine_gen_inst/U0/i_synth/I_SINCOS.i_rom/asyn_sin_RAM_op<6>
+" is sourceless and has been removed.
+The signal
+"Inst_test_signal_gen/sine_gen_inst/U0/i_synth/I_SINCOS.i_rom/asyn_sin_RAM_op<5>
+" is sourceless and has been removed.
+The signal
+"Inst_test_signal_gen/sine_gen_inst/U0/i_synth/I_SINCOS.i_rom/asyn_sin_RAM_op<4>
+" is sourceless and has been removed.
+The signal
+"Inst_test_signal_gen/sine_gen_inst/U0/i_synth/I_SINCOS.i_rom/asyn_sin_RAM_op<3>
+" is sourceless and has been removed.
+The signal
+"Inst_test_signal_gen/sine_gen_inst/U0/i_synth/I_SINCOS.i_rom/asyn_sin_RAM_op<2>
+" is sourceless and has been removed.
+The signal
+"Inst_test_signal_gen/sine_gen_inst/U0/i_synth/I_SINCOS.i_rom/asyn_sin_RAM_op<1>
+" is sourceless and has been removed.
+The signal
+"Inst_test_signal_gen/sine_gen_inst/U0/i_synth/I_SINCOS.i_rom/asyn_sin_RAM_op<0>
+" is sourceless and has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000001" is sourceless and
+has been removed.
+ Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000023" (FF) removed.
+ Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000025" (FF) removed.
+ Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000027" (FF) removed.
+ Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000029" (FF) removed.
+ Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk0000002b" (FF) removed.
+ Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk0000002d" (FF) removed.
+ Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk0000002f" (FF) removed.
+ Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000031" (FF) removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000002" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000041" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000040" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000003f" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000003e" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000003d" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000003c" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000003b" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000003a" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000039" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000038" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000037" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000036" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000035" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000034" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000033" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000032" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000031" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000030" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000002f" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000002e" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000002d" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000002c" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000002b" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000002a" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000029" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000028" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000027" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000026" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000025" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000024" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000023" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000022" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000021" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000020" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000001f" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000001e" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000001d" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000001c" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000001b" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000001a" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000019" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000018" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000017" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000016" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000015" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000014" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000013" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000012" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000011" is sourceless and
+has been removed.
+ Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000005/blk00000016"
+(ROM) removed.
+  The signal "Inst_test_signal_gen/sine_gen_inst/blk00000005/sig0000005e" is
+sourceless and has been removed.
+   Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000005/blk00000007"
+(FF) removed.
+    The signal "Inst_test_signal_gen/sine_gen_inst/sig0000000a" is sourceless and
+has been removed.
+     Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000005/blk00000010"
+(ROM) removed.
+      The signal "Inst_test_signal_gen/sine_gen_inst/blk00000005/sig00000062" is
+sourceless and has been removed.
+       Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000005/blk0000000a"
+(FF) removed.
+        The signal "Inst_test_signal_gen/sine_gen_inst/sig0000000d" is sourceless and
+has been removed.
+         Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000005/blk00000018"
+(ROM) removed.
+          The signal "Inst_test_signal_gen/sine_gen_inst/blk00000005/sig0000005f" is
+sourceless and has been removed.
+           Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000005/blk00000006"
+(FF) removed.
+            The signal "Inst_test_signal_gen/sine_gen_inst/sig00000009" is sourceless and
+has been removed.
+             Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000005/blk00000013"
+(ROM) removed.
+              The signal "Inst_test_signal_gen/sine_gen_inst/blk00000005/sig00000063" is
+sourceless and has been removed.
+               Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000005/blk00000009"
+(FF) removed.
+                The signal "Inst_test_signal_gen/sine_gen_inst/sig0000000c" is sourceless and
+has been removed.
+                 Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000005/blk00000011"
+(ROM) removed.
+                  The signal "Inst_test_signal_gen/sine_gen_inst/blk00000005/sig00000060" is
+sourceless and has been removed.
+                   Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000005/blk0000000c"
+(FF) removed.
+                    The signal "Inst_test_signal_gen/sine_gen_inst/sig0000000f" is sourceless and
+has been removed.
+                     Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000005/blk00000014"
+(ROM) removed.
+                      The signal "Inst_test_signal_gen/sine_gen_inst/blk00000005/sig0000005d" is
+sourceless and has been removed.
+                       Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000005/blk00000008"
+(FF) removed.
+                        The signal "Inst_test_signal_gen/sine_gen_inst/sig0000000b" is sourceless and
+has been removed.
+                         Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000005/blk00000012"
+(ROM) removed.
+                          The signal "Inst_test_signal_gen/sine_gen_inst/blk00000005/sig00000061" is
+sourceless and has been removed.
+                           Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000005/blk0000000b"
+(FF) removed.
+                            The signal "Inst_test_signal_gen/sine_gen_inst/sig0000000e" is sourceless and
+has been removed.
+                             Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000005/blk00000017"
+(ROM) removed.
+                              The signal "Inst_test_signal_gen/sine_gen_inst/blk00000005/sig00000065" is
+sourceless and has been removed.
+                               Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000005/blk0000000e"
+(FF) removed.
+                     Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000005/blk00000015"
+(ROM) removed.
+                      The signal "Inst_test_signal_gen/sine_gen_inst/blk00000005/sig00000064" is
+sourceless and has been removed.
+                       Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000005/blk0000000f"
+(FF) removed.
+                        The signal "Inst_test_signal_gen/sine_gen_inst/blk00000005/sig00000053" is
+sourceless and has been removed.
+         Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000005/blk00000019"
+(ROM) removed.
+          The signal "Inst_test_signal_gen/sine_gen_inst/blk00000005/sig00000066" is
+sourceless and has been removed.
+           Sourceless block "Inst_test_signal_gen/sine_gen_inst/blk00000005/blk0000000d"
+(FF) removed.
+            The signal "Inst_test_signal_gen/sine_gen_inst/sig00000010" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000008" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000007" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000006" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000005" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000004" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000003" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000049" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000048" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000047" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000046" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000045" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000044" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000043" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000042" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000004a" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000004b" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000004c" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000004d" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000004e" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig0000004f" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000050" is sourceless and
+has been removed.
+The signal "Inst_test_signal_gen/sine_gen_inst/sig00000051" is sourceless and
+has been removed.
+The signal "Inst_mag/your_instance_name/blk00000020/sig000000ac" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk00000020/sig000000ae" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk00000020/sig000000be" is sourceless
+and has been removed.
+ Sourceless block "Inst_mag/your_instance_name/blk00000020/blk00000024" (XOR)
+removed.
+The signal "Inst_mag/your_instance_name/blk0000003b/sig000000d4" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk0000003b/sig000000d6" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk0000003b/sig000000e8" is sourceless
+and has been removed.
+ Sourceless block "Inst_mag/your_instance_name/blk0000003b/blk0000003f" (XOR)
+removed.
+The signal "Inst_mag/your_instance_name/blk00000059/sig000000fb" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk00000059/sig000000fd" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk00000059/sig0000010b" is sourceless
+and has been removed.
+ Sourceless block "Inst_mag/your_instance_name/blk00000059/blk0000005d" (XOR)
+removed.
+The signal "Inst_mag/your_instance_name/blk00000071/sig00000122" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk00000071/sig00000124" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk00000071/sig00000138" is sourceless
+and has been removed.
+ Sourceless block "Inst_mag/your_instance_name/blk00000071/blk00000075" (XOR)
+removed.
+The signal "Inst_mag/your_instance_name/blk0000009a/sig00000149" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk0000009a/sig0000014b" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk0000009a/sig00000156" is sourceless
+and has been removed.
+ Sourceless block "Inst_mag/your_instance_name/blk0000009a/blk0000009e" (XOR)
+removed.
+The signal "Inst_mag/your_instance_name/blk000000ae/sig0000016e" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk000000ae/sig00000170" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk000000ae/sig00000186" is sourceless
+and has been removed.
+ Sourceless block "Inst_mag/your_instance_name/blk000000ae/blk000000b2" (XOR)
+removed.
+The signal "Inst_mag/your_instance_name/blk000000d2/sig000001a5" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk000000d2/sig000001a7" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk000000d2/sig000001a8" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk000000d2/sig000001a9" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk000000d2/sig000001aa" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk000000d2/sig000001ab" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk000000d2/sig000001ac" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk000000d2/sig000001ad" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk000000d2/sig000001ae" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk000000d2/sig000001af" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk000000d2/sig000001b0" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk000000d2/sig000001b1" is sourceless
+and has been removed.
+The signal "Inst_mag/your_instance_name/blk000000d2/sig000001bf" is sourceless
+and has been removed.
+ Sourceless block "Inst_mag/your_instance_name/blk000000d2/blk000000d6" (XOR)
+removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "Inst_uart_comms/phase_inc<13>" is unused and has been removed.
+ Unused block "Inst_uart_comms/phase_inc_13" (FF) removed.
+  The signal "Inst_uart_comms/_n0723_inv" is unused and has been removed.
+   Unused block "Inst_uart_comms/_n0723_inv1" (ROM) removed.
+The signal "Inst_uart_comms/phase_inc<12>" is unused and has been removed.
+ Unused block "Inst_uart_comms/phase_inc_12" (FF) removed.
+The signal "Inst_uart_comms/phase_inc<11>" is unused and has been removed.
+ Unused block "Inst_uart_comms/phase_inc_11" (FF) removed.
+The signal "Inst_uart_comms/phase_inc<10>" is unused and has been removed.
+ Unused block "Inst_uart_comms/phase_inc_10" (FF) removed.
+The signal "Inst_uart_comms/phase_inc<9>" is unused and has been removed.
+ Unused block "Inst_uart_comms/phase_inc_9" (FF) removed.
+The signal "Inst_uart_comms/phase_inc<8>" is unused and has been removed.
+ Unused block "Inst_uart_comms/phase_inc_8" (FF) removed.
+The signal "Inst_uart_comms/phase_inc<7>" is unused and has been removed.
+ Unused block "Inst_uart_comms/phase_inc_7" (FF) removed.
+The signal "Inst_uart_comms/phase_inc<6>" is unused and has been removed.
+ Unused block "Inst_uart_comms/phase_inc_6" (FF) removed.
+The signal "Inst_uart_comms/phase_inc<5>" is unused and has been removed.
+ Unused block "Inst_uart_comms/phase_inc_5" (FF) removed.
+The signal "Inst_uart_comms/phase_inc<4>" is unused and has been removed.
+ Unused block "Inst_uart_comms/phase_inc_4" (FF) removed.
+The signal "Inst_uart_comms/phase_inc<3>" is unused and has been removed.
+ Unused block "Inst_uart_comms/phase_inc_3" (FF) removed.
+The signal "Inst_uart_comms/phase_inc<2>" is unused and has been removed.
+ Unused block "Inst_uart_comms/phase_inc_2" (FF) removed.
+The signal "Inst_uart_comms/phase_inc<1>" is unused and has been removed.
+ Unused block "Inst_uart_comms/phase_inc_1" (FF) removed.
+The signal "Inst_uart_comms/phase_inc<0>" is unused and has been removed.
+ Unused block "Inst_uart_comms/phase_inc_0" (FF) removed.
+The signal
+"Inst_test_signal_gen/Mcompar_phase_inc[13]_last_val[13]_not_equal_1_o_lut<4>"
+is unused and has been removed.
+ Unused block
+"Inst_test_signal_gen/Mcompar_phase_inc[13]_last_val[13]_not_equal_1_o_lut<4>"
+(ROM) removed.
+  The signal "Inst_test_signal_gen/last_val<12>" is unused and has been removed.
+   Unused block "Inst_test_signal_gen/last_val_12" (FF) removed.
+  The signal "Inst_test_signal_gen/last_val<13>" is unused and has been removed.
+   Unused block "Inst_test_signal_gen/last_val_13" (FF) removed.
+The signal
+"Inst_test_signal_gen/Mcompar_phase_inc[13]_last_val[13]_not_equal_1_o_cy<3>" is
+unused and has been removed.
+ Unused block
+"Inst_test_signal_gen/Mcompar_phase_inc[13]_last_val[13]_not_equal_1_o_cy<3>"
+(MUX) removed.
+  The signal
+"Inst_test_signal_gen/Mcompar_phase_inc[13]_last_val[13]_not_equal_1_o_cy<2>" is
+unused and has been removed.
+   Unused block
+"Inst_test_signal_gen/Mcompar_phase_inc[13]_last_val[13]_not_equal_1_o_cy<2>"
+(MUX) removed.
+    The signal
+"Inst_test_signal_gen/Mcompar_phase_inc[13]_last_val[13]_not_equal_1_o_cy<1>" is
+unused and has been removed.
+     Unused block
+"Inst_test_signal_gen/Mcompar_phase_inc[13]_last_val[13]_not_equal_1_o_cy<1>"
+(MUX) removed.
+      The signal
+"Inst_test_signal_gen/Mcompar_phase_inc[13]_last_val[13]_not_equal_1_o_cy<0>" is
+unused and has been removed.
+       Unused block
+"Inst_test_signal_gen/Mcompar_phase_inc[13]_last_val[13]_not_equal_1_o_cy<0>"
+(MUX) removed.
+        The signal
+"Inst_test_signal_gen/Mcompar_phase_inc[13]_last_val[13]_not_equal_1_o_lut<0>"
+is unused and has been removed.
+         Unused block
+"Inst_test_signal_gen/Mcompar_phase_inc[13]_last_val[13]_not_equal_1_o_lut<0>"
+(ROM) removed.
+          The signal "Inst_test_signal_gen/last_val<0>" is unused and has been removed.
+           Unused block "Inst_test_signal_gen/last_val_0" (FF) removed.
+          The signal "Inst_test_signal_gen/last_val<1>" is unused and has been removed.
+           Unused block "Inst_test_signal_gen/last_val_1" (FF) removed.
+          The signal "Inst_test_signal_gen/last_val<2>" is unused and has been removed.
+           Unused block "Inst_test_signal_gen/last_val_2" (FF) removed.
+      The signal
+"Inst_test_signal_gen/Mcompar_phase_inc[13]_last_val[13]_not_equal_1_o_lut<1>"
+is unused and has been removed.
+       Unused block
+"Inst_test_signal_gen/Mcompar_phase_inc[13]_last_val[13]_not_equal_1_o_lut<1>"
+(ROM) removed.
+        The signal "Inst_test_signal_gen/last_val<3>" is unused and has been removed.
+         Unused block "Inst_test_signal_gen/last_val_3" (FF) removed.
+        The signal "Inst_test_signal_gen/last_val<4>" is unused and has been removed.
+         Unused block "Inst_test_signal_gen/last_val_4" (FF) removed.
+        The signal "Inst_test_signal_gen/last_val<5>" is unused and has been removed.
+         Unused block "Inst_test_signal_gen/last_val_5" (FF) removed.
+    The signal
+"Inst_test_signal_gen/Mcompar_phase_inc[13]_last_val[13]_not_equal_1_o_lut<2>"
+is unused and has been removed.
+     Unused block
+"Inst_test_signal_gen/Mcompar_phase_inc[13]_last_val[13]_not_equal_1_o_lut<2>"
+(ROM) removed.
+      The signal "Inst_test_signal_gen/last_val<6>" is unused and has been removed.
+       Unused block "Inst_test_signal_gen/last_val_6" (FF) removed.
+      The signal "Inst_test_signal_gen/last_val<7>" is unused and has been removed.
+       Unused block "Inst_test_signal_gen/last_val_7" (FF) removed.
+      The signal "Inst_test_signal_gen/last_val<8>" is unused and has been removed.
+       Unused block "Inst_test_signal_gen/last_val_8" (FF) removed.
+  The signal
+"Inst_test_signal_gen/Mcompar_phase_inc[13]_last_val[13]_not_equal_1_o_lut<3>"
+is unused and has been removed.
+   Unused block
+"Inst_test_signal_gen/Mcompar_phase_inc[13]_last_val[13]_not_equal_1_o_lut<3>"
+(ROM) removed.
+    The signal "Inst_test_signal_gen/last_val<9>" is unused and has been removed.
+     Unused block "Inst_test_signal_gen/last_val_9" (FF) removed.
+    The signal "Inst_test_signal_gen/last_val<10>" is unused and has been removed.
+     Unused block "Inst_test_signal_gen/last_val_10" (FF) removed.
+    The signal "Inst_test_signal_gen/last_val<11>" is unused and has been removed.
+     Unused block "Inst_test_signal_gen/last_val_11" (FF) removed.
+The signal "Inst_test_signal_gen/we" is unused and has been removed.
+ Unused block "Inst_test_signal_gen/we" (FF) removed.
+  The signal "Inst_test_signal_gen/phase_inc[13]_last_val[13]_not_equal_1_o" is
+unused and has been removed.
+   Unused block
+"Inst_test_signal_gen/Mcompar_phase_inc[13]_last_val[13]_not_equal_1_o_cy<4>"
+(MUX) removed.
+Unused block "Inst_mag/your_instance_name/blk00000020/blk00000026" (XOR)
+removed.
+Unused block "Inst_mag/your_instance_name/blk00000020/blk0000002c" (MUX)
+removed.
+Unused block "Inst_mag/your_instance_name/blk0000003b/blk00000041" (XOR)
+removed.
+Unused block "Inst_mag/your_instance_name/blk0000003b/blk00000048" (MUX)
+removed.
+Unused block "Inst_mag/your_instance_name/blk00000059/blk0000005f" (XOR)
+removed.
+Unused block "Inst_mag/your_instance_name/blk00000059/blk00000064" (MUX)
+removed.
+Unused block "Inst_mag/your_instance_name/blk00000071/blk00000077" (XOR)
+removed.
+Unused block "Inst_mag/your_instance_name/blk00000071/blk0000007f" (MUX)
+removed.
+Unused block "Inst_mag/your_instance_name/blk0000009a/blk000000a0" (XOR)
+removed.
+Unused block "Inst_mag/your_instance_name/blk0000009a/blk000000a4" (MUX)
+removed.
+Unused block "Inst_mag/your_instance_name/blk000000ae/blk000000b4" (XOR)
+removed.
+Unused block "Inst_mag/your_instance_name/blk000000ae/blk000000bd" (MUX)
+removed.
+Unused block "Inst_mag/your_instance_name/blk000000d2/blk000000d5" (XOR)
+removed.
+Unused block "Inst_mag/your_instance_name/blk000000d2/blk000000d8" (XOR)
+removed.
+Unused block "Inst_mag/your_instance_name/blk000000d2/blk000000d9" (XOR)
+removed.
+Unused block "Inst_mag/your_instance_name/blk000000d2/blk000000da" (XOR)
+removed.
+Unused block "Inst_mag/your_instance_name/blk000000d2/blk000000db" (XOR)
+removed.
+Unused block "Inst_mag/your_instance_name/blk000000d2/blk000000dc" (XOR)
+removed.
+Unused block "Inst_mag/your_instance_name/blk000000d2/blk000000dd" (XOR)
+removed.
+Unused block "Inst_mag/your_instance_name/blk000000d2/blk000000de" (XOR)
+removed.
+Unused block "Inst_mag/your_instance_name/blk000000d2/blk000000df" (XOR)
+removed.
+Unused block "Inst_mag/your_instance_name/blk000000d2/blk000000e0" (XOR)
+removed.
+Unused block "Inst_mag/your_instance_name/blk000000d2/blk000000e1" (XOR)
+removed.
+Unused block "Inst_mag/your_instance_name/blk000000d2/blk000000e2" (MUX)
+removed.
+Unused block "Inst_test_signal_gen/sine_gen_inst/blk00000001" (ONE) removed.
+Unused block "Inst_test_signal_gen/sine_gen_inst/blk00000002" (ZERO) removed.
+Unused block "Inst_test_signal_gen/sine_gen_inst/blk00000003" (DSP48A1) removed.
+Unused block "Inst_test_signal_gen/sine_gen_inst/blk00000004" (DSP48A1) removed.
+Unused block "Inst_test_signal_gen/sine_gen_inst/blk0000001a" (RAM64X1D)
+removed.
+Unused block "Inst_test_signal_gen/sine_gen_inst/blk0000001b" (RAM64X1D)
+removed.
+Unused block "Inst_test_signal_gen/sine_gen_inst/blk0000001c" (RAM64X1D)
+removed.
+Unused block "Inst_test_signal_gen/sine_gen_inst/blk0000001d" (RAM64X1D)
+removed.
+Unused block "Inst_test_signal_gen/sine_gen_inst/blk0000001e" (RAM64X1D)
+removed.
+Unused block "Inst_test_signal_gen/sine_gen_inst/blk0000001f" (RAM64X1D)
+removed.
+Unused block "Inst_test_signal_gen/sine_gen_inst/blk00000020" (RAM64X1D)
+removed.
+Unused block "Inst_test_signal_gen/sine_gen_inst/blk00000021" (RAM64X1D)
+removed.
+Unused block "Inst_test_signal_gen/sine_gen_inst/blk00000022" (SRLC16E) removed.
+Unused block "Inst_test_signal_gen/sine_gen_inst/blk00000024" (SRLC16E) removed.
+Unused block "Inst_test_signal_gen/sine_gen_inst/blk00000026" (SRLC16E) removed.
+Unused block "Inst_test_signal_gen/sine_gen_inst/blk00000028" (SRLC16E) removed.
+Unused block "Inst_test_signal_gen/sine_gen_inst/blk0000002a" (SRLC16E) removed.
+Unused block "Inst_test_signal_gen/sine_gen_inst/blk0000002c" (SRLC16E) removed.
+Unused block "Inst_test_signal_gen/sine_gen_inst/blk0000002e" (SRLC16E) removed.
+Unused block "Inst_test_signal_gen/sine_gen_inst/blk00000030" (SRLC16E) removed.
+Unused block
+"adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.w
+r/gwas.wsts/ram_full_i" (FF) removed.
+Unused block "fft_instance/blk00000bee" (FF) removed.
+Unused block "fft_instance/blk00000bef" (FF) removed.
+Unused block "fft_instance/blk00000bf0" (FF) removed.
+Unused block "fft_instance/blk00000bf1" (FF) removed.
+Unused block "fft_instance/blk00000bf2" (FF) removed.
+Unused block "fft_instance/blk00000bf3" (FF) removed.
+Unused block "fft_instance/blk00000bf4" (FF) removed.
+Unused block "fft_instance/blk00000c0c" (SFF) removed.
+Unused block "fft_instance/blk00000d0c" (FF) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+VCC 		Inst_mag/your_instance_name/blk00000001
+GND 		Inst_mag/your_instance_name/blk00000002
+VCC 		Inst_mag/your_instance_name/blk00000020/blk00000021
+GND 		Inst_mag/your_instance_name/blk00000020/blk00000022
+VCC 		Inst_mag/your_instance_name/blk0000003b/blk0000003c
+GND 		Inst_mag/your_instance_name/blk0000003b/blk0000003d
+VCC 		Inst_mag/your_instance_name/blk00000059/blk0000005a
+GND 		Inst_mag/your_instance_name/blk00000059/blk0000005b
+VCC 		Inst_mag/your_instance_name/blk00000071/blk00000072
+GND 		Inst_mag/your_instance_name/blk00000071/blk00000073
+VCC 		Inst_mag/your_instance_name/blk0000009a/blk0000009b
+GND 		Inst_mag/your_instance_name/blk0000009a/blk0000009c
+VCC 		Inst_mag/your_instance_name/blk000000ae/blk000000af
+GND 		Inst_mag/your_instance_name/blk000000ae/blk000000b0
+VCC 		Inst_mag/your_instance_name/blk000000d2/blk000000d3
+GND 		Inst_mag/your_instance_name/blk000000d2/blk000000d4
+GND
+		Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.
+rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_m
+em_gen/valid.cstr/XST_GND
+GND 		Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/XST_GND
+GND 		XST_GND
+VCC 		XST_VCC
+GND
+		adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/
+gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND
+GND 		adc_fifo_inst/XST_GND
+VCC 		adc_fifo_inst/XST_VCC
+VCC 		fft_instance/blk00000001
+GND 		fft_instance/blk00000002
+GND 		fft_instance/blk00000247/blk00000248
+GND 		fft_instance/blk000002a4/blk000002a5
+GND 		fft_instance/blk00000301/blk00000302
+GND 		fft_instance/blk0000035e/blk0000035f
+MULT_AND 		fft_instance/blk0000049f/blk000004dc
+MULT_AND 		fft_instance/blk0000049f/blk000004dd
+MULT_AND 		fft_instance/blk0000049f/blk000004de
+MULT_AND 		fft_instance/blk00000511/blk0000054e
+MULT_AND 		fft_instance/blk00000511/blk0000054f
+MULT_AND 		fft_instance/blk00000511/blk00000550
+GND 		fft_instance/blk00000583/blk00000584
+GND 		fft_instance/blk000005de/blk000005df
+GND 		fft_instance/blk00000639/blk0000063a
+GND 		fft_instance/blk00000694/blk00000695
+VCC 		fft_instance/blk000006ef/blk000006f0
+VCC 		fft_instance/blk0000074a/blk0000074b
+VCC 		fft_instance/blk000007a5/blk000007a6
+VCC 		fft_instance/blk00000800/blk00000801
+GND 		fft_instance/blk00000983/blk00000984/blk00000985
+VCC 		fft_instance/blk00000983/blk00000984/blk00000986
+GND 		fft_instance/blk00000af1/blk00000af2
+GND 		fft_instance/blk00000b18/blk00000b19
+GND 		fft_instance/blk00000b3f/blk00000b40
+GND 		fft_instance/blk00000b66/blk00000b67
+GND 		fft_instance/blk00000b8d/blk00000b8e/blk00000b8f
+VCC 		fft_instance/blk00000b8d/blk00000b8e/blk00000b90
+GND 		fft_instance/blk00000b93/blk00000b94/blk00000b95
+VCC 		fft_instance/blk00000b93/blk00000b94/blk00000b96
+GND 		fft_instance/blk00000b99/blk00000b9a/blk00000b9b
+VCC 		fft_instance/blk00000b99/blk00000b9a/blk00000b9c
+GND 		fft_instance/blk00000b9f/blk00000ba0/blk00000ba1
+VCC 		fft_instance/blk00000b9f/blk00000ba0/blk00000ba2
+GND 		fft_instance/blk00000ba5/blk00000ba6/blk00000ba7
+VCC 		fft_instance/blk00000ba5/blk00000ba6/blk00000ba8
+FDE 		fft_instance/blk00000bea
+   optimized to 0
+VCC 		fft_instance/blk00000c14/blk00000c15
+GND 		fft_instance/blk00000c14/blk00000c16
+VCC 		fft_instance/blk00000c30/blk00000c31
+GND 		fft_instance/blk00000c30/blk00000c32
+VCC 		fft_instance/blk00000c5b/blk00000c5c
+GND 		fft_instance/blk00000c5b/blk00000c5d
+VCC 		fft_instance/blk00000c7d/blk00000c7e
+GND 		fft_instance/blk00000c7d/blk00000c7f
+VCC 		fft_instance/blk00000c91/blk00000c92
+GND 		fft_instance/blk00000c91/blk00000c93
+GND 		fft_instance/blk00000c9b/blk00000c9c/blk00000c9d
+GND 		fft_instance/blk00000ca0/blk00000ca1/blk00000ca2
+VCC 		fft_instance/blk00000ca0/blk00000ca1/blk00000ca3
+GND 		fft_instance/blk00000ca6/blk00000ca7/blk00000ca8
+VCC 		fft_instance/blk00000ca6/blk00000ca7/blk00000ca9
+VCC 		fft_instance/blk00000cc8/blk00000cc9/blk00000ccb
+GND 		fft_instance/blk00000ccd/blk00000cce/blk00000ccf
+VCC 		fft_instance/blk00000ccd/blk00000cce/blk00000cd0
+GND 		fft_instance/blk00000cd3/blk00000cd4/blk00000cd6
+VCC 		fft_instance/blk00000cd3/blk00000cd4/blk00000cd7
+VCC 		fft_instance/blk00000d1e/blk00000d1f
+LUT6 		fft_instance/blk00000e3d
+   optimized to 0
+GND 		fft_instance/blk00000e5b/blk00000e5c
+FD 		fft_instance/blk00000f6d
+   optimized to 1
+LUT4 		fft_instance/blk00000f9a
+   optimized to 1
+GND 		your_instance_name/XST_GND
+VCC 		your_instance_name/XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| adc_clk                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| adc_in<0>                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| adc_in<1>                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| adc_in<2>                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| adc_in<3>                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| adc_in<4>                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| adc_in<5>                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| adc_in<6>                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| adc_in<7>                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| antenna                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| blue<0>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| blue<1>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| clk                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| green<0>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| green<1>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| green<2>                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| hs                                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| leds<0>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| leds<1>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| leds<2>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| leds<3>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| leds<4>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| leds<5>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| leds<6>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| leds<7>                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| red<0>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| red<1>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| red<2>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| rst                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| rx                                 | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sine_out<0>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sine_out<1>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sine_out<2>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sine_out<3>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sine_out<4>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sine_out<5>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sine_out<6>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sine_out<7>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sw<0>                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sw<1>                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sw<2>                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sw<3>                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sw<4>                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sw<5>                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sw<6>                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sw<7>                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| vs                                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

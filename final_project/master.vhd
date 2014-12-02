@@ -199,7 +199,7 @@ end component;
   signal adc_clk_buff : std_logic := '0';
   signal adc_clk_counter : integer := 0;
 
-  signal max : integer := 0;
+  signal max : integer := 7;
   signal last_adc_divider : std_logic_vector(adc_divider'range) := (others => '0');
 
   signal clk320            : std_logic;

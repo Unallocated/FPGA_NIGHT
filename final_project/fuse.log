@@ -1,0 +1,129 @@
+Running: /media/sf_Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -lib "secureip" -o "/media/sf_final_project/master_tb_isim_beh.exe" -prj "/media/sf_final_project/master_tb_beh.prj" "work.master_tb" 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "/media/sf_final_project/ipcore_dir/fifo.vhd" into library work
+Parsing VHDL file "/media/sf_final_project/ipcore_dir/sine_generator.vhd" into library work
+Parsing VHDL file "/media/sf_final_project/ipcore_dir/dcm.vhd" into library work
+Parsing VHDL file "/media/sf_final_project/ipcore_dir/adc_fifo.vhd" into library work
+Parsing VHDL file "/media/sf_final_project/ipcore_dir/fft.vhd" into library work
+Parsing VHDL file "/media/sf_final_project/ipcore_dir/mag_sqrt.vhd" into library work
+Parsing VHDL file "/media/sf_final_project/ipcore_dir/VGA_RAM.vhd" into library work
+Parsing VHDL file "/media/sf_final_project/ipcore_dir/fm_dcm.vhd" into library work
+Parsing VHDL file "/media/sf_final_project/serial_rx_fifo.vhd" into library work
+Parsing VHDL file "/media/sf_final_project/lib.vhd" into library work
+Parsing VHDL file "/media/sf_final_project/vga_configurable.vhd" into library work
+Parsing VHDL file "/media/sf_final_project/uart_comms.vhd" into library work
+Parsing VHDL file "/media/sf_final_project/test_signal_gen.vhd" into library work
+Parsing VHDL file "/media/sf_final_project/mag.vhd" into library work
+Parsing VHDL file "/media/sf_final_project/master.vhd" into library work
+WARNING:HDLCompiler:946 - "/media/sf_final_project/master.vhd" Line 459: Actual for formal port wea is neither a static name nor a globally static expression
+Parsing VHDL file "/media/sf_final_project/master_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 181212 KB
+Fuse CPU Usage: 6330 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package vcomponents
+Compiling package textio
+Compiling package vital_timing
+Compiling package vital_primitives
+Compiling package vpkg
+Compiling package uas
+Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_as [\fifo_generator_v9_3_bhv_as(8,"0...]
+Compiling architecture behavioral of entity fifo_generator_v9_3_conv [\fifo_generator_v9_3_conv(0,0,10...]
+Compiling architecture behavioral of entity fifo_generator_v9_3 [\fifo_generator_v9_3(0,0,10,"Bla...]
+Compiling architecture adc_fifo_a of entity adc_fifo [adc_fifo_default]
+Compiling package std_logic_signed
+Compiling architecture ibufg_v of entity IBUFG [\IBUFG("DONT_CARE","0",true,"DEF...]
+Compiling architecture pll_adv_v of entity PLL_ADV [\PLL_ADV("OPTIMIZED","CLKFBOUT",...]
+Compiling architecture pll_base_v of entity PLL_BASE [\PLL_BASE("OPTIMIZED",4,0.0,10.0...]
+Compiling architecture bufg_v of entity BUFG [bufg_default]
+Compiling architecture xilinx of entity dcm [dcm_default]
+Compiling package math_real
+Compiling package bip_utils_pkg_v2_0
+Compiling package bip_usecase_utils_pkg_v2_0
+Compiling package xcc_utils_v2_0
+Compiling package pkg_dds_compiler_v4_0
+Compiling package dds_compiler_v4_0_sim_comps
+Compiling package xbip_pipe_v2_0_xst_comp
+Compiling package xbip_pipe_v2_0_comp
+Compiling architecture behavioral of entity xbip_pipe_v2_0 [\xbip_pipe_v2_0(3,0,0,0,1,0,0,"0...]
+Compiling architecture behavioral of entity xbip_pipe_v2_0_xst [\xbip_pipe_v2_0_xst(3,0,0,0,1,0,...]
+Compiling architecture behavioral of entity xbip_pipe_v2_0 [\xbip_pipe_v2_0(1,1,0,0,0,0,0,"0...]
+Compiling architecture behavioral of entity xbip_pipe_v2_0_xst [\xbip_pipe_v2_0_xst(1,1,0,0,0,0,...]
+Compiling architecture behavioral of entity xbip_pipe_v2_0 [\xbip_pipe_v2_0(0,0,0,0,0,0,0,"0...]
+Compiling architecture behavioral of entity xbip_pipe_v2_0_xst [\xbip_pipe_v2_0_xst(0,0,0,0,0,0,...]
+Compiling architecture behavioral of entity xbip_pipe_v2_0 [\xbip_pipe_v2_0(1,0,0,0,0,0,0,"0...]
+Compiling architecture behavioral of entity xbip_pipe_v2_0_xst [\xbip_pipe_v2_0_xst(1,0,0,0,0,0,...]
+Compiling architecture behavioral of entity xbip_pipe_v2_0 [\xbip_pipe_v2_0(1,0,0,0,0,0,0,"0...]
+Compiling architecture behavioral of entity xbip_pipe_v2_0_xst [\xbip_pipe_v2_0_xst(1,0,0,0,0,0,...]
+Compiling architecture behavioral of entity xbip_pipe_v2_0 [\xbip_pipe_v2_0(2,0,0,0,0,0,0,"0...]
+Compiling architecture behavioral of entity xbip_pipe_v2_0_xst [\xbip_pipe_v2_0_xst(2,0,0,0,0,0,...]
+Compiling architecture behavioral of entity xbip_pipe_v2_0 [\xbip_pipe_v2_0(2,0,0,0,0,0,0,"0...]
+Compiling architecture behavioral of entity xbip_pipe_v2_0_xst [\xbip_pipe_v2_0_xst(2,0,0,0,0,0,...]
+Compiling architecture behavioral of entity dds_compiler_v4_0 [\dds_compiler_v4_0("spartan6",14...]
+Compiling architecture sine_generator_a of entity sine_generator [sine_generator_default]
+Compiling architecture behavioral of entity test_signal_gen [test_signal_gen_default]
+Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_as [\fifo_generator_v9_3_bhv_as(8,"0...]
+Compiling architecture behavioral of entity fifo_generator_v9_3_conv [\fifo_generator_v9_3_conv(0,0,4,...]
+Compiling architecture behavioral of entity fifo_generator_v9_3 [\fifo_generator_v9_3(0,0,4,"Blan...]
+Compiling architecture fifo_a of entity fifo [fifo_default]
+Compiling architecture behavioral of entity serial_rx_fifo [\serial_rx_fifo(100000000,128000...]
+Compiling architecture behavioral of entity uart_comms [uart_comms_default]
+Compiling package std_logic_textio
+Compiling architecture vcc_v of entity VCC [vcc_default]
+Compiling architecture gnd_v of entity GND [gnd_default]
+Compiling architecture lut6_v of entity LUT6 [\LUT6("1111111100000000111100001...]
+Compiling architecture fdre_v of entity FDRE [\FDRE('0')\]
+Compiling architecture dsp48a1_v of entity DSP48A1 [\DSP48A1(0,1,0,1,1,"OPMODE5",0,0...]
+Compiling architecture dsp48a1_v of entity DSP48A1 [\DSP48A1(1,1,1,1,0,"OPMODE5",0,0...]
+Compiling architecture fd_v of entity FD [\FD('0')\]
+Compiling architecture fde_v of entity FDE [\FDE('0')\]
+Compiling architecture srl16e_v of entity SRL16E [\SRL16E("0000000000000000")(0,15...]
+Compiling architecture lut3_v of entity LUT3 [\LUT3("11001010")(0,7)\]
+Compiling architecture muxcy_v of entity MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity XORCY [xorcy_default]
+Compiling architecture lut4_v of entity LUT4 [\LUT4("0000000011001010")(0,15)\]
+Compiling architecture muxf7_v of entity MUXF7 [muxf7_default]
+Compiling architecture ramb8bwer_v of entity RAMB8BWER [\RAMB8BWER(9,9,1,1,true,true,"00...]
+Compiling architecture lut2_v of entity LUT2 [\LUT2("0110")(0,3)\]
+Compiling architecture lut5_v of entity LUT5 [\LUT5("1111111111111111100010101...]
+Compiling architecture inv_v of entity INV [inv_default]
+Compiling architecture srlc16e_v of entity SRLC16E [\SRLC16E("0000000000000000")(0,1...]
+Compiling architecture mult_and_v of entity MULT_AND [mult_and_default]
+Compiling architecture ramb8bwer_v of entity RAMB8BWER [\RAMB8BWER(36,36,0,1,false,false...]
+Compiling architecture lut1_v of entity LUT1 [\LUT1("0010")(0,3)\]
+Compiling architecture structure of entity fft [fft_default]
+Compiling package mult_gen_pkg_v11_0
+Compiling package cordic_v4_0_pack
+Compiling architecture behavioral of entity cordic_v4_0 [\cordic_v4_0(2,6,0,2,"spartan6",...]
+Compiling architecture mag_sqrt_a of entity mag_sqrt [mag_sqrt_default]
+Compiling architecture behave of entity mag [mag_default]
+Compiling architecture output_stage_behavioral of entity BLK_MEM_GEN_V7_3_output_stage [\BLK_MEM_GEN_V7_3_output_stage("...]
+Compiling architecture output_stage_behavioral of entity BLK_MEM_GEN_V7_3_output_stage [\BLK_MEM_GEN_V7_3_output_stage("...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity BLK_MEM_GEN_V7_3_softecc_output_reg_stage [\BLK_MEM_GEN_V7_3_softecc_output...]
+Compiling architecture mem_module_behavioral of entity BLK_MEM_GEN_V7_3_mem_module [\BLK_MEM_GEN_V7_3_mem_module("bl...]
+Compiling architecture behavioral of entity BLK_MEM_GEN_V7_3 [\BLK_MEM_GEN_V7_3("blk_mem_gen_v...]
+Compiling architecture vga_ram_a of entity VGA_RAM [vga_ram_default]
+Compiling architecture behavioral of entity vga_configurable [\vga_configurable((96,16,48,640,...]
+Compiling architecture dcm_sp_clock_divide_by_2_v of entity dcm_sp_clock_divide_by_2 [dcm_sp_clock_divide_by_2_default]
+Compiling architecture dcm_sp_maximum_period_check_v of entity dcm_sp_maximum_period_check [\dcm_sp_maximum_period_check("*"...]
+Compiling architecture dcm_sp_maximum_period_check_v of entity dcm_sp_maximum_period_check [\dcm_sp_maximum_period_check("*"...]
+Compiling architecture dcm_sp_clock_lost_v of entity dcm_sp_clock_lost [dcm_sp_clock_lost_default]
+Compiling architecture dcm_sp_v of entity DCM_SP [\DCM_SP(true,"*",true,false,2.0,...]
+Compiling architecture xilinx of entity fm_dcm [fm_dcm_default]
+Compiling architecture behavioral of entity master [master_default]
+Compiling architecture behavior of entity master_tb
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 262 VHDL Units
+Built simulation executable /media/sf_final_project/master_tb_isim_beh.exe
+Fuse Memory Usage: 800908 KB
+Fuse CPU Usage: 10100 ms
+GCC CPU Usage: 1550 ms

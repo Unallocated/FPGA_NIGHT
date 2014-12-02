@@ -22,7 +22,9 @@ ARCHITECTURE behavior OF master_tb IS
 		     vs : out std_logic;
 		     green : out std_logic_vector(2 downto 0);
 		     red : out std_logic_vector(2 downto 0);
-		     blue : out std_logic_vector(1 downto 0)
+		     blue : out std_logic_vector(1 downto 0);
+			  sw : in std_logic_vector(7 downto 0);
+           antenna : out std_logic
         );
     END COMPONENT;
     
@@ -33,6 +35,8 @@ ARCHITECTURE behavior OF master_tb IS
    signal adc_in : std_logic_vector(7 downto 0) := (others => '0');
    signal rx : std_logic := '0';
 
+	signal sw : std_logic_vector(7 downto 0) := (others => '0');
+
  	--Outputs
    signal adc_clk : std_logic;
    signal leds : std_logic_vector(7 downto 0);
@@ -40,6 +44,7 @@ ARCHITECTURE behavior OF master_tb IS
 	 signal red, green : std_logic_vector(2 downto 0);
 	 signal blue : std_logic_vector(1 downto 0);
 	 signal hs, vs : std_logic;
+	 signal antenna : std_logic;
 
    -- Clock period definitions
    constant clk_period : time := 10 ns;
@@ -59,7 +64,9 @@ BEGIN
 					vs => vs,
 					red => red,
 					green => green,
-					blue => blue
+					blue => blue,
+					antenna => antenna,
+					sw => sw
         );
 
    -- Clock process definitions

@@ -1,0 +1,1271 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.21 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> 
+Reading design: master.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "master.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "master"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : master
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/media/sf_final_project/ipcore_dir/fifo.vhd" into library work
+Parsing entity <fifo>.
+Parsing architecture <fifo_a> of entity <fifo>.
+Parsing VHDL file "/media/sf_final_project/ipcore_dir/sine_generator.vhd" into library work
+Parsing entity <sine_generator>.
+Parsing architecture <sine_generator_a> of entity <sine_generator>.
+Parsing VHDL file "/media/sf_final_project/ipcore_dir/dcm.vhd" into library work
+Parsing entity <dcm>.
+Parsing architecture <xilinx> of entity <dcm>.
+Parsing VHDL file "/media/sf_final_project/ipcore_dir/adc_fifo.vhd" into library work
+Parsing entity <adc_fifo>.
+Parsing architecture <adc_fifo_a> of entity <adc_fifo>.
+Parsing VHDL file "/media/sf_final_project/ipcore_dir/mag_sqrt.vhd" into library work
+Parsing entity <mag_sqrt>.
+Parsing architecture <mag_sqrt_a> of entity <mag_sqrt>.
+Parsing VHDL file "/media/sf_final_project/ipcore_dir/VGA_RAM.vhd" into library work
+Parsing entity <VGA_RAM>.
+Parsing architecture <VGA_RAM_a> of entity <vga_ram>.
+Parsing VHDL file "/media/sf_final_project/ipcore_dir/fm_dcm.vhd" into library work
+Parsing entity <fm_dcm>.
+Parsing architecture <xilinx> of entity <fm_dcm>.
+Parsing VHDL file "/media/sf_final_project/serial_rx_fifo.vhd" into library work
+Parsing entity <serial_rx_fifo>.
+Parsing architecture <Behavioral> of entity <serial_rx_fifo>.
+Parsing VHDL file "/media/sf_final_project/lib.vhd" into library work
+Parsing package <uas>.
+Parsing package body <uas>.
+Parsing VHDL file "/media/sf_final_project/vga_configurable.vhd" into library work
+Parsing entity <vga_configurable>.
+Parsing architecture <Behavioral> of entity <vga_configurable>.
+Parsing VHDL file "/media/sf_final_project/uart_comms.vhd" into library work
+Parsing entity <uart_comms>.
+Parsing architecture <Behavioral> of entity <uart_comms>.
+Parsing VHDL file "/media/sf_final_project/test_signal_gen.vhd" into library work
+Parsing entity <test_signal_gen>.
+Parsing architecture <Behavioral> of entity <test_signal_gen>.
+Parsing VHDL file "/media/sf_final_project/mag.vhd" into library work
+Parsing entity <mag>.
+Parsing architecture <behave> of entity <mag>.
+Parsing VHDL file "/media/sf_final_project/ipcore_dir/fft.vhd" into library work
+Parsing VHDL file "/media/sf_final_project/master.vhd" into library work
+Parsing entity <master>.
+Parsing architecture <Behavioral> of entity <master>.
+WARNING:HDLCompiler:946 - "/media/sf_final_project/master.vhd" Line 459: Actual for formal port wea is neither a static name nor a globally static expression
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <master> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:871 - "/media/sf_final_project/master.vhd" Line 81: Using initial value '0' for fft_rst since it is never assigned
+WARNING:HDLCompiler:1127 - "/media/sf_final_project/master.vhd" Line 301: Assignment to mag_input_valid ignored, since the identifier is never used
+
+Elaborating entity <adc_fifo> (architecture <adc_fifo_a>) from library <work>.
+
+Elaborating entity <dcm> (architecture <xilinx>) from library <work>.
+
+Elaborating entity <test_signal_gen> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <sine_generator> (architecture <sine_generator_a>) from library <work>.
+
+Elaborating entity <uart_comms> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <serial_rx_fifo> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <fifo> (architecture <fifo_a>) from library <work>.
+WARNING:HDLCompiler:89 - "/media/sf_final_project/master.vhd" Line 88: <fft> remains a black-box since it has no binding entity.
+
+Elaborating entity <mag> (architecture <behave>) from library <work>.
+
+Elaborating entity <mag_sqrt> (architecture <mag_sqrt_a>) from library <work>.
+
+Elaborating entity <VGA_RAM> (architecture <VGA_RAM_a>) from library <work>.
+
+Elaborating entity <vga_configurable> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <fm_dcm> (architecture <xilinx>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <master>.
+    Related source file is "/media/sf_final_project/master.vhd".
+INFO:Xst:3210 - "/media/sf_final_project/master.vhd" line 381: Output port <full> of the instance <adc_fifo_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/media/sf_final_project/master.vhd" line 404: Output port <sine_out> of the instance <Inst_test_signal_gen> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/media/sf_final_project/master.vhd" line 411: Output port <leds> of the instance <Inst_uart_comms> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/media/sf_final_project/master.vhd" line 421: Output port <xn_index> of the instance <fft_instance> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/media/sf_final_project/master.vhd" line 421: Output port <rfd> of the instance <fft_instance> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/media/sf_final_project/master.vhd" line 421: Output port <busy> of the instance <fft_instance> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/media/sf_final_project/master.vhd" line 421: Output port <done> of the instance <fft_instance> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/media/sf_final_project/master.vhd" line 455: Output port <douta> of the instance <your_instance_name> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <adc_state>.
+    Found 32-bit register for signal <adc_clk_counter>.
+    Found 3-bit register for signal <fft_state>.
+    Found 3-bit register for signal <vga_red_in>.
+    Found 3-bit register for signal <vga_green_in>.
+    Found 2-bit register for signal <vga_blue_in>.
+    Found 32-bit register for signal <setup_delay>.
+    Found 1-bit register for signal <fft_start>.
+    Found 1-bit register for signal <fft_unload>.
+    Found 1-bit register for signal <adc_fifo_rd_en>.
+    Found 5-bit register for signal <shift_ctr>.
+    Found 32-bit register for signal <phase_accumulator>.
+    Found 20-bit register for signal <beep_counter>.
+    Found 24-bit register for signal <last_adc_divider>.
+    Found 1-bit register for signal <adc_clk_buff>.
+    Found 1-bit register for signal <adc_fifo_wr_en>.
+    Found 9-bit register for signal <vga_ram_out_addr>.
+    Found 34-bit register for signal <message>.
+    Found finite state machine <FSM_0> for signal <fft_state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 19                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 5                                              |
+    | Clock              | buffered_clk (rising_edge)                     |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | fft_waiting                                    |
+    | Power Up State     | fft_waiting                                    |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 10-bit subtractor for signal <GND_4_o_GND_4_o_sub_94_OUT> created at line 368.
+    Found 9-bit adder for signal <n0246> created at line 213.
+    Found 5-bit adder for signal <shift_ctr[4]_GND_4_o_add_46_OUT> created at line 1241.
+    Found 32-bit adder for signal <phase_accumulator[31]_GND_4_o_add_49_OUT> created at line 1241.
+    Found 32-bit adder for signal <phase_accumulator[31]_GND_4_o_add_50_OUT> created at line 1241.
+    Found 32-bit adder for signal <phase_accumulator[31]_GND_4_o_add_52_OUT> created at line 1241.
+    Found 20-bit adder for signal <beep_counter[19]_GND_4_o_add_54_OUT> created at line 1241.
+    Found 32-bit adder for signal <adc_clk_counter[31]_GND_4_o_add_61_OUT> created at line 261.
+    Found 32-bit adder for signal <n0214> created at line 364.
+    Found 32-bit subtractor for signal <setup_delay[31]_GND_4_o_sub_69_OUT<31:0>> created at line 273.
+    Found 8x8-bit multiplier for signal <n0215> created at line 367.
+    Found 8-bit 11-to-1 multiplexer for signal <fft_xk_re_selected> created at line 443.
+    Found 8-bit 11-to-1 multiplexer for signal <fft_xk_im_selected> created at line 443.
+    Found 24-bit comparator equal for signal <n0060> created at line 254
+    Found 32-bit comparator equal for signal <GND_4_o_adc_clk_counter[31]_equal_61_o> created at line 257
+    Found 32-bit comparator greater for signal <GND_4_o_vga_x_pos[31]_LessThan_91_o> created at line 366
+    Found 32-bit comparator greater for signal <GND_4_o_vga_y_pos[31]_LessThan_92_o> created at line 366
+    Found 32-bit comparator lessequal for signal <n0122> created at line 368
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   8 Adder/Subtractor(s).
+	inferred 196 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+	inferred   8 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <master> synthesized.
+
+Synthesizing Unit <dcm>.
+    Related source file is "/media/sf_final_project/ipcore_dir/dcm.vhd".
+    Summary:
+	no macro.
+Unit <dcm> synthesized.
+
+Synthesizing Unit <test_signal_gen>.
+    Related source file is "/media/sf_final_project/test_signal_gen.vhd".
+    Found 1-bit register for signal <we>.
+    Found 14-bit register for signal <last_val>.
+    Found 8-bit adder for signal <sine_out> created at line 1241.
+    Found 14-bit comparator not equal for signal <n0001> created at line 37
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  15 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <test_signal_gen> synthesized.
+
+Synthesizing Unit <uart_comms>.
+    Related source file is "/media/sf_final_project/uart_comms.vhd".
+INFO:Xst:3210 - "/media/sf_final_project/uart_comms.vhd" line 142: Output port <full> of the instance <Inst_serial_rx_fifo> is unconnected or connected to loadless signal.
+    Found 24-bit register for signal <adc_divider>.
+    Found 8-bit register for signal <leds>.
+    Found 8-bit register for signal <current_frame<2>>.
+    Found 8-bit register for signal <current_frame<3>>.
+    Found 8-bit register for signal <current_frame<4>>.
+    Found 8-bit register for signal <current_frame<5>>.
+    Found 8-bit register for signal <current_frame<6>>.
+    Found 8-bit register for signal <last_frame<3>>.
+    Found 8-bit register for signal <last_frame<4>>.
+    Found 8-bit register for signal <last_frame<5>>.
+    Found 8-bit register for signal <last_frame<6>>.
+    Found 8-bit register for signal <current_frame_checksum>.
+    Found 2-bit register for signal <reading_state>.
+    Found 2-bit register for signal <frame_state>.
+    Found 5-bit register for signal <current_frame_pos>.
+    Found 14-bit register for signal <phase_inc>.
+    Found 8-bit register for signal <fft_scaler>.
+    Found 1-bit register for signal <rx_rd_en>.
+    Found 1-bit register for signal <last_frame_valid>.
+    Found 1-bit register for signal <prev_last_frame_valid>.
+    Found finite state machine <FSM_1> for signal <reading_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | wait_for_data                                  |
+    | Power Up State     | wait_for_data                                  |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_2> for signal <frame_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | preamble                                       |
+    | Power Up State     | preamble                                       |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 5-bit adder for signal <current_frame_pos[4]_GND_37_o_add_18_OUT> created at line 104.
+    Found 8-bit adder for signal <current_frame[2][7]_GND_37_o_add_62_OUT> created at line 1241.
+    Found 5-bit 4-to-1 multiplexer for signal <frame_state[1]_GND_37_o_wide_mux_98_OUT> created at line 107.
+    Found 8-bit comparator greater for signal <GND_37_o_rx_data[7]_LessThan_58_o> created at line 117
+    Found 8-bit comparator equal for signal <current_frame[2][7]_GND_37_o_equal_64_o> created at line 126
+    Found 8-bit comparator equal for signal <current_frame_checksum[7]_rx_data[7]_equal_66_o> created at line 133
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred 142 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred   6 Multiplexer(s).
+	inferred   2 Finite State Machine(s).
+Unit <uart_comms> synthesized.
+
+Synthesizing Unit <serial_rx_fifo>.
+    Related source file is "/media/sf_final_project/serial_rx_fifo.vhd".
+        clk_rate = 100000000
+        baud_rate = 128000
+    Found 8-bit register for signal <din>.
+    Found 8-bit register for signal <rx_data_buffer>.
+    Found 2-bit register for signal <rx_state>.
+    Found 32-bit register for signal <rx_counter>.
+    Found 3-bit register for signal <rx_bit_pos>.
+    Found 1-bit register for signal <wr_en>.
+    Found 1-bit register for signal <rx_buffer_n>.
+    Found finite state machine <FSM_3> for signal <rx_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit adder for signal <rx_counter[31]_GND_38_o_add_0_OUT> created at line 1241.
+    Found 3-bit adder for signal <rx_bit_pos[2]_GND_38_o_add_12_OUT> created at line 1241.
+    Found 32-bit 4-to-1 multiplexer for signal <rx_state[1]_rx_counter[31]_wide_mux_29_OUT> created at line 68.
+    Found 32-bit comparator greater for signal <rx_counter[31]_GND_38_o_LessThan_26_o> created at line 101
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  53 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  15 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <serial_rx_fifo> synthesized.
+
+Synthesizing Unit <mag>.
+    Related source file is "/media/sf_final_project/mag.vhd".
+    Found 9-bit register for signal <idx_buffer_array<1>>.
+    Found 9-bit register for signal <idx_buffer_array<2>>.
+    Found 9-bit register for signal <idx_buffer_array<3>>.
+    Found 9-bit register for signal <idx_buffer_array<4>>.
+    Found 9-bit register for signal <idx_buffer_array<5>>.
+    Found 9-bit register for signal <idx_buffer_array<6>>.
+    Found 9-bit register for signal <idx_buffer_array<7>>.
+    Found 9-bit register for signal <idx_buffer_array<8>>.
+    Found 9-bit register for signal <idx_buffer_array<9>>.
+    Found 9-bit register for signal <idx_buffer_array<0>>.
+    Found 16-bit register for signal <re_squared>.
+    Found 16-bit register for signal <im_squared>.
+    Found 16-bit register for signal <parts_summed>.
+    Found 8-bit register for signal <re_buffer>.
+    Found 8-bit register for signal <im_buffer>.
+    Found 10-bit register for signal <valid_array>.
+    Found 1-bit register for signal <output_valid>.
+    Found 16-bit register for signal <sqrt_in>.
+    Found 16-bit register for signal <sqrt_delay<0>>.
+    Found 8-bit register for signal <mag>.
+    Found 9-bit register for signal <idx_out>.
+    Found 16-bit adder for signal <re_squared[15]_im_squared[15]_add_2_OUT> created at line 71.
+    Found 8x8-bit multiplier for signal <re_buffer[7]_re_buffer[7]_MuLt_0_OUT> created at line 68.
+    Found 8x8-bit multiplier for signal <im_buffer[7]_im_buffer[7]_MuLt_1_OUT> created at line 69.
+    Summary:
+	inferred   2 Multiplier(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred 214 D-type flip-flop(s).
+Unit <mag> synthesized.
+
+Synthesizing Unit <vga_configurable>.
+    Related source file is "/media/sf_final_project/vga_configurable.vhd".
+        config = (96,16,48,640,'0',2,10,33,480,'0')
+        red_width = 3
+        green_width = 3
+        blue_width = 2
+    Found 10-bit register for signal <v_counter>.
+    Found 10-bit register for signal <h_counter>.
+    Found 1-bit register for signal <hs>.
+    Found 1-bit register for signal <vs>.
+    Found 1-bit register for signal <color_valid>.
+    Found 11-bit register for signal <x_pos>.
+    Found 10-bit register for signal <y_pos>.
+    Found 11-bit subtractor for signal <GND_64_o_GND_64_o_sub_12_OUT> created at line 89.
+    Found 10-bit adder for signal <v_counter[9]_GND_64_o_add_17_OUT> created at line 106.
+    Found 10-bit adder for signal <h_counter[9]_GND_64_o_add_19_OUT> created at line 113.
+    Found 10-bit subtractor for signal <GND_64_o_GND_64_o_sub_13_OUT<9:0>> created at line 89.
+    Found 11-bit subtractor for signal <GND_64_o_GND_64_o_sub_11_OUT<10:0>> created at line 88.
+    Found 10-bit comparator lessequal for signal <h_counter[9]_GND_64_o_LessThan_4_o> created at line 66
+    Found 10-bit comparator lessequal for signal <v_counter[9]_GND_64_o_LessThan_5_o> created at line 73
+    Found 10-bit comparator greater for signal <GND_64_o_h_counter[9]_LessThan_6_o> created at line 80
+    Found 10-bit comparator greater for signal <h_counter[9]_PWR_26_o_LessThan_7_o> created at line 81
+    Found 10-bit comparator greater for signal <GND_64_o_v_counter[9]_LessThan_8_o> created at line 82
+    Found 10-bit comparator greater for signal <v_counter[9]_PWR_26_o_LessThan_9_o> created at line 83
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  44 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   5 Multiplexer(s).
+Unit <vga_configurable> synthesized.
+
+Synthesizing Unit <fm_dcm>.
+    Related source file is "/media/sf_final_project/ipcore_dir/fm_dcm.vhd".
+    Summary:
+	no macro.
+Unit <fm_dcm> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 3
+ 8x8-bit multiplier                                    : 3
+# Adders/Subtractors                                   : 19
+ 10-bit adder                                          : 2
+ 10-bit subtractor                                     : 2
+ 11-bit subtractor                                     : 2
+ 16-bit adder                                          : 1
+ 20-bit adder                                          : 1
+ 3-bit adder                                           : 1
+ 32-bit adder                                          : 4
+ 32-bit subtractor                                     : 1
+ 5-bit adder                                           : 2
+ 8-bit adder                                           : 2
+ 9-bit adder                                           : 1
+# Registers                                            : 69
+ 1-bit register                                        : 16
+ 10-bit register                                       : 4
+ 11-bit register                                       : 1
+ 14-bit register                                       : 2
+ 16-bit register                                       : 5
+ 2-bit register                                        : 1
+ 20-bit register                                       : 1
+ 24-bit register                                       : 2
+ 3-bit register                                        : 1
+ 32-bit register                                       : 4
+ 34-bit register                                       : 1
+ 5-bit register                                        : 2
+ 8-bit register                                        : 17
+ 9-bit register                                        : 12
+# Comparators                                          : 16
+ 10-bit comparator greater                             : 4
+ 10-bit comparator lessequal                           : 2
+ 14-bit comparator not equal                           : 1
+ 24-bit comparator equal                               : 1
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 3
+ 32-bit comparator lessequal                           : 1
+ 8-bit comparator equal                                : 2
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 34
+ 1-bit 2-to-1 multiplexer                              : 11
+ 10-bit 2-to-1 multiplexer                             : 2
+ 2-bit 2-to-1 multiplexer                              : 2
+ 3-bit 2-to-1 multiplexer                              : 3
+ 32-bit 2-to-1 multiplexer                             : 8
+ 32-bit 4-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 2
+ 5-bit 4-to-1 multiplexer                              : 1
+ 8-bit 11-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 4
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/adc_fifo.ngc>.
+Reading core <ipcore_dir/VGA_RAM.ngc>.
+Reading core <ipcore_dir/fft.ngc>.
+Reading Secure Unit <blk00000247>.
+Reading core <ipcore_dir/sine_generator.ngc>.
+Reading core <ipcore_dir/fifo.ngc>.
+Reading core <ipcore_dir/mag_sqrt.ngc>.
+Reading Secure Unit <blk00000020>.
+Loading core <adc_fifo> for timing and area information for instance <adc_fifo_inst>.
+Loading core <VGA_RAM> for timing and area information for instance <your_instance_name>.
+Loading core <fft> for timing and area information for instance <fft_instance>.
+Loading core <sine_generator> for timing and area information for instance <sine_gen_inst>.
+Loading core <fifo> for timing and area information for instance <fifo_inst>.
+Loading core <mag_sqrt> for timing and area information for instance <your_instance_name>.
+
+Synthesizing (advanced) Unit <master>.
+The following registers are absorbed into accumulator <phase_accumulator>: 1 register on signal <phase_accumulator>.
+The following registers are absorbed into counter <beep_counter>: 1 register on signal <beep_counter>.
+The following registers are absorbed into counter <shift_ctr>: 1 register on signal <shift_ctr>.
+Unit <master> synthesized (advanced).
+
+Synthesizing (advanced) Unit <serial_rx_fifo>.
+The following registers are absorbed into counter <rx_bit_pos>: 1 register on signal <rx_bit_pos>.
+Unit <serial_rx_fifo> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vga_configurable>.
+The following registers are absorbed into counter <h_counter>: 1 register on signal <h_counter>.
+The following registers are absorbed into counter <v_counter>: 1 register on signal <v_counter>.
+Unit <vga_configurable> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 3
+ 8x8-bit multiplier                                    : 3
+# Adders/Subtractors                                   : 13
+ 10-bit subtractor                                     : 3
+ 11-bit subtractor                                     : 1
+ 16-bit adder                                          : 1
+ 32-bit adder                                          : 2
+ 32-bit subtractor                                     : 1
+ 4-bit adder                                           : 1
+ 5-bit adder                                           : 1
+ 8-bit adder                                           : 2
+ 9-bit adder                                           : 1
+# Counters                                             : 5
+ 10-bit up counter                                     : 2
+ 20-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
+# Accumulators                                         : 1
+ 32-bit up accumulator                                 : 1
+# Registers                                            : 584
+ Flip-Flops                                            : 584
+# Comparators                                          : 16
+ 10-bit comparator greater                             : 4
+ 10-bit comparator lessequal                           : 2
+ 14-bit comparator not equal                           : 1
+ 24-bit comparator equal                               : 1
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 3
+ 32-bit comparator lessequal                           : 1
+ 8-bit comparator equal                                : 2
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 31
+ 1-bit 2-to-1 multiplexer                              : 11
+ 2-bit 2-to-1 multiplexer                              : 2
+ 3-bit 2-to-1 multiplexer                              : 2
+ 32-bit 2-to-1 multiplexer                             : 8
+ 32-bit 4-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 2
+ 5-bit 4-to-1 multiplexer                              : 1
+ 8-bit 11-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 4
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <fft_state[1:3]> with user encoding.
+--------------------------------
+ State              | Encoding
+--------------------------------
+ fft_waiting        | 000
+ fft_reading        | 001
+ fft_wait_for_edone | 010
+ fft_wait_for_vsync | 011
+ fft_wait_for_dv    | 100
+ fft_unload_data    | 101
+--------------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <Inst_uart_comms/FSM_1> on signal <reading_state[1:2]> with user encoding.
+---------------------------
+ State         | Encoding
+---------------------------
+ wait_for_data | 00
+ stall         | 01
+ data_valid    | 10
+---------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <Inst_uart_comms/FSM_2> on signal <frame_state[1:2]> with user encoding.
+----------------------
+ State    | Encoding
+----------------------
+ preamble | 00
+ length   | 01
+ payload  | 10
+ fcs      | 11
+----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <Inst_uart_comms/Inst_serial_rx_fifo/FSM_3> on signal <rx_state[1:2]> with gray encoding.
+-------------------------
+ State       | Encoding
+-------------------------
+ idle        | 00
+ start_bit   | 01
+ handle_data | 11
+ stop_bit    | 10
+-------------------------
+INFO:Xst:1901 - Instance dcm_inst/pll_base_inst in unit dcm_inst/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+INFO:Xst:2261 - The FF/Latch <vga_blue_in_0> in Unit <master> is equivalent to the following FF/Latch, which will be removed : <vga_blue_in_1> 
+
+Optimizing unit <master> ...
+
+Optimizing unit <test_signal_gen> ...
+
+Optimizing unit <uart_comms> ...
+
+Optimizing unit <serial_rx_fifo> ...
+
+Optimizing unit <mag> ...
+
+Optimizing unit <vga_configurable> ...
+WARNING:Xst:2677 - Node <Inst_uart_comms/leds_7> of sequential type is unconnected in block <master>.
+WARNING:Xst:2677 - Node <Inst_uart_comms/leds_6> of sequential type is unconnected in block <master>.
+WARNING:Xst:2677 - Node <Inst_uart_comms/leds_5> of sequential type is unconnected in block <master>.
+WARNING:Xst:2677 - Node <Inst_uart_comms/leds_4> of sequential type is unconnected in block <master>.
+WARNING:Xst:2677 - Node <Inst_uart_comms/leds_3> of sequential type is unconnected in block <master>.
+WARNING:Xst:2677 - Node <Inst_uart_comms/leds_2> of sequential type is unconnected in block <master>.
+WARNING:Xst:2677 - Node <Inst_uart_comms/leds_1> of sequential type is unconnected in block <master>.
+WARNING:Xst:2677 - Node <Inst_uart_comms/leds_0> of sequential type is unconnected in block <master>.
+WARNING:Xst:1293 - FF/Latch <setup_delay_31> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_30> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_29> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_28> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_27> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_26> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_25> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_24> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_23> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_22> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_21> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_20> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_19> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_18> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_17> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_16> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_15> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_14> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_13> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_12> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_11> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_10> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_9> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_8> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_7> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_6> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_5> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <setup_delay_4> has a constant value of 0 in block <master>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <Inst_uart_comms/reading_state_FSM_FFd2> in Unit <master> is equivalent to the following FF/Latch, which will be removed : <Inst_uart_comms/rx_rd_en> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block master, actual ratio is 24.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <adc_fifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <adc_fifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <adc_fifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <adc_fifo_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <blk00000177> in Unit <fft_instance> is equivalent to the following 4 FFs/Latches : <blk00000fab> <blk00000fac> <blk00000fad> <blk00000fae> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <adc_fifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <adc_fifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <adc_fifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <adc_fifo_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <blk00000177> in Unit <fft_instance> is equivalent to the following 4 FFs/Latches : <blk00000fab> <blk00000fac> <blk00000fad> <blk00000fae> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+
+Final Macro Processing ...
+
+Processing Unit <master> :
+	Found 10-bit shift register for signal <Inst_mag/idx_buffer_array_9_8>.
+	Found 10-bit shift register for signal <Inst_mag/idx_buffer_array_9_7>.
+	Found 10-bit shift register for signal <Inst_mag/idx_buffer_array_9_6>.
+	Found 10-bit shift register for signal <Inst_mag/idx_buffer_array_9_5>.
+	Found 10-bit shift register for signal <Inst_mag/idx_buffer_array_9_4>.
+	Found 10-bit shift register for signal <Inst_mag/idx_buffer_array_9_3>.
+	Found 10-bit shift register for signal <Inst_mag/idx_buffer_array_9_2>.
+	Found 10-bit shift register for signal <Inst_mag/idx_buffer_array_9_1>.
+	Found 10-bit shift register for signal <Inst_mag/idx_buffer_array_9_0>.
+	Found 2-bit shift register for signal <Inst_mag/sqrt_in_15>.
+	Found 2-bit shift register for signal <Inst_mag/sqrt_in_14>.
+	Found 2-bit shift register for signal <Inst_mag/sqrt_in_13>.
+	Found 2-bit shift register for signal <Inst_mag/sqrt_in_12>.
+	Found 2-bit shift register for signal <Inst_mag/sqrt_in_11>.
+	Found 2-bit shift register for signal <Inst_mag/sqrt_in_10>.
+	Found 2-bit shift register for signal <Inst_mag/sqrt_in_9>.
+	Found 2-bit shift register for signal <Inst_mag/sqrt_in_8>.
+	Found 2-bit shift register for signal <Inst_mag/sqrt_in_7>.
+	Found 2-bit shift register for signal <Inst_mag/sqrt_in_6>.
+	Found 2-bit shift register for signal <Inst_mag/sqrt_in_5>.
+	Found 2-bit shift register for signal <Inst_mag/sqrt_in_4>.
+	Found 2-bit shift register for signal <Inst_mag/sqrt_in_3>.
+	Found 2-bit shift register for signal <Inst_mag/sqrt_in_2>.
+	Found 2-bit shift register for signal <Inst_mag/sqrt_in_1>.
+	Found 2-bit shift register for signal <Inst_mag/sqrt_in_0>.
+	Found 11-bit shift register for signal <Inst_mag/output_valid>.
+Unit <master> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 502
+ Flip-Flops                                            : 502
+# Shift Registers                                      : 26
+ 10-bit shift register                                 : 9
+ 11-bit shift register                                 : 1
+ 2-bit shift register                                  : 16
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : master.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 3542
+#      GND                         : 45
+#      INV                         : 70
+#      LUT1                        : 115
+#      LUT2                        : 396
+#      LUT3                        : 687
+#      LUT4                        : 107
+#      LUT5                        : 78
+#      LUT6                        : 561
+#      MULT_AND                    : 88
+#      MUXCY                       : 690
+#      MUXF7                       : 14
+#      VCC                         : 34
+#      XORCY                       : 657
+# FlipFlops/Latches                : 2440
+#      FD                          : 296
+#      FDC                         : 269
+#      FDCE                        : 239
+#      FDE                         : 808
+#      FDP                         : 31
+#      FDPE                        : 7
+#      FDRE                        : 769
+#      FDSE                        : 21
+# RAMS                             : 18
+#      RAM64X1D                    : 8
+#      RAMB8BWER                   : 10
+# Shift Registers                  : 199
+#      SRL16E                      : 140
+#      SRLC16E                     : 59
+# Clock Buffers                    : 8
+#      BUFG                        : 8
+# IO Buffers                       : 43
+#      IBUF                        : 14
+#      IBUFG                       : 1
+#      OBUF                        : 28
+# DCMs                             : 1
+#      DCM_SP                      : 1
+# DSPs                             : 17
+#      DSP48A1                     : 17
+# Others                           : 1
+#      PLL_ADV                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            2440  out of  18224    13%  
+ Number of Slice LUTs:                 2229  out of   9112    24%  
+    Number used as Logic:              2014  out of   9112    22%  
+    Number used as Memory:              215  out of   2176     9%  
+       Number used as RAM:               16
+       Number used as SRL:              199
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   3460
+   Number with an unused Flip Flop:    1020  out of   3460    29%  
+   Number with an unused LUT:          1231  out of   3460    35%  
+   Number of fully used LUT-FF pairs:  1209  out of   3460    34%  
+   Number of unique control sets:        76
+
+IO Utilization: 
+ Number of IOs:                          47
+ Number of bonded IOBs:                  43  out of    232    18%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                5  out of     32    15%  
+    Number using Block RAM only:          5
+ Number of BUFG/BUFGCTRLs:                8  out of     16    50%  
+ Number of DSP48A1s:                     17  out of     32    53%  
+ Number of PLL_ADVs:                      1  out of      2    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                                                      | Load  |
+-----------------------------------+------------------------------------------------------------------------------------------------------------+-------+
+dcm_inst/pll_base_inst/CLKOUT1     | BUFG                                                                                                       | 114   |
+dcm_inst/pll_base_inst/CLKOUT2     | BUFG                                                                                                       | 55    |
+dcm_inst/pll_base_inst/CLKOUT0     | BUFG                                                                                                       | 2332  |
+dcm_inst/pll_base_inst/CLKOUT3     | DCM_SP:CLKFX                                                                                               | 91    |
+adc_clk_buff                       | NONE(adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i)| 81    |
+-----------------------------------+------------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 13.423ns (Maximum Frequency: 74.497MHz)
+   Minimum input arrival time before clock: 6.544ns
+   Maximum output required time after clock: 5.329ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'dcm_inst/pll_base_inst/CLKOUT1'
+  Clock period: 3.990ns (frequency: 250.649MHz)
+  Total number of paths / destination ports: 2664 / 215
+-------------------------------------------------------------------------
+Delay:               3.990ns (Levels of Logic = 12)
+  Source:            adc_clk_counter_0 (FF)
+  Destination:       adc_clk_counter_0 (FF)
+  Source Clock:      dcm_inst/pll_base_inst/CLKOUT1 rising
+  Destination Clock: dcm_inst/pll_base_inst/CLKOUT1 rising
+
+  Data Path: adc_clk_counter_0 to adc_clk_counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.961  adc_clk_counter_0 (adc_clk_counter_0)
+     LUT6:I1->O            1   0.203   0.000  Mcompar_GND_4_o_adc_clk_counter[31]_equal_61_o_lut<0> (Mcompar_GND_4_o_adc_clk_counter[31]_equal_61_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_GND_4_o_adc_clk_counter[31]_equal_61_o_cy<0> (Mcompar_GND_4_o_adc_clk_counter[31]_equal_61_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_4_o_adc_clk_counter[31]_equal_61_o_cy<1> (Mcompar_GND_4_o_adc_clk_counter[31]_equal_61_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_4_o_adc_clk_counter[31]_equal_61_o_cy<2> (Mcompar_GND_4_o_adc_clk_counter[31]_equal_61_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_4_o_adc_clk_counter[31]_equal_61_o_cy<3> (Mcompar_GND_4_o_adc_clk_counter[31]_equal_61_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_4_o_adc_clk_counter[31]_equal_61_o_cy<4> (Mcompar_GND_4_o_adc_clk_counter[31]_equal_61_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_4_o_adc_clk_counter[31]_equal_61_o_cy<5> (Mcompar_GND_4_o_adc_clk_counter[31]_equal_61_o_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_4_o_adc_clk_counter[31]_equal_61_o_cy<6> (Mcompar_GND_4_o_adc_clk_counter[31]_equal_61_o_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_4_o_adc_clk_counter[31]_equal_61_o_cy<7> (Mcompar_GND_4_o_adc_clk_counter[31]_equal_61_o_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_4_o_adc_clk_counter[31]_equal_61_o_cy<8> (Mcompar_GND_4_o_adc_clk_counter[31]_equal_61_o_cy<8>)
+     MUXCY:CI->O          33   0.213   1.534  Mcompar_GND_4_o_adc_clk_counter[31]_equal_61_o_cy<9> (GND_4_o_adc_clk_counter[31]_equal_61_o)
+     LUT3:I0->O            1   0.205   0.000  Mmux_adc_clk_counter[31]_GND_4_o_mux_63_OUT321 (adc_clk_counter[31]_GND_4_o_mux_63_OUT<9>)
+     FDC:D                     0.102          adc_clk_counter_9
+    ----------------------------------------
+    Total                      3.990ns (1.494ns logic, 2.496ns route)
+                                       (37.4% logic, 62.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'dcm_inst/pll_base_inst/CLKOUT2'
+  Clock period: 9.580ns (frequency: 104.380MHz)
+  Total number of paths / destination ports: 3003 / 94
+-------------------------------------------------------------------------
+Delay:               9.580ns (Levels of Logic = 7)
+  Source:            your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/TRUE_DP.PRIM9.ram (RAM)
+  Destination:       vga_blue_in_0 (FF)
+  Source Clock:      dcm_inst/pll_base_inst/CLKOUT2 rising
+  Destination Clock: dcm_inst/pll_base_inst/CLKOUT2 rising
+
+  Data Path: your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/TRUE_DP.PRIM9.ram to vga_blue_in_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKBRDCLK->DOBDO11    1   1.850   0.579  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/TRUE_DP.PRIM9.ram (doutb<7>)
+     end scope: 'your_instance_name:doutb<7>'
+     DSP48A1:B7->M8        5   3.364   0.943  Mmult_n0215 (n0215<8>)
+     LUT3:I0->O            3   0.205   0.879  Msub_GND_4_o_GND_4_o_sub_94_OUT_xor<3>111 (Msub_GND_4_o_GND_4_o_sub_94_OUT_xor<3>11)
+     LUT6:I3->O            2   0.205   0.845  Msub_GND_4_o_GND_4_o_sub_94_OUT_cy<7>11 (Msub_GND_4_o_GND_4_o_sub_94_OUT_cy<7>)
+     LUT3:I0->O            0   0.205   0.000  Mcompar_GND_4_o_vga_y_pos[31]_LessThan_95_o_lutdi4 (Mcompar_GND_4_o_vga_y_pos[31]_LessThan_95_o_lutdi4)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_GND_4_o_vga_y_pos[31]_LessThan_95_o_cy<4> (GND_4_o_vga_y_pos[31]_LessThan_95_o)
+     MUXCY:CI->O           1   0.258   0.000  GND_4_o_GND_4_o_mux_96_OUT<0>1_cy (GND_4_o_GND_4_o_mux_96_OUT<0>)
+     FDC:D                     0.102          vga_blue_in_0
+    ----------------------------------------
+    Total                      9.580ns (6.334ns logic, 3.246ns route)
+                                       (66.1% logic, 33.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'dcm_inst/pll_base_inst/CLKOUT0'
+  Clock period: 7.287ns (frequency: 137.229MHz)
+  Total number of paths / destination ports: 39194 / 3824
+-------------------------------------------------------------------------
+Delay:               7.287ns (Levels of Logic = 6)
+  Source:            Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_17 (FF)
+  Destination:       Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_31 (FF)
+  Source Clock:      dcm_inst/pll_base_inst/CLKOUT0 rising
+  Destination Clock: dcm_inst/pll_base_inst/CLKOUT0 rising
+
+  Data Path: Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_17 to Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.447   1.079  Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_17 (Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_17)
+     LUT6:I0->O            1   0.203   0.827  Inst_uart_comms/Inst_serial_rx_fifo/rx_counter[31]_GND_38_o_equal_11_o<31>13 (Inst_uart_comms/Inst_serial_rx_fifo/rx_counter[31]_GND_38_o_equal_11_o<31>13)
+     LUT6:I2->O            2   0.203   0.617  Inst_uart_comms/Inst_serial_rx_fifo/rx_counter[31]_GND_38_o_equal_11_o<31>15 (Inst_uart_comms/Inst_serial_rx_fifo/rx_counter[31]_GND_38_o_equal_11_o<31>1)
+     LUT4:I3->O            3   0.205   0.651  Inst_uart_comms/Inst_serial_rx_fifo/rx_counter[31]_GND_38_o_equal_11_o<31>21 (Inst_uart_comms/Inst_serial_rx_fifo/rx_counter[31]_GND_38_o_equal_11_o<31>2)
+     LUT4:I3->O            4   0.205   0.684  Inst_uart_comms/Inst_serial_rx_fifo/rx_counter[31]_GND_38_o_equal_11_o<31>3 (Inst_uart_comms/Inst_serial_rx_fifo/rx_counter[31]_GND_38_o_equal_11_o)
+     LUT6:I5->O           32   0.205   1.656  Inst_uart_comms/Inst_serial_rx_fifo/Mmux_rx_state[1]_rx_counter[31]_wide_mux_29_OUT110 (Inst_uart_comms/Inst_serial_rx_fifo/Mmux_rx_state[1]_rx_counter[31]_wide_mux_29_OUT110)
+     LUT6:I0->O            1   0.203   0.000  Inst_uart_comms/Inst_serial_rx_fifo/Mmux_rx_state[1]_rx_counter[31]_wide_mux_29_OUT112 (Inst_uart_comms/Inst_serial_rx_fifo/rx_state[1]_rx_counter[31]_wide_mux_29_OUT<0>)
+     FDC:D                     0.102          Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_0
+    ----------------------------------------
+    Total                      7.287ns (1.773ns logic, 5.514ns route)
+                                       (24.3% logic, 75.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'dcm_inst/pll_base_inst/CLKOUT3'
+  Clock period: 13.423ns (frequency: 74.497MHz)
+  Total number of paths / destination ports: 2614 / 96
+-------------------------------------------------------------------------
+Delay:               4.195ns (Levels of Logic = 3)
+  Source:            beep_counter_19 (FF)
+  Destination:       message_0 (FF)
+  Source Clock:      dcm_inst/pll_base_inst/CLKOUT3 rising 3.2X
+  Destination Clock: dcm_inst/pll_base_inst/CLKOUT3 rising 3.2X
+
+  Data Path: beep_counter_19 to message_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.981  beep_counter_19 (beep_counter_19)
+     LUT6:I0->O            7   0.203   1.002  _n0346_inv13 (_n0346_inv13)
+     LUT6:I3->O           18   0.205   1.050  _n0346_inv2 (_n0346_inv)
+     LUT3:I2->O            1   0.205   0.000  message_0_rstpot (message_0_rstpot)
+     FD:D                      0.102          message_0
+    ----------------------------------------
+    Total                      4.195ns (1.162ns logic, 3.033ns route)
+                                       (27.7% logic, 72.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'adc_clk_buff'
+  Clock period: 3.016ns (frequency: 331.532MHz)
+  Total number of paths / destination ports: 397 / 179
+-------------------------------------------------------------------------
+Delay:               3.016ns (Levels of Logic = 7)
+  Source:            adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_0 (FF)
+  Destination:       adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i (FF)
+  Source Clock:      adc_clk_buff rising
+  Destination Clock: adc_clk_buff rising
+
+  Data Path: adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_0 to adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q             13   0.447   0.933  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_0 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1<0>)
+     LUT4:I3->O            1   0.205   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c1/v1<0>1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c1/v1<0>)
+     MUXCY:S->O            1   0.172   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c1/gmux.gm[0].gm1.m1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c1/gmux.carrynet<0>)
+     MUXCY:CI->O           1   0.019   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c1/gmux.gm[1].gms.ms (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c1/gmux.carrynet<1>)
+     MUXCY:CI->O           1   0.019   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c1/gmux.gm[2].gms.ms (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c1/gmux.carrynet<2>)
+     MUXCY:CI->O           1   0.019   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c1/gmux.gm[3].gms.ms (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c1/gmux.carrynet<3>)
+     MUXCY:CI->O           1   0.213   0.684  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c1/gmux.gm[4].gms.ms (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/comp1)
+     LUT5:I3->O            2   0.203   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_179_o_MUX_14_o11 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/comp1_GND_179_o_MUX_14_o)
+     FDP:D                     0.102          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i
+    ----------------------------------------
+    Total                      3.016ns (1.399ns logic, 1.617ns route)
+                                       (46.4% logic, 53.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'dcm_inst/pll_base_inst/CLKOUT1'
+  Total number of paths / destination ports: 79 / 78
+-------------------------------------------------------------------------
+Offset:              5.760ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       last_adc_divider_0 (FF)
+  Destination Clock: dcm_inst/pll_base_inst/CLKOUT1 rising
+
+  Data Path: rst to last_adc_divider_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           357   1.222   2.075  rst_IBUF (rst_IBUF)
+     INV:I->O            122   0.206   1.934  rst_inv1_INV_0 (Inst_mag/rst_inv)
+     FDE:CE                    0.322          Inst_test_signal_gen/last_val_0
+    ----------------------------------------
+    Total                      5.760ns (1.750ns logic, 4.010ns route)
+                                       (30.4% logic, 69.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'dcm_inst/pll_base_inst/CLKOUT2'
+  Total number of paths / destination ports: 75 / 75
+-------------------------------------------------------------------------
+Offset:              5.760ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       vga_ram_out_addr_0 (FF)
+  Destination Clock: dcm_inst/pll_base_inst/CLKOUT2 rising
+
+  Data Path: rst to vga_ram_out_addr_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           357   1.222   2.075  rst_IBUF (rst_IBUF)
+     INV:I->O            122   0.206   1.934  rst_inv1_INV_0 (Inst_mag/rst_inv)
+     FDE:CE                    0.322          vga_ram_out_addr_0
+    ----------------------------------------
+    Total                      5.760ns (1.750ns logic, 4.010ns route)
+                                       (30.4% logic, 69.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'dcm_inst/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 684 / 356
+-------------------------------------------------------------------------
+Offset:              6.544ns (Levels of Logic = 6)
+  Source:            sw<0> (PAD)
+  Destination:       Inst_mag/re_buffer_5 (FF)
+  Destination Clock: dcm_inst/pll_base_inst/CLKOUT0 rising
+
+  Data Path: sw<0> to Inst_mag/re_buffer_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            57   1.222   1.698  sw_0_IBUF (Madd_n0246_Madd_cy<0>)
+     LUT3:I1->O           16   0.203   1.369  Madd_n0246_Madd_xor<2>11 (n0246<2>)
+     LUT6:I0->O            2   0.203   0.617  Mmux_fft_xk_re_selected81 (Mmux_fft_xk_re_selected8)
+     LUT6:I5->O            1   0.205   0.000  Mmux_fft_xk_re_selected83_G (N45)
+     MUXF7:I1->O           1   0.140   0.580  Mmux_fft_xk_re_selected83 (Mmux_fft_xk_re_selected82)
+     LUT6:I5->O            1   0.205   0.000  Mmux_fft_xk_re_selected85 (fft_xk_re_selected<5>)
+     FDC:D                     0.102          Inst_mag/re_buffer_5
+    ----------------------------------------
+    Total                      6.544ns (2.280ns logic, 4.264ns route)
+                                       (34.8% logic, 65.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'adc_clk_buff'
+  Total number of paths / destination ports: 13 / 13
+-------------------------------------------------------------------------
+Offset:              3.727ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/RST_FULL_GEN (FF)
+  Destination Clock: adc_clk_buff rising
+
+  Data Path: rst to adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/RST_FULL_GEN
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           357   1.222   2.075  rst_IBUF (rst_IBUF)
+     begin scope: 'adc_fifo_inst:rst'
+     FDP:PRE                   0.430          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.rst_d1
+    ----------------------------------------
+    Total                      3.727ns (1.652ns logic, 2.075ns route)
+                                       (44.3% logic, 55.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'dcm_inst/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              5.329ns (Levels of Logic = 2)
+  Source:            adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM9.ram (RAM)
+  Destination:       sine_out<7> (PAD)
+  Source Clock:      dcm_inst/pll_base_inst/CLKOUT0 rising
+
+  Data Path: adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM9.ram to sine_out<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKBRDCLK->DOBDO7   12   1.850   0.908  ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM9.ram (DOUTB<7>)
+     end scope: 'adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr:DOUTB<7>'
+     end scope: 'adc_fifo_inst:dout<7>'
+     OBUF:I->O                 2.571          sine_out_7_OBUF (sine_out<7>)
+    ----------------------------------------
+    Total                      5.329ns (4.421ns logic, 0.908ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'dcm_inst/pll_base_inst/CLKOUT2'
+  Total number of paths / destination ports: 6 / 4
+-------------------------------------------------------------------------
+Offset:              4.521ns (Levels of Logic = 2)
+  Source:            Inst_vga_configurable/color_valid (FF)
+  Destination:       blue<1> (PAD)
+  Source Clock:      dcm_inst/pll_base_inst/CLKOUT2 rising
+
+  Data Path: Inst_vga_configurable/color_valid to blue<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.684  Inst_vga_configurable/color_valid (Inst_vga_configurable/color_valid)
+     LUT2:I0->O            2   0.203   0.616  Inst_vga_configurable/Mmux_blue11 (blue_0_OBUF)
+     OBUF:I->O                 2.571          blue_0_OBUF (blue<0>)
+    ----------------------------------------
+    Total                      4.521ns (3.221ns logic, 1.300ns route)
+                                       (71.2% logic, 28.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'dcm_inst/pll_base_inst/CLKOUT1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.776ns (Levels of Logic = 1)
+  Source:            adc_clk_buff (FF)
+  Destination:       adc_clk (PAD)
+  Source Clock:      dcm_inst/pll_base_inst/CLKOUT1 rising
+
+  Data Path: adc_clk_buff to adc_clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              82   0.447   1.758  adc_clk_buff (adc_clk_buff)
+     OBUF:I->O                 2.571          adc_clk_OBUF (adc_clk)
+    ----------------------------------------
+    Total                      4.776ns (3.018ns logic, 1.758ns route)
+                                       (63.2% logic, 36.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'dcm_inst/pll_base_inst/CLKOUT3'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            phase_accumulator_31 (FF)
+  Destination:       antenna (PAD)
+  Source Clock:      dcm_inst/pll_base_inst/CLKOUT3 rising 3.2X
+
+  Data Path: phase_accumulator_31 to antenna
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  phase_accumulator_31 (phase_accumulator_31)
+     OBUF:I->O                 2.571          antenna_OBUF (antenna)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock adc_clk_buff
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+adc_clk_buff                  |    3.016|         |         |         |
+dcm_inst/pll_base_inst/CLKOUT0|    1.128|         |         |         |
+dcm_inst/pll_base_inst/CLKOUT1|    2.904|         |         |         |
+------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock dcm_inst/pll_base_inst/CLKOUT0
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+adc_clk_buff                  |    1.702|         |         |         |
+dcm_inst/pll_base_inst/CLKOUT0|    7.287|         |         |         |
+dcm_inst/pll_base_inst/CLKOUT1|    3.210|         |         |         |
+dcm_inst/pll_base_inst/CLKOUT2|    2.356|         |         |         |
+------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock dcm_inst/pll_base_inst/CLKOUT1
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+adc_clk_buff                  |    1.811|         |         |         |
+dcm_inst/pll_base_inst/CLKOUT0|    4.044|         |         |         |
+dcm_inst/pll_base_inst/CLKOUT1|    3.990|         |         |         |
+------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock dcm_inst/pll_base_inst/CLKOUT2
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+dcm_inst/pll_base_inst/CLKOUT0|    7.648|         |         |         |
+dcm_inst/pll_base_inst/CLKOUT2|    9.580|         |         |         |
+------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock dcm_inst/pll_base_inst/CLKOUT3
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+dcm_inst/pll_base_inst/CLKOUT3|    4.195|         |         |         |
+------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 30.00 secs
+Total CPU time to Xst completion: 18.85 secs
+ 
+--> 
+
+
+Total memory usage is 430924 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   40 (   0 filtered)
+Number of infos    :   32 (   0 filtered)
+

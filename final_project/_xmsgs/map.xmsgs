@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="Map" num="284" delta="new" >Map is running with the multi-threading option on. Map currently supports the use of up to 2 processors. Based on the the user options and machine load, Map will use 2 processors during this run.
+</msg>
+
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">sw&lt;7&gt;_IBUF</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="395" delta="new" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">60</arg> more times for the following (max. 5 shown):
+<arg fmt="%s" index="3">sw&lt;6&gt;_IBUF,
+sw&lt;5&gt;_IBUF,
+sw&lt;4&gt;_IBUF,
+adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i,
+your_instance_name/douta&lt;7&gt;</arg>
+To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
+</msg>
+
+<msg type="info" file="MapLib" num="562" delta="new" >No environment variables are currently set.
+</msg>
+
+<msg type="info" file="LIT" num="244" delta="new" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
+</msg>
+
+<msg type="warning" file="Pack" num="2238" delta="new" >Function generator symbol &quot;<arg fmt="%s" index="1">fft_instance/blk00000de2</arg>&quot; (Output Signal = <arg fmt="%s" index="2">fft_instance/sig00000ad3</arg>) has an invalid use of the LUTNM constraint. There are no other function generator symbols with a matching LUTNM constraint value (LUTNM=<arg fmt="%s" index="3">fft_instance/hlutnm000000a0</arg>). The constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Pack" num="2238" delta="new" >Function generator symbol &quot;<arg fmt="%s" index="1">fft_instance/blk00000de4</arg>&quot; (Output Signal = <arg fmt="%s" index="2">fft_instance/sig00000ad4</arg>) has an invalid use of the LUTNM constraint. There are no other function generator symbols with a matching LUTNM constraint value (LUTNM=<arg fmt="%s" index="3">fft_instance/hlutnm000000a1</arg>). The constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Pack" num="2238" delta="new" >Function generator symbol &quot;<arg fmt="%s" index="1">fft_instance/blk00000de6</arg>&quot; (Output Signal = <arg fmt="%s" index="2">fft_instance/sig00000ad5</arg>) has an invalid use of the LUTNM constraint. There are no other function generator symbols with a matching LUTNM constraint value (LUTNM=<arg fmt="%s" index="3">fft_instance/hlutnm000000a2</arg>). The constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Pack" num="2238" delta="new" >Function generator symbol &quot;<arg fmt="%s" index="1">fft_instance/blk00000df4</arg>&quot; (Output Signal = <arg fmt="%s" index="2">fft_instance/sig00000add</arg>) has an invalid use of the LUTNM constraint. There are no other function generator symbols with a matching LUTNM constraint value (LUTNM=<arg fmt="%s" index="3">fft_instance/hlutnm000000a3</arg>). The constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Pack" num="2238" delta="new" >Function generator symbol &quot;<arg fmt="%s" index="1">fft_instance/blk00000d70</arg>&quot; (Output Signal = <arg fmt="%s" index="2">fft_instance/sig00000aa0</arg>) has an invalid use of the LUTNM constraint. There are no other function generator symbols with a matching LUTNM constraint value (LUTNM=<arg fmt="%s" index="3">fft_instance/hlutnm00000085</arg>). The constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Pack" num="2238" delta="new" >Function generator symbol &quot;<arg fmt="%s" index="1">fft_instance/blk00000d72</arg>&quot; (Output Signal = <arg fmt="%s" index="2">fft_instance/sig00000aa1</arg>) has an invalid use of the LUTNM constraint. There are no other function generator symbols with a matching LUTNM constraint value (LUTNM=<arg fmt="%s" index="3">fft_instance/hlutnm00000086</arg>). The constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Pack" num="2238" delta="new" >Function generator symbol &quot;<arg fmt="%s" index="1">fft_instance/blk00000d74</arg>&quot; (Output Signal = <arg fmt="%s" index="2">fft_instance/sig00000aa2</arg>) has an invalid use of the LUTNM constraint. There are no other function generator symbols with a matching LUTNM constraint value (LUTNM=<arg fmt="%s" index="3">fft_instance/hlutnm00000087</arg>). The constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Pack" num="2238" delta="new" >Function generator symbol &quot;<arg fmt="%s" index="1">fft_instance/blk00000d7a</arg>&quot; (Output Signal = <arg fmt="%s" index="2">fft_instance/sig00000aa3</arg>) has an invalid use of the LUTNM constraint. There are no other function generator symbols with a matching LUTNM constraint value (LUTNM=<arg fmt="%s" index="3">fft_instance/hlutnm00000088</arg>). The constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Pack" num="2238" delta="new" >Function generator symbol &quot;<arg fmt="%s" index="1">fft_instance/blk00000d7c</arg>&quot; (Output Signal = <arg fmt="%s" index="2">fft_instance/sig00000aa4</arg>) has an invalid use of the LUTNM constraint. There are no other function generator symbols with a matching LUTNM constraint value (LUTNM=<arg fmt="%s" index="3">fft_instance/hlutnm00000089</arg>). The constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Pack" num="2238" delta="new" >Function generator symbol &quot;<arg fmt="%s" index="1">fft_instance/blk00000d7e</arg>&quot; (Output Signal = <arg fmt="%s" index="2">fft_instance/sig00000aa5</arg>) has an invalid use of the LUTNM constraint. There are no other function generator symbols with a matching LUTNM constraint value (LUTNM=<arg fmt="%s" index="3">fft_instance/hlutnm0000008a</arg>). The constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Pack" num="2238" delta="new" >Function generator symbol &quot;<arg fmt="%s" index="1">fft_instance/blk00000dca</arg>&quot; (Output Signal = <arg fmt="%s" index="2">fft_instance/sig00000ac9</arg>) has an invalid use of the LUTNM constraint. There are no other function generator symbols with a matching LUTNM constraint value (LUTNM=<arg fmt="%s" index="3">fft_instance/hlutnm0000009a</arg>). The constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Pack" num="2238" delta="new" >Function generator symbol &quot;<arg fmt="%s" index="1">fft_instance/blk00000dcc</arg>&quot; (Output Signal = <arg fmt="%s" index="2">fft_instance/sig00000aca</arg>) has an invalid use of the LUTNM constraint. There are no other function generator symbols with a matching LUTNM constraint value (LUTNM=<arg fmt="%s" index="3">fft_instance/hlutnm0000009b</arg>). The constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Pack" num="2238" delta="new" >Function generator symbol &quot;<arg fmt="%s" index="1">fft_instance/blk00000dce</arg>&quot; (Output Signal = <arg fmt="%s" index="2">fft_instance/sig00000acb</arg>) has an invalid use of the LUTNM constraint. There are no other function generator symbols with a matching LUTNM constraint value (LUTNM=<arg fmt="%s" index="3">fft_instance/hlutnm0000009c</arg>). The constraint will be ignored.
+</msg>
+
+<msg type="info" file="Pack" num="1716" delta="new" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celsius)
+</msg>
+
+<msg type="info" file="Pack" num="1720" delta="new" >Initializing voltage to <arg fmt="%0.3f" index="1">1.140</arg> Volts. (default - Range: <arg fmt="%0.3f" index="2">1.140</arg> to <arg fmt="%0.3f" index="3">1.260</arg> Volts)
+</msg>
+
+<msg type="info" file="Map" num="215" delta="new" >The Interim Design Summary has been generated in the MAP Report (.mrp).
+</msg>
+
+<msg type="warning" file="Place" num="1137" delta="new" >This design is not guaranteed to be routable! This design contains a global buffer instance, &lt;<arg fmt="%s" index="1">dcm_inst/clkout4_buf</arg>&gt;, driving the net, &lt;<arg fmt="%s" index="2">buffered_clk2</arg>&gt;, that is driving the following (first <arg fmt="%d" index="3">30</arg>) non-clock load pins.
+<arg fmt="%s" index="4">&lt; PIN: fm_dcm_mgr/clkin1_buf.I0; &gt;
+</arg>This is not a recommended design practice in Spartan-6 due to limitations in the global routing that may cause excessive delay, skew or unroutable situations.  It is recommended to only use a BUFG resource to drive clock loads. Please pay extra attention to the timing and routing of this path to ensure the design goals are met. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN &lt;<arg fmt="%s" index="5">dcm_inst/clkout4_buf</arg>.<arg fmt="%s" index="6">O</arg>&gt; allowing your design to continue. This constraint disables all clock placer rules related to the specified COMP.PIN.
+</msg>
+
+<msg type="info" file="Pack" num="1650" delta="new" >Map created a placed design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="2212" delta="new" >Async clocking for BRAM (comp <arg fmt="%s" index="1">your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/TRUE_DP.PRIM9.ram</arg>) port(s) with READ_FIRST mode has certain restrictions. Make sure that there is no address collision. A read/write on one port and a write operation from the other port at the same address is not allowed.<arg fmt="%s" index="2">RAMB8BWER in all configurations, A12-6 including A4 cannot be the same. </arg>Violating this restriction may result in the incorrect operation of the BRAM.
+</msg>
+
+<msg type="info" file="PhysDesignRules" num="1861" delta="new" >To achieve optimal frequency synthesis performance with the CLKFX and CLKFX180 outputs of the DCM comp <arg fmt="%s" index="1">fm_dcm_mgr/dcm_sp_inst</arg>, consult the device Data Sheet.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="2410" delta="new" >This design is using one or more 9K Block RAMs (RAMB8BWER).  9K Block RAM initialization data, both user defined and default, may be incorrect and should not be used.  For more information, please reference Xilinx Answer Record 39999.
+</msg>
+
+</messages>
+

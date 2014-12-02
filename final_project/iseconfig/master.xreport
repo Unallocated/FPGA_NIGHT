@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-11-28T17:45:33</DateModified>
+  <DateModified>2013-12-01T00:01:00</DateModified>
   <ModuleName>master</ModuleName>
   <SummaryTimeStamp>2014-11-28T16:07:56</SummaryTimeStamp>
-  <SavedFilePath>/home/xilinx/FPGA_NIGHT/final_project/iseconfig/master.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/xilinx/FPGA_NIGHT/final_project/</ImplementationReportsDirectory>
+  <SavedFilePath>/media/sf_final_project/iseconfig/master.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/media/sf_final_project/</ImplementationReportsDirectory>
   <DateInitialized>2014-11-13T18:40:15</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

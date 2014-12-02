@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "/home/xilinx/FPGA_NIGHT/final_project/master_tb_isim_beh.exe" -prj "/home/xilinx/FPGA_NIGHT/final_project/master_tb_beh.prj" "work.master_tb" 
+-intstyle "ise" -incremental -lib "secureip" -o "/media/sf_final_project/master_tb_isim_beh.exe" -prj "/media/sf_final_project/master_tb_beh.prj" "work.master_tb" 

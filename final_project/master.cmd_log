@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "/media/sf_final_project/master.xst" -ofn "/media/sf_final_project/master.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc6slx16-csg324-3 master.ngc master.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt 2 -ir off -pr off -lc off -power off -o master_map.ncd master.ngd master.pcf 
+par -w -intstyle ise -ol high -mt 4 master_map.ncd master.ncd master.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml master.twx master.ncd -o master.twr master.pcf -ucf top.ucf 
+bitgen -intstyle ise -f master.ut master.ncd 

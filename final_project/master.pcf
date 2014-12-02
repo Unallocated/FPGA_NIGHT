@@ -1,0 +1,1970 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Dec 01 00:28:41 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "hs" LOCATE = SITE "N6" LEVEL 1;
+COMP "rx" LOCATE = SITE "N17" LEVEL 1;
+COMP "vs" LOCATE = SITE "P7" LEVEL 1;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "rst" LOCATE = SITE "C9" LEVEL 1;
+COMP "adc_clk" LOCATE = SITE "H3" LEVEL 1;
+COMP "blue<0>" LOCATE = SITE "R7" LEVEL 1;
+COMP "blue<1>" LOCATE = SITE "T7" LEVEL 1;
+COMP "leds<0>" LOCATE = SITE "U16" LEVEL 1;
+COMP "leds<1>" LOCATE = SITE "V16" LEVEL 1;
+COMP "leds<2>" LOCATE = SITE "U15" LEVEL 1;
+COMP "leds<3>" LOCATE = SITE "V15" LEVEL 1;
+COMP "leds<4>" LOCATE = SITE "M11" LEVEL 1;
+COMP "leds<5>" LOCATE = SITE "N11" LEVEL 1;
+COMP "leds<6>" LOCATE = SITE "R11" LEVEL 1;
+COMP "leds<7>" LOCATE = SITE "T11" LEVEL 1;
+COMP "antenna" LOCATE = SITE "K2" LEVEL 1;
+COMP "sw<0>" LOCATE = SITE "T10" LEVEL 1;
+COMP "sw<1>" LOCATE = SITE "T9" LEVEL 1;
+COMP "sw<2>" LOCATE = SITE "V9" LEVEL 1;
+COMP "sw<3>" LOCATE = SITE "M8" LEVEL 1;
+COMP "sw<4>" LOCATE = SITE "N8" LEVEL 1;
+COMP "sw<5>" LOCATE = SITE "U8" LEVEL 1;
+COMP "sw<6>" LOCATE = SITE "V8" LEVEL 1;
+COMP "sw<7>" LOCATE = SITE "T5" LEVEL 1;
+COMP "sine_out<0>" LOCATE = SITE "T12" LEVEL 1;
+COMP "sine_out<1>" LOCATE = SITE "V12" LEVEL 1;
+COMP "sine_out<2>" LOCATE = SITE "N10" LEVEL 1;
+COMP "sine_out<3>" LOCATE = SITE "P11" LEVEL 1;
+COMP "sine_out<4>" LOCATE = SITE "M10" LEVEL 1;
+COMP "sine_out<5>" LOCATE = SITE "N9" LEVEL 1;
+COMP "sine_out<6>" LOCATE = SITE "U11" LEVEL 1;
+COMP "sine_out<7>" LOCATE = SITE "V11" LEVEL 1;
+COMP "red<0>" LOCATE = SITE "U7" LEVEL 1;
+COMP "red<1>" LOCATE = SITE "V7" LEVEL 1;
+COMP "red<2>" LOCATE = SITE "N7" LEVEL 1;
+COMP "green<0>" LOCATE = SITE "P8" LEVEL 1;
+COMP "green<1>" LOCATE = SITE "T6" LEVEL 1;
+COMP "green<2>" LOCATE = SITE "V6" LEVEL 1;
+COMP "adc_in<0>" LOCATE = SITE "G11" LEVEL 1;
+COMP "adc_in<1>" LOCATE = SITE "F10" LEVEL 1;
+COMP "adc_in<2>" LOCATE = SITE "F11" LEVEL 1;
+COMP "adc_in<3>" LOCATE = SITE "E11" LEVEL 1;
+COMP "adc_in<4>" LOCATE = SITE "D12" LEVEL 1;
+COMP "adc_in<5>" LOCATE = SITE "C12" LEVEL 1;
+COMP "adc_in<6>" LOCATE = SITE "F12" LEVEL 1;
+COMP "adc_in<7>" LOCATE = SITE "E12" LEVEL 1;
+PIN dcm_inst/clkout2_buf_pin<1> = BEL "dcm_inst/clkout2_buf" PINNAME O;
+PIN "dcm_inst/clkout2_buf_pin<1>" CLOCK_DEDICATED_ROUTE = FALSE;
+PIN dcm_inst/clkout4_buf_pin<1> = BEL "dcm_inst/clkout4_buf" PINNAME O;
+PIN "dcm_inst/clkout4_buf_pin<1>" CLOCK_DEDICATED_ROUTE = FALSE;
+TIMEGRP dcm_inst_clkout1 = BEL "setup_delay_0" BEL "setup_delay_1" BEL
+        "setup_delay_2" BEL "setup_delay_3" BEL "last_adc_divider_0" BEL
+        "last_adc_divider_1" BEL "last_adc_divider_2" BEL "last_adc_divider_3"
+        BEL "last_adc_divider_4" BEL "last_adc_divider_5" BEL
+        "last_adc_divider_6" BEL "last_adc_divider_7" BEL "last_adc_divider_8"
+        BEL "last_adc_divider_9" BEL "last_adc_divider_10" BEL
+        "last_adc_divider_11" BEL "last_adc_divider_12" BEL
+        "last_adc_divider_13" BEL "last_adc_divider_14" BEL
+        "last_adc_divider_15" BEL "last_adc_divider_16" BEL
+        "last_adc_divider_17" BEL "last_adc_divider_18" BEL
+        "last_adc_divider_19" BEL "last_adc_divider_20" BEL
+        "last_adc_divider_21" BEL "last_adc_divider_22" BEL
+        "last_adc_divider_23" BEL "adc_clk_counter_0" BEL "adc_clk_counter_1"
+        BEL "adc_clk_counter_2" BEL "adc_clk_counter_3" BEL
+        "adc_clk_counter_4" BEL "adc_clk_counter_5" BEL "adc_clk_counter_6"
+        BEL "adc_clk_counter_7" BEL "adc_clk_counter_8" BEL
+        "adc_clk_counter_9" BEL "adc_clk_counter_10" BEL "adc_clk_counter_11"
+        BEL "adc_clk_counter_12" BEL "adc_clk_counter_13" BEL
+        "adc_clk_counter_14" BEL "adc_clk_counter_15" BEL "adc_clk_counter_16"
+        BEL "adc_clk_counter_17" BEL "adc_clk_counter_18" BEL
+        "adc_clk_counter_19" BEL "adc_clk_counter_20" BEL "adc_clk_counter_21"
+        BEL "adc_clk_counter_22" BEL "adc_clk_counter_23" BEL
+        "adc_clk_counter_24" BEL "adc_clk_counter_25" BEL "adc_clk_counter_26"
+        BEL "adc_clk_counter_27" BEL "adc_clk_counter_28" BEL
+        "adc_clk_counter_29" BEL "adc_clk_counter_30" BEL "adc_clk_counter_31"
+        BEL "dcm_inst/clkout2_buf" BEL "adc_state" BEL "adc_clk_buff" BEL
+        "adc_fifo_wr_en";
+PIN
+        your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/TRUE_DP.PRIM9.ram_pins<27>
+        = BEL
+        "your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/TRUE_DP.PRIM9.ram"
+        PINNAME CLKBRDCLK;
+TIMEGRP dcm_inst_clkout2 = BEL "vga_ram_out_addr_0" BEL "vga_ram_out_addr_1"
+        BEL "vga_ram_out_addr_2" BEL "vga_ram_out_addr_3" BEL
+        "vga_ram_out_addr_4" BEL "vga_ram_out_addr_5" BEL "vga_ram_out_addr_6"
+        BEL "vga_ram_out_addr_7" BEL "vga_ram_out_addr_8" BEL "vga_blue_in_0"
+        BEL "dcm_inst/clkout3_buf" BEL "Inst_vga_configurable/v_counter_9" BEL
+        "Inst_vga_configurable/v_counter_8" BEL
+        "Inst_vga_configurable/v_counter_7" BEL
+        "Inst_vga_configurable/v_counter_6" BEL
+        "Inst_vga_configurable/v_counter_5" BEL
+        "Inst_vga_configurable/v_counter_4" BEL
+        "Inst_vga_configurable/v_counter_3" BEL
+        "Inst_vga_configurable/v_counter_2" BEL
+        "Inst_vga_configurable/v_counter_1" BEL
+        "Inst_vga_configurable/v_counter_0" BEL
+        "Inst_vga_configurable/h_counter_9" BEL
+        "Inst_vga_configurable/h_counter_8" BEL
+        "Inst_vga_configurable/h_counter_7" BEL
+        "Inst_vga_configurable/h_counter_6" BEL
+        "Inst_vga_configurable/h_counter_5" BEL
+        "Inst_vga_configurable/h_counter_4" BEL
+        "Inst_vga_configurable/h_counter_3" BEL
+        "Inst_vga_configurable/h_counter_2" BEL
+        "Inst_vga_configurable/h_counter_1" BEL
+        "Inst_vga_configurable/h_counter_0" BEL
+        "Inst_vga_configurable/y_pos_9" BEL "Inst_vga_configurable/y_pos_8"
+        BEL "Inst_vga_configurable/y_pos_7" BEL
+        "Inst_vga_configurable/y_pos_6" BEL "Inst_vga_configurable/y_pos_5"
+        BEL "Inst_vga_configurable/y_pos_4" BEL
+        "Inst_vga_configurable/y_pos_3" BEL "Inst_vga_configurable/y_pos_2"
+        BEL "Inst_vga_configurable/y_pos_1" BEL
+        "Inst_vga_configurable/y_pos_0" BEL "Inst_vga_configurable/x_pos_10"
+        BEL "Inst_vga_configurable/x_pos_9" BEL
+        "Inst_vga_configurable/x_pos_8" BEL "Inst_vga_configurable/x_pos_7"
+        BEL "Inst_vga_configurable/x_pos_6" BEL
+        "Inst_vga_configurable/x_pos_5" BEL "Inst_vga_configurable/x_pos_4"
+        BEL "Inst_vga_configurable/x_pos_3" BEL
+        "Inst_vga_configurable/x_pos_2" BEL "Inst_vga_configurable/x_pos_1"
+        BEL "Inst_vga_configurable/x_pos_0" BEL "Inst_vga_configurable/vs" BEL
+        "Inst_vga_configurable/hs" BEL "Inst_vga_configurable/color_valid" PIN
+        "your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/TRUE_DP.PRIM9.ram_pins<27>";
+PIN
+        adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM9.ram_pins<27>
+        = BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM9.ram"
+        PINNAME CLKBRDCLK;
+PIN
+        your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/TRUE_DP.PRIM9.ram_pins<26>
+        = BEL
+        "your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/TRUE_DP.PRIM9.ram"
+        PINNAME CLKAWRCLK;
+PIN fft_instance/blk0000016b_pins<92> = BEL "fft_instance/blk0000016b" PINNAME
+        CLK;
+PIN fft_instance/blk0000016c_pins<92> = BEL "fft_instance/blk0000016c" PINNAME
+        CLK;
+PIN fft_instance/blk0000016d_pins<92> = BEL "fft_instance/blk0000016d" PINNAME
+        CLK;
+PIN fft_instance/blk0000016e_pins<92> = BEL "fft_instance/blk0000016e" PINNAME
+        CLK;
+PIN fft_instance/blk0000016f_pins<92> = BEL "fft_instance/blk0000016f" PINNAME
+        CLK;
+PIN fft_instance/blk00000170_pins<92> = BEL "fft_instance/blk00000170" PINNAME
+        CLK;
+PIN fft_instance/blk00000171_pins<92> = BEL "fft_instance/blk00000171" PINNAME
+        CLK;
+PIN fft_instance/blk00000172_pins<92> = BEL "fft_instance/blk00000172" PINNAME
+        CLK;
+PIN fft_instance/blk00000173_pins<92> = BEL "fft_instance/blk00000173" PINNAME
+        CLK;
+PIN fft_instance/blk00000174_pins<92> = BEL "fft_instance/blk00000174" PINNAME
+        CLK;
+PIN fft_instance/blk00000175_pins<92> = BEL "fft_instance/blk00000175" PINNAME
+        CLK;
+PIN fft_instance/blk00000176_pins<92> = BEL "fft_instance/blk00000176" PINNAME
+        CLK;
+PIN fft_instance/blk00000af1/blk00000b17_pins<26> = BEL
+        "fft_instance/blk00000af1/blk00000b17" PINNAME CLKAWRCLK;
+PIN fft_instance/blk00000af1/blk00000b17_pins<27> = BEL
+        "fft_instance/blk00000af1/blk00000b17" PINNAME CLKBRDCLK;
+PIN fft_instance/blk00000b18/blk00000b3e_pins<26> = BEL
+        "fft_instance/blk00000b18/blk00000b3e" PINNAME CLKAWRCLK;
+PIN fft_instance/blk00000b18/blk00000b3e_pins<27> = BEL
+        "fft_instance/blk00000b18/blk00000b3e" PINNAME CLKBRDCLK;
+PIN fft_instance/blk00000b3f/blk00000b65_pins<26> = BEL
+        "fft_instance/blk00000b3f/blk00000b65" PINNAME CLKAWRCLK;
+PIN fft_instance/blk00000b3f/blk00000b65_pins<27> = BEL
+        "fft_instance/blk00000b3f/blk00000b65" PINNAME CLKBRDCLK;
+PIN fft_instance/blk00000b66/blk00000b8c_pins<26> = BEL
+        "fft_instance/blk00000b66/blk00000b8c" PINNAME CLKAWRCLK;
+PIN fft_instance/blk00000b66/blk00000b8c_pins<27> = BEL
+        "fft_instance/blk00000b66/blk00000b8c" PINNAME CLKBRDCLK;
+PIN fft_instance/blk00000edb_pins<20> = BEL "fft_instance/blk00000edb" PINNAME
+        CLKAWRCLK;
+PIN fft_instance/blk00000edb_pins<21> = BEL "fft_instance/blk00000edb" PINNAME
+        CLKBRDCLK;
+PIN fft_instance/blk00000fb2_pins<20> = BEL "fft_instance/blk00000fb2" PINNAME
+        CLKAWRCLK;
+PIN fft_instance/blk00000fb2_pins<21> = BEL "fft_instance/blk00000fb2" PINNAME
+        CLKBRDCLK;
+PIN fft_instance/blk00000fb3_pins<20> = BEL "fft_instance/blk00000fb3" PINNAME
+        CLKAWRCLK;
+PIN fft_instance/blk00000fb3_pins<21> = BEL "fft_instance/blk00000fb3" PINNAME
+        CLKBRDCLK;
+PIN
+        Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram_pins<26>
+        = BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram"
+        PINNAME CLKAWRCLK;
+PIN
+        Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram_pins<27>
+        = BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram"
+        PINNAME CLKBRDCLK;
+TIMEGRP dcm_inst_clkout0 = BEL "fft_state_FSM_FFd3" BEL "fft_state_FSM_FFd2"
+        BEL "fft_state_FSM_FFd1" BEL "dcm_inst/clkout1_buf" BEL
+        "Inst_uart_comms/reading_state_FSM_FFd1" BEL
+        "Inst_uart_comms/frame_state_FSM_FFd1" BEL
+        "Inst_uart_comms/frame_state_FSM_FFd2" BEL
+        "Inst_uart_comms/reading_state_FSM_FFd2" BEL
+        "Inst_uart_comms/prev_last_frame_valid" BEL
+        "Inst_uart_comms/last_frame_valid" BEL
+        "Inst_uart_comms/current_frame_checksum_7" BEL
+        "Inst_uart_comms/current_frame_checksum_6" BEL
+        "Inst_uart_comms/current_frame_checksum_5" BEL
+        "Inst_uart_comms/current_frame_checksum_4" BEL
+        "Inst_uart_comms/current_frame_checksum_3" BEL
+        "Inst_uart_comms/current_frame_checksum_2" BEL
+        "Inst_uart_comms/current_frame_checksum_1" BEL
+        "Inst_uart_comms/current_frame_checksum_0" BEL
+        "Inst_uart_comms/current_frame_pos_4" BEL
+        "Inst_uart_comms/current_frame_pos_3" BEL
+        "Inst_uart_comms/current_frame_pos_2" BEL
+        "Inst_uart_comms/current_frame_pos_1" BEL
+        "Inst_uart_comms/current_frame_pos_0" BEL
+        "Inst_uart_comms/fft_scaler_7" BEL "Inst_uart_comms/fft_scaler_6" BEL
+        "Inst_uart_comms/fft_scaler_5" BEL "Inst_uart_comms/fft_scaler_4" BEL
+        "Inst_uart_comms/fft_scaler_3" BEL "Inst_uart_comms/fft_scaler_2" BEL
+        "Inst_uart_comms/fft_scaler_1" BEL "Inst_uart_comms/fft_scaler_0" BEL
+        "Inst_uart_comms/adc_divider_23" BEL "Inst_uart_comms/adc_divider_22"
+        BEL "Inst_uart_comms/adc_divider_21" BEL
+        "Inst_uart_comms/adc_divider_20" BEL "Inst_uart_comms/adc_divider_19"
+        BEL "Inst_uart_comms/adc_divider_18" BEL
+        "Inst_uart_comms/adc_divider_17" BEL "Inst_uart_comms/adc_divider_16"
+        BEL "Inst_uart_comms/adc_divider_15" BEL
+        "Inst_uart_comms/adc_divider_14" BEL "Inst_uart_comms/adc_divider_13"
+        BEL "Inst_uart_comms/adc_divider_12" BEL
+        "Inst_uart_comms/adc_divider_11" BEL "Inst_uart_comms/adc_divider_10"
+        BEL "Inst_uart_comms/adc_divider_9" BEL
+        "Inst_uart_comms/adc_divider_8" BEL "Inst_uart_comms/adc_divider_7"
+        BEL "Inst_uart_comms/adc_divider_6" BEL
+        "Inst_uart_comms/adc_divider_5" BEL "Inst_uart_comms/adc_divider_4"
+        BEL "Inst_uart_comms/adc_divider_3" BEL
+        "Inst_uart_comms/adc_divider_2" BEL "Inst_uart_comms/adc_divider_1"
+        BEL "Inst_uart_comms/adc_divider_0" BEL
+        "Inst_uart_comms/last_frame_6_7" BEL "Inst_uart_comms/last_frame_6_6"
+        BEL "Inst_uart_comms/last_frame_6_5" BEL
+        "Inst_uart_comms/last_frame_6_4" BEL "Inst_uart_comms/last_frame_6_3"
+        BEL "Inst_uart_comms/last_frame_6_2" BEL
+        "Inst_uart_comms/last_frame_6_1" BEL "Inst_uart_comms/last_frame_6_0"
+        BEL "Inst_uart_comms/last_frame_5_7" BEL
+        "Inst_uart_comms/last_frame_5_6" BEL "Inst_uart_comms/last_frame_5_5"
+        BEL "Inst_uart_comms/last_frame_5_4" BEL
+        "Inst_uart_comms/last_frame_5_3" BEL "Inst_uart_comms/last_frame_5_2"
+        BEL "Inst_uart_comms/last_frame_5_1" BEL
+        "Inst_uart_comms/last_frame_5_0" BEL "Inst_uart_comms/last_frame_4_7"
+        BEL "Inst_uart_comms/last_frame_4_6" BEL
+        "Inst_uart_comms/last_frame_4_5" BEL "Inst_uart_comms/last_frame_4_4"
+        BEL "Inst_uart_comms/last_frame_4_3" BEL
+        "Inst_uart_comms/last_frame_4_2" BEL "Inst_uart_comms/last_frame_4_1"
+        BEL "Inst_uart_comms/last_frame_4_0" BEL
+        "Inst_uart_comms/last_frame_3_7" BEL "Inst_uart_comms/last_frame_3_6"
+        BEL "Inst_uart_comms/last_frame_3_5" BEL
+        "Inst_uart_comms/last_frame_3_4" BEL "Inst_uart_comms/last_frame_3_3"
+        BEL "Inst_uart_comms/last_frame_3_2" BEL
+        "Inst_uart_comms/last_frame_3_1" BEL "Inst_uart_comms/last_frame_3_0"
+        BEL "Inst_uart_comms/current_frame_6_7" BEL
+        "Inst_uart_comms/current_frame_6_6" BEL
+        "Inst_uart_comms/current_frame_6_5" BEL
+        "Inst_uart_comms/current_frame_6_4" BEL
+        "Inst_uart_comms/current_frame_6_3" BEL
+        "Inst_uart_comms/current_frame_6_2" BEL
+        "Inst_uart_comms/current_frame_6_1" BEL
+        "Inst_uart_comms/current_frame_6_0" BEL
+        "Inst_uart_comms/current_frame_5_7" BEL
+        "Inst_uart_comms/current_frame_5_6" BEL
+        "Inst_uart_comms/current_frame_5_5" BEL
+        "Inst_uart_comms/current_frame_5_4" BEL
+        "Inst_uart_comms/current_frame_5_3" BEL
+        "Inst_uart_comms/current_frame_5_2" BEL
+        "Inst_uart_comms/current_frame_5_1" BEL
+        "Inst_uart_comms/current_frame_5_0" BEL
+        "Inst_uart_comms/current_frame_4_7" BEL
+        "Inst_uart_comms/current_frame_4_6" BEL
+        "Inst_uart_comms/current_frame_4_5" BEL
+        "Inst_uart_comms/current_frame_4_4" BEL
+        "Inst_uart_comms/current_frame_4_3" BEL
+        "Inst_uart_comms/current_frame_4_2" BEL
+        "Inst_uart_comms/current_frame_4_1" BEL
+        "Inst_uart_comms/current_frame_4_0" BEL
+        "Inst_uart_comms/current_frame_3_7" BEL
+        "Inst_uart_comms/current_frame_3_6" BEL
+        "Inst_uart_comms/current_frame_3_5" BEL
+        "Inst_uart_comms/current_frame_3_4" BEL
+        "Inst_uart_comms/current_frame_3_3" BEL
+        "Inst_uart_comms/current_frame_3_2" BEL
+        "Inst_uart_comms/current_frame_3_1" BEL
+        "Inst_uart_comms/current_frame_3_0" BEL
+        "Inst_uart_comms/current_frame_2_7" BEL
+        "Inst_uart_comms/current_frame_2_6" BEL
+        "Inst_uart_comms/current_frame_2_5" BEL
+        "Inst_uart_comms/current_frame_2_4" BEL
+        "Inst_uart_comms/current_frame_2_3" BEL
+        "Inst_uart_comms/current_frame_2_2" BEL
+        "Inst_uart_comms/current_frame_2_1" BEL
+        "Inst_uart_comms/current_frame_2_0" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_bit_pos_2" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_bit_pos_1" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_bit_pos_0" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_state_FSM_FFd1" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_state_FSM_FFd2" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/din_7" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/din_6" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/din_5" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/din_4" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/din_3" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/din_2" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/din_1" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/din_0" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_31" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_30" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_29" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_28" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_27" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_26" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_25" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_24" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_23" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_22" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_21" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_20" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_19" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_18" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_17" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_16" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_15" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_14" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_13" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_12" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_11" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_10" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_9" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_8" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_7" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_6" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_5" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_4" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_3" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_2" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_1" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_counter_0" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_data_buffer_7" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_data_buffer_6" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_data_buffer_5" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_data_buffer_4" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_data_buffer_3" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_data_buffer_2" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_data_buffer_1" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_data_buffer_0" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/rx_buffer_n" BEL
+        "Inst_mag/idx_out_8" BEL "Inst_mag/idx_out_7" BEL "Inst_mag/idx_out_6"
+        BEL "Inst_mag/idx_out_5" BEL "Inst_mag/idx_out_4" BEL
+        "Inst_mag/idx_out_3" BEL "Inst_mag/idx_out_2" BEL "Inst_mag/idx_out_1"
+        BEL "Inst_mag/idx_out_0" BEL "Inst_mag/mag_7" BEL "Inst_mag/mag_6" BEL
+        "Inst_mag/mag_5" BEL "Inst_mag/mag_4" BEL "Inst_mag/mag_3" BEL
+        "Inst_mag/mag_2" BEL "Inst_mag/mag_1" BEL "Inst_mag/mag_0" BEL
+        "Inst_mag/parts_summed_15" BEL "Inst_mag/parts_summed_14" BEL
+        "Inst_mag/parts_summed_13" BEL "Inst_mag/parts_summed_12" BEL
+        "Inst_mag/parts_summed_11" BEL "Inst_mag/parts_summed_10" BEL
+        "Inst_mag/parts_summed_9" BEL "Inst_mag/parts_summed_8" BEL
+        "Inst_mag/parts_summed_7" BEL "Inst_mag/parts_summed_6" BEL
+        "Inst_mag/parts_summed_5" BEL "Inst_mag/parts_summed_4" BEL
+        "Inst_mag/parts_summed_3" BEL "Inst_mag/parts_summed_2" BEL
+        "Inst_mag/parts_summed_1" BEL "Inst_mag/parts_summed_0" BEL
+        "Inst_mag/im_squared_15" BEL "Inst_mag/im_squared_14" BEL
+        "Inst_mag/im_squared_13" BEL "Inst_mag/im_squared_12" BEL
+        "Inst_mag/im_squared_11" BEL "Inst_mag/im_squared_10" BEL
+        "Inst_mag/im_squared_9" BEL "Inst_mag/im_squared_8" BEL
+        "Inst_mag/im_squared_7" BEL "Inst_mag/im_squared_6" BEL
+        "Inst_mag/im_squared_5" BEL "Inst_mag/im_squared_4" BEL
+        "Inst_mag/im_squared_3" BEL "Inst_mag/im_squared_2" BEL
+        "Inst_mag/im_squared_1" BEL "Inst_mag/im_squared_0" BEL
+        "Inst_mag/re_squared_15" BEL "Inst_mag/re_squared_14" BEL
+        "Inst_mag/re_squared_13" BEL "Inst_mag/re_squared_12" BEL
+        "Inst_mag/re_squared_11" BEL "Inst_mag/re_squared_10" BEL
+        "Inst_mag/re_squared_9" BEL "Inst_mag/re_squared_8" BEL
+        "Inst_mag/re_squared_7" BEL "Inst_mag/re_squared_6" BEL
+        "Inst_mag/re_squared_5" BEL "Inst_mag/re_squared_4" BEL
+        "Inst_mag/re_squared_3" BEL "Inst_mag/re_squared_2" BEL
+        "Inst_mag/re_squared_1" BEL "Inst_mag/re_squared_0" BEL
+        "Inst_mag/im_buffer_7" BEL "Inst_mag/im_buffer_6" BEL
+        "Inst_mag/im_buffer_5" BEL "Inst_mag/im_buffer_4" BEL
+        "Inst_mag/im_buffer_3" BEL "Inst_mag/im_buffer_2" BEL
+        "Inst_mag/im_buffer_1" BEL "Inst_mag/im_buffer_0" BEL
+        "Inst_mag/re_buffer_7" BEL "Inst_mag/re_buffer_6" BEL
+        "Inst_mag/re_buffer_5" BEL "Inst_mag/re_buffer_4" BEL
+        "Inst_mag/re_buffer_3" BEL "Inst_mag/re_buffer_2" BEL
+        "Inst_mag/re_buffer_1" BEL "Inst_mag/re_buffer_0" BEL "fft_unload" BEL
+        "fft_start" BEL "adc_fifo_rd_en" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/wr_en" BEL
+        "Inst_mag/Mshreg_idx_buffer_array_9_8" BEL
+        "Inst_mag/Mshreg_idx_buffer_array_9_7" BEL
+        "Inst_mag/Mshreg_idx_buffer_array_9_6" BEL
+        "Inst_mag/Mshreg_idx_buffer_array_9_5" BEL
+        "Inst_mag/Mshreg_idx_buffer_array_9_2" BEL
+        "Inst_mag/Mshreg_idx_buffer_array_9_4" BEL
+        "Inst_mag/Mshreg_idx_buffer_array_9_3" BEL
+        "Inst_mag/Mshreg_sqrt_in_15" BEL "Inst_mag/sqrt_in_15" BEL
+        "Inst_mag/Mshreg_idx_buffer_array_9_1" BEL
+        "Inst_mag/Mshreg_idx_buffer_array_9_0" BEL
+        "Inst_mag/Mshreg_sqrt_in_12" BEL "Inst_mag/sqrt_in_12" BEL
+        "Inst_mag/Mshreg_sqrt_in_14" BEL "Inst_mag/sqrt_in_14" BEL
+        "Inst_mag/Mshreg_sqrt_in_13" BEL "Inst_mag/sqrt_in_13" BEL
+        "Inst_mag/Mshreg_sqrt_in_11" BEL "Inst_mag/sqrt_in_11" BEL
+        "Inst_mag/Mshreg_sqrt_in_10" BEL "Inst_mag/sqrt_in_10" BEL
+        "Inst_mag/Mshreg_sqrt_in_9" BEL "Inst_mag/sqrt_in_9" BEL
+        "Inst_mag/Mshreg_sqrt_in_8" BEL "Inst_mag/sqrt_in_8" BEL
+        "Inst_mag/Mshreg_sqrt_in_5" BEL "Inst_mag/sqrt_in_5" BEL
+        "Inst_mag/Mshreg_sqrt_in_7" BEL "Inst_mag/sqrt_in_7" BEL
+        "Inst_mag/Mshreg_sqrt_in_6" BEL "Inst_mag/sqrt_in_6" BEL
+        "Inst_mag/Mshreg_sqrt_in_2" BEL "Inst_mag/sqrt_in_2" BEL
+        "Inst_mag/Mshreg_sqrt_in_4" BEL "Inst_mag/sqrt_in_4" BEL
+        "Inst_mag/Mshreg_sqrt_in_3" BEL "Inst_mag/sqrt_in_3" BEL
+        "Inst_mag/Mshreg_output_valid" BEL "Inst_mag/output_valid1" BEL
+        "Inst_mag/Mshreg_sqrt_in_1" BEL "Inst_mag/sqrt_in_1" BEL
+        "Inst_mag/Mshreg_sqrt_in_0" BEL "Inst_mag/sqrt_in_0" BEL
+        "rst_IBUF_shift1" BEL "rst_IBUF_shift2" BEL "rst_IBUF_shift3" BEL
+        "rst_IBUF_shift4" BEL "rst_IBUF_shift5" BEL "rst_IBUF_shift6" BEL
+        "rst_IBUF_shift7" BEL "rst_IBUF_shift8" BEL "rst_IBUF_shift9" BEL
+        "rst_IBUF_shift10" BEL "Inst_mag/idx_buffer_array_9_0" BEL
+        "Inst_mag/idx_buffer_array_9_1" BEL "Inst_mag/idx_buffer_array_9_2"
+        BEL "Inst_mag/idx_buffer_array_9_3" BEL
+        "Inst_mag/idx_buffer_array_9_4" BEL "Inst_mag/idx_buffer_array_9_5"
+        BEL "Inst_mag/idx_buffer_array_9_6" BEL
+        "Inst_mag/idx_buffer_array_9_7" BEL "Inst_mag/idx_buffer_array_9_8"
+        BEL "Inst_mag/output_valid" BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg_d2"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg_d1"
+        PIN
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM9.ram_pins<27>"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_9"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_8"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_7"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_6"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_5"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_4"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_0"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_9"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_8"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_7"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_6"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_5"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_4"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_3"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_2"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_1"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_9"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_8"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_7"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_6"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_5"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_4"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_3"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_2"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_1"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_0"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_9"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_8"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_7"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_6"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_5"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_4"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_3"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_2"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_1"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_reg_9"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_reg_8"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_reg_7"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_reg_6"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_reg_5"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_reg_4"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_reg_3"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_reg_2"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_reg_1"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_reg_0"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_9"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_8"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_7"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_6"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_5"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_4"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_3"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_2"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1"
+        BEL
+        "adc_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0"
+        PIN
+        "your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/TRUE_DP.PRIM9.ram_pins<26>"
+        BEL "fft_instance/blk000000b7" BEL "fft_instance/blk000000b8" BEL
+        "fft_instance/blk000000b9" BEL "fft_instance/blk000000ba" BEL
+        "fft_instance/blk000000bb" BEL "fft_instance/blk000000bc" BEL
+        "fft_instance/blk000000bd" BEL "fft_instance/blk000000be" BEL
+        "fft_instance/blk000000bf" BEL "fft_instance/blk000000c0" BEL
+        "fft_instance/blk000000c1" BEL "fft_instance/blk000000c2" BEL
+        "fft_instance/blk000000c3" BEL "fft_instance/blk000000c4" BEL
+        "fft_instance/blk000000c5" BEL "fft_instance/blk000000c6" BEL
+        "fft_instance/blk000000c7" BEL "fft_instance/blk000000c8" BEL
+        "fft_instance/blk000000c9" BEL "fft_instance/blk000000ca" BEL
+        "fft_instance/blk000000cb" BEL "fft_instance/blk000000cc" BEL
+        "fft_instance/blk000000cd" BEL "fft_instance/blk000000ce" BEL
+        "fft_instance/blk000000cf" BEL "fft_instance/blk000000d0" BEL
+        "fft_instance/blk000000d1" BEL "fft_instance/blk000000d2" BEL
+        "fft_instance/blk000000d3" BEL "fft_instance/blk000000d4" BEL
+        "fft_instance/blk000000d5" BEL "fft_instance/blk000000d6" BEL
+        "fft_instance/blk000000d7" BEL "fft_instance/blk000000d8" BEL
+        "fft_instance/blk000000d9" BEL "fft_instance/blk000000da" BEL
+        "fft_instance/blk000000db" BEL "fft_instance/blk000000dc" BEL
+        "fft_instance/blk000000dd" BEL "fft_instance/blk000000de" BEL
+        "fft_instance/blk000000df" BEL "fft_instance/blk000000e0" BEL
+        "fft_instance/blk000000e1" BEL "fft_instance/blk000000e2" BEL
+        "fft_instance/blk000000e3" BEL "fft_instance/blk000000e4" BEL
+        "fft_instance/blk000000e5" BEL "fft_instance/blk000000e6" BEL
+        "fft_instance/blk000000e7" BEL "fft_instance/blk000000e8" BEL
+        "fft_instance/blk000000e9" BEL "fft_instance/blk000000ea" BEL
+        "fft_instance/blk000000eb" BEL "fft_instance/blk000000ec" BEL
+        "fft_instance/blk000000ed" BEL "fft_instance/blk000000ee" BEL
+        "fft_instance/blk000000ef" BEL "fft_instance/blk000000f0" BEL
+        "fft_instance/blk000000f1" BEL "fft_instance/blk000000f2" BEL
+        "fft_instance/blk000000f3" BEL "fft_instance/blk000000f4" BEL
+        "fft_instance/blk000000f5" BEL "fft_instance/blk000000f6" BEL
+        "fft_instance/blk000000f7" BEL "fft_instance/blk000000f8" BEL
+        "fft_instance/blk000000f9" BEL "fft_instance/blk000000fa" BEL
+        "fft_instance/blk000000fb" BEL "fft_instance/blk000000fc" BEL
+        "fft_instance/blk000000fd" BEL "fft_instance/blk000000fe" BEL
+        "fft_instance/blk000000ff" BEL "fft_instance/blk00000100" BEL
+        "fft_instance/blk00000101" BEL "fft_instance/blk00000102" BEL
+        "fft_instance/blk00000103" BEL "fft_instance/blk00000104" BEL
+        "fft_instance/blk00000105" BEL "fft_instance/blk00000106" BEL
+        "fft_instance/blk00000107" BEL "fft_instance/blk00000108" BEL
+        "fft_instance/blk00000109" BEL "fft_instance/blk0000010a" BEL
+        "fft_instance/blk0000010b" BEL "fft_instance/blk0000010c" BEL
+        "fft_instance/blk0000010d" BEL "fft_instance/blk0000010e" BEL
+        "fft_instance/blk0000010f" BEL "fft_instance/blk00000110" BEL
+        "fft_instance/blk00000111" BEL "fft_instance/blk00000112" BEL
+        "fft_instance/blk00000113" BEL "fft_instance/blk00000114" BEL
+        "fft_instance/blk00000115" BEL "fft_instance/blk00000116" BEL
+        "fft_instance/blk00000117" BEL "fft_instance/blk00000118" BEL
+        "fft_instance/blk00000119" BEL "fft_instance/blk0000011a" BEL
+        "fft_instance/blk0000011b" BEL "fft_instance/blk0000011c" BEL
+        "fft_instance/blk0000011d" BEL "fft_instance/blk0000011e" BEL
+        "fft_instance/blk0000011f" BEL "fft_instance/blk00000120" BEL
+        "fft_instance/blk00000121" BEL "fft_instance/blk00000122" BEL
+        "fft_instance/blk00000123" BEL "fft_instance/blk00000124" BEL
+        "fft_instance/blk00000125" BEL "fft_instance/blk00000126" BEL
+        "fft_instance/blk00000127" BEL "fft_instance/blk00000128" BEL
+        "fft_instance/blk00000129" BEL "fft_instance/blk0000012a" BEL
+        "fft_instance/blk0000012b" BEL "fft_instance/blk0000012c" BEL
+        "fft_instance/blk0000012d" BEL "fft_instance/blk0000012e" BEL
+        "fft_instance/blk0000012f" BEL "fft_instance/blk00000130" BEL
+        "fft_instance/blk00000131" BEL "fft_instance/blk00000132" BEL
+        "fft_instance/blk00000133" BEL "fft_instance/blk00000134" BEL
+        "fft_instance/blk00000135" BEL "fft_instance/blk00000136" BEL
+        "fft_instance/blk00000137" BEL "fft_instance/blk00000138" BEL
+        "fft_instance/blk00000139" BEL "fft_instance/blk0000013a" BEL
+        "fft_instance/blk0000013b" BEL "fft_instance/blk0000013c" BEL
+        "fft_instance/blk0000013d" BEL "fft_instance/blk0000013e" BEL
+        "fft_instance/blk0000013f" BEL "fft_instance/blk00000140" BEL
+        "fft_instance/blk00000141" BEL "fft_instance/blk00000142" BEL
+        "fft_instance/blk00000143" BEL "fft_instance/blk00000144" BEL
+        "fft_instance/blk00000145" BEL "fft_instance/blk00000146" BEL
+        "fft_instance/blk00000147" BEL "fft_instance/blk00000148" BEL
+        "fft_instance/blk00000149" BEL "fft_instance/blk0000014a" BEL
+        "fft_instance/blk0000014b" BEL "fft_instance/blk0000014c" BEL
+        "fft_instance/blk0000014d" BEL "fft_instance/blk0000014e" BEL
+        "fft_instance/blk0000014f" BEL "fft_instance/blk00000150" BEL
+        "fft_instance/blk00000151" BEL "fft_instance/blk00000152" BEL
+        "fft_instance/blk00000153" BEL "fft_instance/blk00000154" BEL
+        "fft_instance/blk00000155" BEL "fft_instance/blk00000156" BEL
+        "fft_instance/blk00000157" BEL "fft_instance/blk00000158" BEL
+        "fft_instance/blk00000159" BEL "fft_instance/blk0000015a" BEL
+        "fft_instance/blk0000015b" BEL "fft_instance/blk0000015c" BEL
+        "fft_instance/blk0000015d" BEL "fft_instance/blk0000015e" BEL
+        "fft_instance/blk0000015f" BEL "fft_instance/blk00000160" BEL
+        "fft_instance/blk00000161" BEL "fft_instance/blk00000162" BEL
+        "fft_instance/blk00000163" BEL "fft_instance/blk00000164" BEL
+        "fft_instance/blk00000165" BEL "fft_instance/blk00000166" BEL
+        "fft_instance/blk00000167" BEL "fft_instance/blk00000168" BEL
+        "fft_instance/blk00000169" BEL "fft_instance/blk0000016a" PIN
+        "fft_instance/blk0000016b_pins<92>" PIN
+        "fft_instance/blk0000016c_pins<92>" PIN
+        "fft_instance/blk0000016d_pins<92>" PIN
+        "fft_instance/blk0000016e_pins<92>" PIN
+        "fft_instance/blk0000016f_pins<92>" PIN
+        "fft_instance/blk00000170_pins<92>" PIN
+        "fft_instance/blk00000171_pins<92>" PIN
+        "fft_instance/blk00000172_pins<92>" PIN
+        "fft_instance/blk00000173_pins<92>" PIN
+        "fft_instance/blk00000174_pins<92>" PIN
+        "fft_instance/blk00000175_pins<92>" PIN
+        "fft_instance/blk00000176_pins<92>" BEL "fft_instance/blk00000177" BEL
+        "fft_instance/blk00000178" BEL "fft_instance/blk00000179" BEL
+        "fft_instance/blk0000017a" BEL "fft_instance/blk0000017c" BEL
+        "fft_instance/blk0000017d" BEL "fft_instance/blk0000017e" BEL
+        "fft_instance/blk0000017f" BEL "fft_instance/blk00000180" BEL
+        "fft_instance/blk00000181" BEL "fft_instance/blk00000182" BEL
+        "fft_instance/blk00000183" BEL "fft_instance/blk00000184" BEL
+        "fft_instance/blk00000185" BEL "fft_instance/blk00000186" BEL
+        "fft_instance/blk00000187" BEL "fft_instance/blk00000188" BEL
+        "fft_instance/blk00000189" BEL "fft_instance/blk0000018a" BEL
+        "fft_instance/blk0000018b" BEL "fft_instance/blk0000018c" BEL
+        "fft_instance/blk0000018d" BEL "fft_instance/blk0000018e" BEL
+        "fft_instance/blk0000018f" BEL "fft_instance/blk00000190" BEL
+        "fft_instance/blk00000192" BEL "fft_instance/blk00000193" BEL
+        "fft_instance/blk00000194" BEL "fft_instance/blk00000195" BEL
+        "fft_instance/blk00000196" BEL "fft_instance/blk00000197" BEL
+        "fft_instance/blk00000198" BEL "fft_instance/blk00000199" BEL
+        "fft_instance/blk0000019a" BEL "fft_instance/blk0000019b" BEL
+        "fft_instance/blk0000019c" BEL "fft_instance/blk0000019d" BEL
+        "fft_instance/blk0000019e" BEL "fft_instance/blk0000019f" BEL
+        "fft_instance/blk000001a0" BEL "fft_instance/blk000001a1" BEL
+        "fft_instance/blk000001a2" BEL "fft_instance/blk000001a3" BEL
+        "fft_instance/blk000001a4" BEL "fft_instance/blk000001a5" BEL
+        "fft_instance/blk000001a6" BEL "fft_instance/blk000001a8" BEL
+        "fft_instance/blk000001a9" BEL "fft_instance/blk000001aa" BEL
+        "fft_instance/blk000001ab" BEL "fft_instance/blk000001ac" BEL
+        "fft_instance/blk000001ad" BEL "fft_instance/blk000001ae" BEL
+        "fft_instance/blk000001af" BEL "fft_instance/blk000001b0" BEL
+        "fft_instance/blk000001b1" BEL "fft_instance/blk000001b2" BEL
+        "fft_instance/blk000001b3" BEL "fft_instance/blk000001b4" BEL
+        "fft_instance/blk000001b5" BEL "fft_instance/blk000001b6" BEL
+        "fft_instance/blk000001b7" BEL "fft_instance/blk000001b8" BEL
+        "fft_instance/blk000001b9" BEL "fft_instance/blk000001ba" BEL
+        "fft_instance/blk000001bb" BEL "fft_instance/blk000001bc" BEL
+        "fft_instance/blk000001be" BEL "fft_instance/blk000001bf" BEL
+        "fft_instance/blk000001c0" BEL "fft_instance/blk000001c1" BEL
+        "fft_instance/blk000001c2" BEL "fft_instance/blk000001c3" BEL
+        "fft_instance/blk000001c4" BEL "fft_instance/blk000001c5" BEL
+        "fft_instance/blk000001c6" BEL "fft_instance/blk000001c7" BEL
+        "fft_instance/blk000001c8" BEL "fft_instance/blk000001c9" BEL
+        "fft_instance/blk000001ca" BEL "fft_instance/blk000001cb" BEL
+        "fft_instance/blk000001cc" BEL "fft_instance/blk000001cd" BEL
+        "fft_instance/blk000001ce" BEL "fft_instance/blk000001cf" BEL
+        "fft_instance/blk000001d0" BEL "fft_instance/blk000001d1" BEL
+        "fft_instance/blk000001d2" BEL "fft_instance/blk000001d4" BEL
+        "fft_instance/blk000001d5" BEL "fft_instance/blk000001d6" BEL
+        "fft_instance/blk000001d7" BEL "fft_instance/blk000001d8" BEL
+        "fft_instance/blk000001d9" BEL "fft_instance/blk000001da" BEL
+        "fft_instance/blk000001db" BEL "fft_instance/blk000001dc" BEL
+        "fft_instance/blk000001dd" BEL "fft_instance/blk000001de" BEL
+        "fft_instance/blk000001df" BEL "fft_instance/blk000001e0" BEL
+        "fft_instance/blk000001e1" BEL "fft_instance/blk000001e2" BEL
+        "fft_instance/blk000001e3" BEL "fft_instance/blk000001e4" BEL
+        "fft_instance/blk000001e5" BEL "fft_instance/blk000001e6" BEL
+        "fft_instance/blk000001e7" BEL "fft_instance/blk000001e8" BEL
+        "fft_instance/blk000001ea" BEL "fft_instance/blk000001eb" BEL
+        "fft_instance/blk000001ec" BEL "fft_instance/blk000001ed" BEL
+        "fft_instance/blk000001ee" BEL "fft_instance/blk000001ef" BEL
+        "fft_instance/blk000001f0" BEL "fft_instance/blk000001f1" BEL
+        "fft_instance/blk000001f2" BEL "fft_instance/blk000001f3" BEL
+        "fft_instance/blk000001f4" BEL "fft_instance/blk000001f5" BEL
+        "fft_instance/blk000001f6" BEL "fft_instance/blk000001f7" BEL
+        "fft_instance/blk000001f8" BEL "fft_instance/blk000001f9" BEL
+        "fft_instance/blk000001fa" BEL "fft_instance/blk000001fb" BEL
+        "fft_instance/blk000001fc" BEL "fft_instance/blk000001fd" BEL
+        "fft_instance/blk000001fe" BEL "fft_instance/blk000001ff" BEL
+        "fft_instance/blk00000200" BEL "fft_instance/blk00000201" BEL
+        "fft_instance/blk00000202" BEL "fft_instance/blk00000203" BEL
+        "fft_instance/blk00000204" BEL "fft_instance/blk00000205" BEL
+        "fft_instance/blk00000206" BEL "fft_instance/blk00000207" BEL
+        "fft_instance/blk00000208" BEL "fft_instance/blk00000209" BEL
+        "fft_instance/blk0000020a" BEL "fft_instance/blk0000020b" BEL
+        "fft_instance/blk0000020c" BEL "fft_instance/blk0000020d" BEL
+        "fft_instance/blk0000020e" BEL "fft_instance/blk0000020f" BEL
+        "fft_instance/blk00000210" BEL "fft_instance/blk00000211" BEL
+        "fft_instance/blk00000212" BEL "fft_instance/blk00000213" BEL
+        "fft_instance/blk00000214" BEL "fft_instance/blk00000215" BEL
+        "fft_instance/blk00000216" BEL "fft_instance/blk00000217" BEL
+        "fft_instance/blk00000218" BEL "fft_instance/blk00000219" BEL
+        "fft_instance/blk0000021a" BEL "fft_instance/blk0000021b" BEL
+        "fft_instance/blk0000021c" BEL "fft_instance/blk0000021d" BEL
+        "fft_instance/blk0000021e" BEL "fft_instance/blk0000021f" BEL
+        "fft_instance/blk00000220" BEL "fft_instance/blk00000221" BEL
+        "fft_instance/blk00000222" BEL "fft_instance/blk00000223" BEL
+        "fft_instance/blk00000224" BEL "fft_instance/blk00000225" BEL
+        "fft_instance/blk00000226" BEL "fft_instance/blk00000227" BEL
+        "fft_instance/blk00000228" BEL "fft_instance/blk00000229" BEL
+        "fft_instance/blk0000022a" BEL "fft_instance/blk0000022b" BEL
+        "fft_instance/blk0000022c" BEL "fft_instance/blk0000022d" BEL
+        "fft_instance/blk0000022e" BEL "fft_instance/blk0000022f" BEL
+        "fft_instance/blk00000230" BEL "fft_instance/blk00000231" BEL
+        "fft_instance/blk00000232" BEL "fft_instance/blk00000233" BEL
+        "fft_instance/blk00000234" BEL "fft_instance/blk00000235" BEL
+        "fft_instance/blk00000236" BEL "fft_instance/blk00000237" BEL
+        "fft_instance/blk00000238" BEL "fft_instance/blk00000239" BEL
+        "fft_instance/blk0000023a" BEL "fft_instance/blk0000023b" BEL
+        "fft_instance/blk0000023c" BEL "fft_instance/blk0000023d" BEL
+        "fft_instance/blk0000023e" BEL "fft_instance/blk0000023f" BEL
+        "fft_instance/blk00000240" BEL "fft_instance/blk00000241" BEL
+        "fft_instance/blk00000242" BEL "fft_instance/blk00000243" BEL
+        "fft_instance/blk00000244" BEL "fft_instance/blk00000245" BEL
+        "fft_instance/blk00000246" BEL "fft_instance/blk00000247/blk00000278"
+        BEL "fft_instance/blk00000247/blk00000279" BEL
+        "fft_instance/blk00000247/blk0000027a" BEL
+        "fft_instance/blk00000247/blk0000027b" BEL
+        "fft_instance/blk00000247/blk0000027c" BEL
+        "fft_instance/blk00000247/blk0000027d" BEL
+        "fft_instance/blk00000247/blk0000027e" BEL
+        "fft_instance/blk00000247/blk0000027f" BEL
+        "fft_instance/blk00000247/blk00000280" BEL
+        "fft_instance/blk00000247/blk00000281" BEL
+        "fft_instance/blk00000247/blk00000282" BEL
+        "fft_instance/blk00000247/blk00000283" BEL
+        "fft_instance/blk00000247/blk00000284" BEL
+        "fft_instance/blk00000247/blk00000285" BEL
+        "fft_instance/blk00000247/blk00000286" BEL
+        "fft_instance/blk00000247/blk00000287" BEL
+        "fft_instance/blk00000247/blk00000288" BEL
+        "fft_instance/blk00000247/blk00000289" BEL
+        "fft_instance/blk00000247/blk0000028a" BEL
+        "fft_instance/blk00000247/blk0000028b" BEL
+        "fft_instance/blk00000247/blk0000028c" BEL
+        "fft_instance/blk000002a4/blk000002d5" BEL
+        "fft_instance/blk000002a4/blk000002d6" BEL
+        "fft_instance/blk000002a4/blk000002d7" BEL
+        "fft_instance/blk000002a4/blk000002d8" BEL
+        "fft_instance/blk000002a4/blk000002d9" BEL
+        "fft_instance/blk000002a4/blk000002da" BEL
+        "fft_instance/blk000002a4/blk000002db" BEL
+        "fft_instance/blk000002a4/blk000002dc" BEL
+        "fft_instance/blk000002a4/blk000002dd" BEL
+        "fft_instance/blk000002a4/blk000002de" BEL
+        "fft_instance/blk000002a4/blk000002df" BEL
+        "fft_instance/blk000002a4/blk000002e0" BEL
+        "fft_instance/blk000002a4/blk000002e1" BEL
+        "fft_instance/blk000002a4/blk000002e2" BEL
+        "fft_instance/blk000002a4/blk000002e3" BEL
+        "fft_instance/blk000002a4/blk000002e4" BEL
+        "fft_instance/blk000002a4/blk000002e5" BEL
+        "fft_instance/blk000002a4/blk000002e6" BEL
+        "fft_instance/blk000002a4/blk000002e7" BEL
+        "fft_instance/blk000002a4/blk000002e8" BEL
+        "fft_instance/blk000002a4/blk000002e9" BEL
+        "fft_instance/blk00000301/blk00000332" BEL
+        "fft_instance/blk00000301/blk00000333" BEL
+        "fft_instance/blk00000301/blk00000334" BEL
+        "fft_instance/blk00000301/blk00000335" BEL
+        "fft_instance/blk00000301/blk00000336" BEL
+        "fft_instance/blk00000301/blk00000337" BEL
+        "fft_instance/blk00000301/blk00000338" BEL
+        "fft_instance/blk00000301/blk00000339" BEL
+        "fft_instance/blk00000301/blk0000033a" BEL
+        "fft_instance/blk00000301/blk0000033b" BEL
+        "fft_instance/blk00000301/blk0000033c" BEL
+        "fft_instance/blk00000301/blk0000033d" BEL
+        "fft_instance/blk00000301/blk0000033e" BEL
+        "fft_instance/blk00000301/blk0000033f" BEL
+        "fft_instance/blk00000301/blk00000340" BEL
+        "fft_instance/blk00000301/blk00000341" BEL
+        "fft_instance/blk00000301/blk00000342" BEL
+        "fft_instance/blk00000301/blk00000343" BEL
+        "fft_instance/blk00000301/blk00000344" BEL
+        "fft_instance/blk00000301/blk00000345" BEL
+        "fft_instance/blk00000301/blk00000346" BEL
+        "fft_instance/blk0000035e/blk0000038f" BEL
+        "fft_instance/blk0000035e/blk00000390" BEL
+        "fft_instance/blk0000035e/blk00000391" BEL
+        "fft_instance/blk0000035e/blk00000392" BEL
+        "fft_instance/blk0000035e/blk00000393" BEL
+        "fft_instance/blk0000035e/blk00000394" BEL
+        "fft_instance/blk0000035e/blk00000395" BEL
+        "fft_instance/blk0000035e/blk00000396" BEL
+        "fft_instance/blk0000035e/blk00000397" BEL
+        "fft_instance/blk0000035e/blk00000398" BEL
+        "fft_instance/blk0000035e/blk00000399" BEL
+        "fft_instance/blk0000035e/blk0000039a" BEL
+        "fft_instance/blk0000035e/blk0000039b" BEL
+        "fft_instance/blk0000035e/blk0000039c" BEL
+        "fft_instance/blk0000035e/blk0000039d" BEL
+        "fft_instance/blk0000035e/blk0000039e" BEL
+        "fft_instance/blk0000035e/blk0000039f" BEL
+        "fft_instance/blk0000035e/blk000003a0" BEL
+        "fft_instance/blk0000035e/blk000003a1" BEL
+        "fft_instance/blk0000035e/blk000003a2" BEL
+        "fft_instance/blk0000035e/blk000003a3" BEL
+        "fft_instance/blk000003bb/blk00000401" BEL
+        "fft_instance/blk000003bb/blk00000402" BEL
+        "fft_instance/blk000003bb/blk00000403" BEL
+        "fft_instance/blk000003bb/blk00000404" BEL
+        "fft_instance/blk000003bb/blk00000405" BEL
+        "fft_instance/blk000003bb/blk00000406" BEL
+        "fft_instance/blk000003bb/blk00000407" BEL
+        "fft_instance/blk000003bb/blk00000408" BEL
+        "fft_instance/blk000003bb/blk00000409" BEL
+        "fft_instance/blk000003bb/blk0000040a" BEL
+        "fft_instance/blk000003bb/blk0000040b" BEL
+        "fft_instance/blk000003bb/blk0000040c" BEL
+        "fft_instance/blk000003bb/blk0000040d" BEL
+        "fft_instance/blk000003bb/blk0000040e" BEL
+        "fft_instance/blk000003bb/blk0000040f" BEL
+        "fft_instance/blk000003bb/blk00000410" BEL
+        "fft_instance/blk000003bb/blk00000411" BEL
+        "fft_instance/blk000003bb/blk00000412" BEL
+        "fft_instance/blk000003bb/blk00000413" BEL
+        "fft_instance/blk000003bb/blk00000414" BEL
+        "fft_instance/blk000003bb/blk00000415" BEL
+        "fft_instance/blk0000042d/blk00000473" BEL
+        "fft_instance/blk0000042d/blk00000474" BEL
+        "fft_instance/blk0000042d/blk00000475" BEL
+        "fft_instance/blk0000042d/blk00000476" BEL
+        "fft_instance/blk0000042d/blk00000477" BEL
+        "fft_instance/blk0000042d/blk00000478" BEL
+        "fft_instance/blk0000042d/blk00000479" BEL
+        "fft_instance/blk0000042d/blk0000047a" BEL
+        "fft_instance/blk0000042d/blk0000047b" BEL
+        "fft_instance/blk0000042d/blk0000047c" BEL
+        "fft_instance/blk0000042d/blk0000047d" BEL
+        "fft_instance/blk0000042d/blk0000047e" BEL
+        "fft_instance/blk0000042d/blk0000047f" BEL
+        "fft_instance/blk0000042d/blk00000480" BEL
+        "fft_instance/blk0000042d/blk00000481" BEL
+        "fft_instance/blk0000042d/blk00000482" BEL
+        "fft_instance/blk0000042d/blk00000483" BEL
+        "fft_instance/blk0000042d/blk00000484" BEL
+        "fft_instance/blk0000042d/blk00000485" BEL
+        "fft_instance/blk0000042d/blk00000486" BEL
+        "fft_instance/blk0000042d/blk00000487" BEL
+        "fft_instance/blk0000049f/blk000004e5" BEL
+        "fft_instance/blk0000049f/blk000004e6" BEL
+        "fft_instance/blk0000049f/blk000004e7" BEL
+        "fft_instance/blk0000049f/blk000004e8" BEL
+        "fft_instance/blk0000049f/blk000004e9" BEL
+        "fft_instance/blk0000049f/blk000004ea" BEL
+        "fft_instance/blk0000049f/blk000004eb" BEL
+        "fft_instance/blk0000049f/blk000004ec" BEL
+        "fft_instance/blk0000049f/blk000004ed" BEL
+        "fft_instance/blk0000049f/blk000004ee" BEL
+        "fft_instance/blk0000049f/blk000004ef" BEL
+        "fft_instance/blk0000049f/blk000004f0" BEL
+        "fft_instance/blk0000049f/blk000004f1" BEL
+        "fft_instance/blk0000049f/blk000004f2" BEL
+        "fft_instance/blk0000049f/blk000004f3" BEL
+        "fft_instance/blk0000049f/blk000004f4" BEL
+        "fft_instance/blk0000049f/blk000004f5" BEL
+        "fft_instance/blk0000049f/blk000004f6" BEL
+        "fft_instance/blk0000049f/blk000004f7" BEL
+        "fft_instance/blk0000049f/blk000004f8" BEL
+        "fft_instance/blk0000049f/blk000004f9" BEL
+        "fft_instance/blk00000511/blk00000557" BEL
+        "fft_instance/blk00000511/blk00000558" BEL
+        "fft_instance/blk00000511/blk00000559" BEL
+        "fft_instance/blk00000511/blk0000055a" BEL
+        "fft_instance/blk00000511/blk0000055b" BEL
+        "fft_instance/blk00000511/blk0000055c" BEL
+        "fft_instance/blk00000511/blk0000055d" BEL
+        "fft_instance/blk00000511/blk0000055e" BEL
+        "fft_instance/blk00000511/blk0000055f" BEL
+        "fft_instance/blk00000511/blk00000560" BEL
+        "fft_instance/blk00000511/blk00000561" BEL
+        "fft_instance/blk00000511/blk00000562" BEL
+        "fft_instance/blk00000511/blk00000563" BEL
+        "fft_instance/blk00000511/blk00000564" BEL
+        "fft_instance/blk00000511/blk00000565" BEL
+        "fft_instance/blk00000511/blk00000566" BEL
+        "fft_instance/blk00000511/blk00000567" BEL
+        "fft_instance/blk00000511/blk00000568" BEL
+        "fft_instance/blk00000511/blk00000569" BEL
+        "fft_instance/blk00000511/blk0000056a" BEL
+        "fft_instance/blk00000511/blk0000056b" BEL
+        "fft_instance/blk00000583/blk000005b4" BEL
+        "fft_instance/blk00000583/blk000005b5" BEL
+        "fft_instance/blk00000583/blk000005b6" BEL
+        "fft_instance/blk00000583/blk000005b7" BEL
+        "fft_instance/blk00000583/blk000005b8" BEL
+        "fft_instance/blk00000583/blk000005b9" BEL
+        "fft_instance/blk00000583/blk000005ba" BEL
+        "fft_instance/blk00000583/blk000005bb" BEL
+        "fft_instance/blk00000583/blk000005bc" BEL
+        "fft_instance/blk00000583/blk000005bd" BEL
+        "fft_instance/blk00000583/blk000005be" BEL
+        "fft_instance/blk00000583/blk000005bf" BEL
+        "fft_instance/blk00000583/blk000005c0" BEL
+        "fft_instance/blk00000583/blk000005c1" BEL
+        "fft_instance/blk00000583/blk000005c2" BEL
+        "fft_instance/blk00000583/blk000005c3" BEL
+        "fft_instance/blk00000583/blk000005c4" BEL
+        "fft_instance/blk00000583/blk000005c5" BEL
+        "fft_instance/blk000005de/blk0000060f" BEL
+        "fft_instance/blk000005de/blk00000610" BEL
+        "fft_instance/blk000005de/blk00000611" BEL
+        "fft_instance/blk000005de/blk00000612" BEL
+        "fft_instance/blk000005de/blk00000613" BEL
+        "fft_instance/blk000005de/blk00000614" BEL
+        "fft_instance/blk000005de/blk00000615" BEL
+        "fft_instance/blk000005de/blk00000616" BEL
+        "fft_instance/blk000005de/blk00000617" BEL
+        "fft_instance/blk000005de/blk00000618" BEL
+        "fft_instance/blk000005de/blk00000619" BEL
+        "fft_instance/blk000005de/blk0000061a" BEL
+        "fft_instance/blk000005de/blk0000061b" BEL
+        "fft_instance/blk000005de/blk0000061c" BEL
+        "fft_instance/blk000005de/blk0000061d" BEL
+        "fft_instance/blk000005de/blk0000061e" BEL
+        "fft_instance/blk000005de/blk0000061f" BEL
+        "fft_instance/blk000005de/blk00000620" BEL
+        "fft_instance/blk00000639/blk0000066a" BEL
+        "fft_instance/blk00000639/blk0000066b" BEL
+        "fft_instance/blk00000639/blk0000066c" BEL
+        "fft_instance/blk00000639/blk0000066d" BEL
+        "fft_instance/blk00000639/blk0000066e" BEL
+        "fft_instance/blk00000639/blk0000066f" BEL
+        "fft_instance/blk00000639/blk00000670" BEL
+        "fft_instance/blk00000639/blk00000671" BEL
+        "fft_instance/blk00000639/blk00000672" BEL
+        "fft_instance/blk00000639/blk00000673" BEL
+        "fft_instance/blk00000639/blk00000674" BEL
+        "fft_instance/blk00000639/blk00000675" BEL
+        "fft_instance/blk00000639/blk00000676" BEL
+        "fft_instance/blk00000639/blk00000677" BEL
+        "fft_instance/blk00000639/blk00000678" BEL
+        "fft_instance/blk00000639/blk00000679" BEL
+        "fft_instance/blk00000639/blk0000067a" BEL
+        "fft_instance/blk00000639/blk0000067b" BEL
+        "fft_instance/blk00000694/blk000006c5" BEL
+        "fft_instance/blk00000694/blk000006c6" BEL
+        "fft_instance/blk00000694/blk000006c7" BEL
+        "fft_instance/blk00000694/blk000006c8" BEL
+        "fft_instance/blk00000694/blk000006c9" BEL
+        "fft_instance/blk00000694/blk000006ca" BEL
+        "fft_instance/blk00000694/blk000006cb" BEL
+        "fft_instance/blk00000694/blk000006cc" BEL
+        "fft_instance/blk00000694/blk000006cd" BEL
+        "fft_instance/blk00000694/blk000006ce" BEL
+        "fft_instance/blk00000694/blk000006cf" BEL
+        "fft_instance/blk00000694/blk000006d0" BEL
+        "fft_instance/blk00000694/blk000006d1" BEL
+        "fft_instance/blk00000694/blk000006d2" BEL
+        "fft_instance/blk00000694/blk000006d3" BEL
+        "fft_instance/blk00000694/blk000006d4" BEL
+        "fft_instance/blk00000694/blk000006d5" BEL
+        "fft_instance/blk00000694/blk000006d6" BEL
+        "fft_instance/blk000006ef/blk000006f1" BEL
+        "fft_instance/blk000006ef/blk000006f2" BEL
+        "fft_instance/blk000006ef/blk000006f3" BEL
+        "fft_instance/blk000006ef/blk000006f4" BEL
+        "fft_instance/blk000006ef/blk000006f5" BEL
+        "fft_instance/blk000006ef/blk000006f6" BEL
+        "fft_instance/blk000006ef/blk000006f7" BEL
+        "fft_instance/blk000006ef/blk000006f8" BEL
+        "fft_instance/blk000006ef/blk000006f9" BEL
+        "fft_instance/blk000006ef/blk000006fa" BEL
+        "fft_instance/blk000006ef/blk000006fb" BEL
+        "fft_instance/blk000006ef/blk000006fc" BEL
+        "fft_instance/blk000006ef/blk000006fd" BEL
+        "fft_instance/blk000006ef/blk000006fe" BEL
+        "fft_instance/blk000006ef/blk000006ff" BEL
+        "fft_instance/blk000006ef/blk00000700" BEL
+        "fft_instance/blk000006ef/blk00000701" BEL
+        "fft_instance/blk000006ef/blk00000702" BEL
+        "fft_instance/blk0000074a/blk0000074c" BEL
+        "fft_instance/blk0000074a/blk0000074d" BEL
+        "fft_instance/blk0000074a/blk0000074e" BEL
+        "fft_instance/blk0000074a/blk0000074f" BEL
+        "fft_instance/blk0000074a/blk00000750" BEL
+        "fft_instance/blk0000074a/blk00000751" BEL
+        "fft_instance/blk0000074a/blk00000752" BEL
+        "fft_instance/blk0000074a/blk00000753" BEL
+        "fft_instance/blk0000074a/blk00000754" BEL
+        "fft_instance/blk0000074a/blk00000755" BEL
+        "fft_instance/blk0000074a/blk00000756" BEL
+        "fft_instance/blk0000074a/blk00000757" BEL
+        "fft_instance/blk0000074a/blk00000758" BEL
+        "fft_instance/blk0000074a/blk00000759" BEL
+        "fft_instance/blk0000074a/blk0000075a" BEL
+        "fft_instance/blk0000074a/blk0000075b" BEL
+        "fft_instance/blk0000074a/blk0000075c" BEL
+        "fft_instance/blk0000074a/blk0000075d" BEL
+        "fft_instance/blk000007a5/blk000007a7" BEL
+        "fft_instance/blk000007a5/blk000007a8" BEL
+        "fft_instance/blk000007a5/blk000007a9" BEL
+        "fft_instance/blk000007a5/blk000007aa" BEL
+        "fft_instance/blk000007a5/blk000007ab" BEL
+        "fft_instance/blk000007a5/blk000007ac" BEL
+        "fft_instance/blk000007a5/blk000007ad" BEL
+        "fft_instance/blk000007a5/blk000007ae" BEL
+        "fft_instance/blk000007a5/blk000007af" BEL
+        "fft_instance/blk000007a5/blk000007b0" BEL
+        "fft_instance/blk000007a5/blk000007b1" BEL
+        "fft_instance/blk000007a5/blk000007b2" BEL
+        "fft_instance/blk000007a5/blk000007b3" BEL
+        "fft_instance/blk000007a5/blk000007b4" BEL
+        "fft_instance/blk000007a5/blk000007b5" BEL
+        "fft_instance/blk000007a5/blk000007b6" BEL
+        "fft_instance/blk000007a5/blk000007b7" BEL
+        "fft_instance/blk000007a5/blk000007b8" BEL
+        "fft_instance/blk00000800/blk00000802" BEL
+        "fft_instance/blk00000800/blk00000803" BEL
+        "fft_instance/blk00000800/blk00000804" BEL
+        "fft_instance/blk00000800/blk00000805" BEL
+        "fft_instance/blk00000800/blk00000806" BEL
+        "fft_instance/blk00000800/blk00000807" BEL
+        "fft_instance/blk00000800/blk00000808" BEL
+        "fft_instance/blk00000800/blk00000809" BEL
+        "fft_instance/blk00000800/blk0000080a" BEL
+        "fft_instance/blk00000800/blk0000080b" BEL
+        "fft_instance/blk00000800/blk0000080c" BEL
+        "fft_instance/blk00000800/blk0000080d" BEL
+        "fft_instance/blk00000800/blk0000080e" BEL
+        "fft_instance/blk00000800/blk0000080f" BEL
+        "fft_instance/blk00000800/blk00000810" BEL
+        "fft_instance/blk00000800/blk00000811" BEL
+        "fft_instance/blk00000800/blk00000812" BEL
+        "fft_instance/blk00000800/blk00000813" BEL "fft_instance/blk000008a3"
+        BEL "fft_instance/blk000008a4" BEL "fft_instance/blk000008a5" BEL
+        "fft_instance/blk000008a6" BEL "fft_instance/blk000008a7" BEL
+        "fft_instance/blk000008a8" BEL "fft_instance/blk000008a9" BEL
+        "fft_instance/blk000008aa" BEL "fft_instance/blk000008ab" BEL
+        "fft_instance/blk000008ac" BEL "fft_instance/blk000008ad" BEL
+        "fft_instance/blk000008ae" BEL "fft_instance/blk000008af" BEL
+        "fft_instance/blk000008b0" BEL "fft_instance/blk000008b1" BEL
+        "fft_instance/blk000008b2" BEL "fft_instance/blk000008b3" BEL
+        "fft_instance/blk000008b4" BEL "fft_instance/blk000008b5" BEL
+        "fft_instance/blk000008b6" BEL "fft_instance/blk000008b7" BEL
+        "fft_instance/blk000008b8" BEL "fft_instance/blk000008b9" BEL
+        "fft_instance/blk000008ba" BEL "fft_instance/blk000008bb" BEL
+        "fft_instance/blk000008bc" BEL "fft_instance/blk000008bd" BEL
+        "fft_instance/blk000008be" BEL "fft_instance/blk000008bf" BEL
+        "fft_instance/blk000008c0" BEL "fft_instance/blk000008c1" BEL
+        "fft_instance/blk000008c2" BEL "fft_instance/blk000008c3" BEL
+        "fft_instance/blk000008c4" BEL "fft_instance/blk000008c5" BEL
+        "fft_instance/blk000008c6" BEL "fft_instance/blk000008c7" BEL
+        "fft_instance/blk000008c8" BEL "fft_instance/blk000008c9" BEL
+        "fft_instance/blk000008ca" BEL "fft_instance/blk000008cb" BEL
+        "fft_instance/blk000008cc" BEL "fft_instance/blk000008cd" BEL
+        "fft_instance/blk000008ce" BEL "fft_instance/blk000008cf" BEL
+        "fft_instance/blk000008d0" BEL "fft_instance/blk000008d1" BEL
+        "fft_instance/blk000008d2" BEL "fft_instance/blk000008d3" BEL
+        "fft_instance/blk000008d4" BEL "fft_instance/blk000008d5" BEL
+        "fft_instance/blk000008d6" BEL "fft_instance/blk000008d7" BEL
+        "fft_instance/blk000008d8" BEL "fft_instance/blk000008d9" BEL
+        "fft_instance/blk000008da" BEL "fft_instance/blk000008db" BEL
+        "fft_instance/blk000008dc" BEL "fft_instance/blk000008dd" BEL
+        "fft_instance/blk000008de" BEL "fft_instance/blk000008df" BEL
+        "fft_instance/blk000008e0" BEL "fft_instance/blk000008e1" BEL
+        "fft_instance/blk000008e2" BEL "fft_instance/blk000008e3" BEL
+        "fft_instance/blk000008e4" BEL "fft_instance/blk000008e5" BEL
+        "fft_instance/blk000008e6" BEL "fft_instance/blk000008e7" BEL
+        "fft_instance/blk000008e8" BEL "fft_instance/blk000008e9" BEL
+        "fft_instance/blk000008ea" BEL "fft_instance/blk000008eb" BEL
+        "fft_instance/blk000008ec" BEL "fft_instance/blk000008ed" BEL
+        "fft_instance/blk000008ee" BEL "fft_instance/blk000008ef" BEL
+        "fft_instance/blk000008f0" BEL "fft_instance/blk000008f1" BEL
+        "fft_instance/blk000008f2" BEL "fft_instance/blk0000093b" BEL
+        "fft_instance/blk0000093c" BEL "fft_instance/blk0000093d" BEL
+        "fft_instance/blk0000093e" BEL "fft_instance/blk0000093f" BEL
+        "fft_instance/blk00000940" BEL "fft_instance/blk00000941" BEL
+        "fft_instance/blk00000942" BEL "fft_instance/blk00000943" BEL
+        "fft_instance/blk00000944" BEL "fft_instance/blk00000945" BEL
+        "fft_instance/blk00000946" BEL "fft_instance/blk00000947" BEL
+        "fft_instance/blk00000948" BEL "fft_instance/blk00000949" BEL
+        "fft_instance/blk0000094a" BEL "fft_instance/blk0000094b" BEL
+        "fft_instance/blk0000094c" BEL "fft_instance/blk0000094d" BEL
+        "fft_instance/blk0000094e" BEL "fft_instance/blk0000094f" BEL
+        "fft_instance/blk00000950" BEL "fft_instance/blk00000951" BEL
+        "fft_instance/blk00000952" BEL "fft_instance/blk00000953" BEL
+        "fft_instance/blk00000954" BEL "fft_instance/blk00000955" BEL
+        "fft_instance/blk00000956" BEL "fft_instance/blk00000957" BEL
+        "fft_instance/blk00000958" BEL "fft_instance/blk00000959" BEL
+        "fft_instance/blk0000095a" BEL "fft_instance/blk0000095b" BEL
+        "fft_instance/blk0000095c" BEL "fft_instance/blk0000095d" BEL
+        "fft_instance/blk0000095e" BEL "fft_instance/blk0000095f" BEL
+        "fft_instance/blk00000960" BEL "fft_instance/blk00000961" BEL
+        "fft_instance/blk00000962" BEL "fft_instance/blk00000963" BEL
+        "fft_instance/blk00000964" BEL "fft_instance/blk00000965" BEL
+        "fft_instance/blk00000966" BEL "fft_instance/blk00000967" BEL
+        "fft_instance/blk00000968" BEL "fft_instance/blk00000969" BEL
+        "fft_instance/blk0000096a" BEL "fft_instance/blk0000096b" BEL
+        "fft_instance/blk0000096c" BEL "fft_instance/blk0000096d" BEL
+        "fft_instance/blk0000096e" BEL "fft_instance/blk0000096f" BEL
+        "fft_instance/blk00000970" BEL "fft_instance/blk00000971" BEL
+        "fft_instance/blk00000972" BEL "fft_instance/blk00000973" BEL
+        "fft_instance/blk00000974" BEL "fft_instance/blk00000975" BEL
+        "fft_instance/blk00000976" BEL "fft_instance/blk00000977" BEL
+        "fft_instance/blk00000978" BEL "fft_instance/blk00000979" BEL
+        "fft_instance/blk0000097a" BEL "fft_instance/blk0000097b" BEL
+        "fft_instance/blk0000097c" BEL "fft_instance/blk0000097d" BEL
+        "fft_instance/blk0000097e" BEL "fft_instance/blk0000097f" BEL
+        "fft_instance/blk00000980" BEL "fft_instance/blk00000981" BEL
+        "fft_instance/blk00000982" BEL
+        "fft_instance/blk00000983/blk00000984/blk00000987" BEL
+        "fft_instance/blk00000983/blk00000984/blk00000988" BEL
+        "fft_instance/blk00000989" BEL "fft_instance/blk0000098a" BEL
+        "fft_instance/blk0000098b" BEL "fft_instance/blk0000098c" BEL
+        "fft_instance/blk0000098d" BEL "fft_instance/blk0000098e" BEL
+        "fft_instance/blk0000098f" BEL "fft_instance/blk00000990" BEL
+        "fft_instance/blk00000991" BEL "fft_instance/blk00000992" BEL
+        "fft_instance/blk00000993" BEL "fft_instance/blk00000994" BEL
+        "fft_instance/blk00000995" BEL "fft_instance/blk00000996" BEL
+        "fft_instance/blk00000997" BEL "fft_instance/blk00000998" BEL
+        "fft_instance/blk00000999" BEL "fft_instance/blk0000099a" BEL
+        "fft_instance/blk0000099b" BEL "fft_instance/blk0000099c" BEL
+        "fft_instance/blk0000099d" BEL "fft_instance/blk0000099e" BEL
+        "fft_instance/blk0000099f" BEL "fft_instance/blk000009a0" BEL
+        "fft_instance/blk000009a1" BEL "fft_instance/blk000009a2" BEL
+        "fft_instance/blk000009a3" BEL "fft_instance/blk000009a4" BEL
+        "fft_instance/blk000009a5" BEL "fft_instance/blk000009a6" BEL
+        "fft_instance/blk000009a7" BEL "fft_instance/blk000009a8" BEL
+        "fft_instance/blk000009a9" BEL "fft_instance/blk000009aa" BEL
+        "fft_instance/blk000009ab" BEL "fft_instance/blk000009ac" BEL
+        "fft_instance/blk000009ad" BEL "fft_instance/blk000009ae" BEL
+        "fft_instance/blk000009af" BEL "fft_instance/blk000009b0" BEL
+        "fft_instance/blk000009b1" BEL "fft_instance/blk000009b2" BEL
+        "fft_instance/blk000009b3" BEL "fft_instance/blk000009b4" BEL
+        "fft_instance/blk000009b5" BEL "fft_instance/blk000009b6" BEL
+        "fft_instance/blk000009b7" BEL "fft_instance/blk000009b8" BEL
+        "fft_instance/blk000009b9" BEL "fft_instance/blk000009ba" BEL
+        "fft_instance/blk000009bb" BEL "fft_instance/blk000009bc" BEL
+        "fft_instance/blk000009bd" BEL "fft_instance/blk000009be" BEL
+        "fft_instance/blk000009bf" BEL "fft_instance/blk000009c0" BEL
+        "fft_instance/blk000009c1" BEL "fft_instance/blk000009c2" BEL
+        "fft_instance/blk000009c3" BEL "fft_instance/blk000009c4" BEL
+        "fft_instance/blk000009c5" BEL "fft_instance/blk000009c6" BEL
+        "fft_instance/blk000009c7" BEL "fft_instance/blk000009c8" BEL
+        "fft_instance/blk000009c9" BEL "fft_instance/blk000009ca" BEL
+        "fft_instance/blk000009cb" BEL "fft_instance/blk000009cc" BEL
+        "fft_instance/blk000009cd" BEL "fft_instance/blk000009ce" BEL
+        "fft_instance/blk000009cf" BEL "fft_instance/blk000009d0" BEL
+        "fft_instance/blk000009e3" BEL "fft_instance/blk000009e4" BEL
+        "fft_instance/blk000009e5" BEL "fft_instance/blk000009e6" BEL
+        "fft_instance/blk000009e7" BEL "fft_instance/blk000009e8" BEL
+        "fft_instance/blk000009e9" BEL "fft_instance/blk000009ea" BEL
+        "fft_instance/blk000009eb" BEL "fft_instance/blk000009ec" BEL
+        "fft_instance/blk000009ed" BEL "fft_instance/blk000009ee" BEL
+        "fft_instance/blk000009ef" BEL "fft_instance/blk000009f0" BEL
+        "fft_instance/blk000009f1" BEL "fft_instance/blk000009f2" BEL
+        "fft_instance/blk000009f3" BEL "fft_instance/blk000009f4" BEL
+        "fft_instance/blk00000a07" BEL "fft_instance/blk00000a08" BEL
+        "fft_instance/blk00000a09" BEL "fft_instance/blk00000a0a" BEL
+        "fft_instance/blk00000a0b" BEL "fft_instance/blk00000a0c" BEL
+        "fft_instance/blk00000a0d" BEL "fft_instance/blk00000a0e" BEL
+        "fft_instance/blk00000a0f" BEL "fft_instance/blk00000a10" BEL
+        "fft_instance/blk00000a11" BEL "fft_instance/blk00000a12" BEL
+        "fft_instance/blk00000a13" BEL "fft_instance/blk00000a14" BEL
+        "fft_instance/blk00000a15" BEL "fft_instance/blk00000a16" BEL
+        "fft_instance/blk00000a17" BEL "fft_instance/blk00000a18" BEL
+        "fft_instance/blk00000a2b" BEL "fft_instance/blk00000a2c" BEL
+        "fft_instance/blk00000a2d" BEL "fft_instance/blk00000a2e" BEL
+        "fft_instance/blk00000a2f" BEL "fft_instance/blk00000a30" BEL
+        "fft_instance/blk00000a31" BEL "fft_instance/blk00000a32" BEL
+        "fft_instance/blk00000a33" BEL "fft_instance/blk00000a34" BEL
+        "fft_instance/blk00000a35" BEL "fft_instance/blk00000a36" BEL
+        "fft_instance/blk00000a37" BEL "fft_instance/blk00000a38" BEL
+        "fft_instance/blk00000a39" BEL "fft_instance/blk00000a3a" BEL
+        "fft_instance/blk00000a3b" BEL "fft_instance/blk00000a3c" BEL
+        "fft_instance/blk00000a4f" BEL "fft_instance/blk00000a50" BEL
+        "fft_instance/blk00000a51" BEL "fft_instance/blk00000a52" BEL
+        "fft_instance/blk00000a53" BEL "fft_instance/blk00000a54" BEL
+        "fft_instance/blk00000a55" BEL "fft_instance/blk00000a56" BEL
+        "fft_instance/blk00000a57" BEL "fft_instance/blk00000a58" BEL
+        "fft_instance/blk00000a59" BEL "fft_instance/blk00000a5a" BEL
+        "fft_instance/blk00000a5b" BEL "fft_instance/blk00000a5c" BEL
+        "fft_instance/blk00000a5d" BEL "fft_instance/blk00000a5e" BEL
+        "fft_instance/blk00000a5f" BEL "fft_instance/blk00000a60" BEL
+        "fft_instance/blk00000a73" BEL "fft_instance/blk00000a74" BEL
+        "fft_instance/blk00000a75" BEL "fft_instance/blk00000a76" BEL
+        "fft_instance/blk00000a77" BEL "fft_instance/blk00000a78" BEL
+        "fft_instance/blk00000a79" BEL "fft_instance/blk00000a7a" BEL
+        "fft_instance/blk00000a7b" BEL "fft_instance/blk00000a7c" BEL
+        "fft_instance/blk00000a7d" BEL "fft_instance/blk00000a7e" BEL
+        "fft_instance/blk00000a7f" BEL "fft_instance/blk00000a80" BEL
+        "fft_instance/blk00000a81" BEL "fft_instance/blk00000a82" BEL
+        "fft_instance/blk00000a83" BEL "fft_instance/blk00000a84" BEL
+        "fft_instance/blk00000a97" BEL "fft_instance/blk00000a98" BEL
+        "fft_instance/blk00000a99" BEL "fft_instance/blk00000a9a" BEL
+        "fft_instance/blk00000a9b" BEL "fft_instance/blk00000a9c" BEL
+        "fft_instance/blk00000a9d" BEL "fft_instance/blk00000a9e" BEL
+        "fft_instance/blk00000a9f" BEL "fft_instance/blk00000aa0" BEL
+        "fft_instance/blk00000aa1" BEL "fft_instance/blk00000aa2" BEL
+        "fft_instance/blk00000aa3" BEL "fft_instance/blk00000aa4" BEL
+        "fft_instance/blk00000aa5" BEL "fft_instance/blk00000aa6" BEL
+        "fft_instance/blk00000aa7" BEL "fft_instance/blk00000aa8" BEL
+        "fft_instance/blk00000abb" BEL "fft_instance/blk00000abc" BEL
+        "fft_instance/blk00000abd" BEL "fft_instance/blk00000abe" BEL
+        "fft_instance/blk00000abf" BEL "fft_instance/blk00000ac0" BEL
+        "fft_instance/blk00000ac1" BEL "fft_instance/blk00000ac2" BEL
+        "fft_instance/blk00000ac3" BEL "fft_instance/blk00000ac4" BEL
+        "fft_instance/blk00000ac5" BEL "fft_instance/blk00000ac6" BEL
+        "fft_instance/blk00000ac7" BEL "fft_instance/blk00000ac8" BEL
+        "fft_instance/blk00000ac9" BEL "fft_instance/blk00000aca" BEL
+        "fft_instance/blk00000acb" BEL "fft_instance/blk00000acc" BEL
+        "fft_instance/blk00000adf" BEL "fft_instance/blk00000ae0" BEL
+        "fft_instance/blk00000ae1" BEL "fft_instance/blk00000ae2" BEL
+        "fft_instance/blk00000ae3" BEL "fft_instance/blk00000ae4" BEL
+        "fft_instance/blk00000ae5" BEL "fft_instance/blk00000ae6" BEL
+        "fft_instance/blk00000ae7" BEL "fft_instance/blk00000ae8" BEL
+        "fft_instance/blk00000ae9" BEL "fft_instance/blk00000aea" BEL
+        "fft_instance/blk00000aeb" BEL "fft_instance/blk00000aec" BEL
+        "fft_instance/blk00000aed" BEL "fft_instance/blk00000aee" BEL
+        "fft_instance/blk00000aef" BEL "fft_instance/blk00000af0" BEL
+        "fft_instance/blk00000af1/blk00000af3" BEL
+        "fft_instance/blk00000af1/blk00000af4" BEL
+        "fft_instance/blk00000af1/blk00000af5" BEL
+        "fft_instance/blk00000af1/blk00000af6" BEL
+        "fft_instance/blk00000af1/blk00000af7" BEL
+        "fft_instance/blk00000af1/blk00000af8" BEL
+        "fft_instance/blk00000af1/blk00000af9" BEL
+        "fft_instance/blk00000af1/blk00000afa" BEL
+        "fft_instance/blk00000af1/blk00000afb" BEL
+        "fft_instance/blk00000af1/blk00000afc" BEL
+        "fft_instance/blk00000af1/blk00000afd" BEL
+        "fft_instance/blk00000af1/blk00000afe" BEL
+        "fft_instance/blk00000af1/blk00000aff" BEL
+        "fft_instance/blk00000af1/blk00000b00" BEL
+        "fft_instance/blk00000af1/blk00000b01" BEL
+        "fft_instance/blk00000af1/blk00000b02" BEL
+        "fft_instance/blk00000af1/blk00000b03" BEL
+        "fft_instance/blk00000af1/blk00000b04" BEL
+        "fft_instance/blk00000af1/blk00000b05" BEL
+        "fft_instance/blk00000af1/blk00000b06" BEL
+        "fft_instance/blk00000af1/blk00000b07" BEL
+        "fft_instance/blk00000af1/blk00000b08" BEL
+        "fft_instance/blk00000af1/blk00000b09" BEL
+        "fft_instance/blk00000af1/blk00000b0a" BEL
+        "fft_instance/blk00000af1/blk00000b0b" BEL
+        "fft_instance/blk00000af1/blk00000b0c" BEL
+        "fft_instance/blk00000af1/blk00000b0d" BEL
+        "fft_instance/blk00000af1/blk00000b0e" BEL
+        "fft_instance/blk00000af1/blk00000b0f" BEL
+        "fft_instance/blk00000af1/blk00000b10" BEL
+        "fft_instance/blk00000af1/blk00000b11" BEL
+        "fft_instance/blk00000af1/blk00000b12" BEL
+        "fft_instance/blk00000af1/blk00000b13" BEL
+        "fft_instance/blk00000af1/blk00000b14" BEL
+        "fft_instance/blk00000af1/blk00000b15" BEL
+        "fft_instance/blk00000af1/blk00000b16" PIN
+        "fft_instance/blk00000af1/blk00000b17_pins<26>" PIN
+        "fft_instance/blk00000af1/blk00000b17_pins<27>" BEL
+        "fft_instance/blk00000b18/blk00000b1a" BEL
+        "fft_instance/blk00000b18/blk00000b1b" BEL
+        "fft_instance/blk00000b18/blk00000b1c" BEL
+        "fft_instance/blk00000b18/blk00000b1d" BEL
+        "fft_instance/blk00000b18/blk00000b1e" BEL
+        "fft_instance/blk00000b18/blk00000b1f" BEL
+        "fft_instance/blk00000b18/blk00000b20" BEL
+        "fft_instance/blk00000b18/blk00000b21" BEL
+        "fft_instance/blk00000b18/blk00000b22" BEL
+        "fft_instance/blk00000b18/blk00000b23" BEL
+        "fft_instance/blk00000b18/blk00000b24" BEL
+        "fft_instance/blk00000b18/blk00000b25" BEL
+        "fft_instance/blk00000b18/blk00000b26" BEL
+        "fft_instance/blk00000b18/blk00000b27" BEL
+        "fft_instance/blk00000b18/blk00000b28" BEL
+        "fft_instance/blk00000b18/blk00000b29" BEL
+        "fft_instance/blk00000b18/blk00000b2a" BEL
+        "fft_instance/blk00000b18/blk00000b2b" BEL
+        "fft_instance/blk00000b18/blk00000b2c" BEL
+        "fft_instance/blk00000b18/blk00000b2d" BEL
+        "fft_instance/blk00000b18/blk00000b2e" BEL
+        "fft_instance/blk00000b18/blk00000b2f" BEL
+        "fft_instance/blk00000b18/blk00000b30" BEL
+        "fft_instance/blk00000b18/blk00000b31" BEL
+        "fft_instance/blk00000b18/blk00000b32" BEL
+        "fft_instance/blk00000b18/blk00000b33" BEL
+        "fft_instance/blk00000b18/blk00000b34" BEL
+        "fft_instance/blk00000b18/blk00000b35" BEL
+        "fft_instance/blk00000b18/blk00000b36" BEL
+        "fft_instance/blk00000b18/blk00000b37" BEL
+        "fft_instance/blk00000b18/blk00000b38" BEL
+        "fft_instance/blk00000b18/blk00000b39" BEL
+        "fft_instance/blk00000b18/blk00000b3a" BEL
+        "fft_instance/blk00000b18/blk00000b3b" BEL
+        "fft_instance/blk00000b18/blk00000b3c" BEL
+        "fft_instance/blk00000b18/blk00000b3d" PIN
+        "fft_instance/blk00000b18/blk00000b3e_pins<26>" PIN
+        "fft_instance/blk00000b18/blk00000b3e_pins<27>" BEL
+        "fft_instance/blk00000b3f/blk00000b41" BEL
+        "fft_instance/blk00000b3f/blk00000b42" BEL
+        "fft_instance/blk00000b3f/blk00000b43" BEL
+        "fft_instance/blk00000b3f/blk00000b44" BEL
+        "fft_instance/blk00000b3f/blk00000b45" BEL
+        "fft_instance/blk00000b3f/blk00000b46" BEL
+        "fft_instance/blk00000b3f/blk00000b47" BEL
+        "fft_instance/blk00000b3f/blk00000b48" BEL
+        "fft_instance/blk00000b3f/blk00000b49" BEL
+        "fft_instance/blk00000b3f/blk00000b4a" BEL
+        "fft_instance/blk00000b3f/blk00000b4b" BEL
+        "fft_instance/blk00000b3f/blk00000b4c" BEL
+        "fft_instance/blk00000b3f/blk00000b4d" BEL
+        "fft_instance/blk00000b3f/blk00000b4e" BEL
+        "fft_instance/blk00000b3f/blk00000b4f" BEL
+        "fft_instance/blk00000b3f/blk00000b50" BEL
+        "fft_instance/blk00000b3f/blk00000b51" BEL
+        "fft_instance/blk00000b3f/blk00000b52" BEL
+        "fft_instance/blk00000b3f/blk00000b53" BEL
+        "fft_instance/blk00000b3f/blk00000b54" BEL
+        "fft_instance/blk00000b3f/blk00000b55" BEL
+        "fft_instance/blk00000b3f/blk00000b56" BEL
+        "fft_instance/blk00000b3f/blk00000b57" BEL
+        "fft_instance/blk00000b3f/blk00000b58" BEL
+        "fft_instance/blk00000b3f/blk00000b59" BEL
+        "fft_instance/blk00000b3f/blk00000b5a" BEL
+        "fft_instance/blk00000b3f/blk00000b5b" BEL
+        "fft_instance/blk00000b3f/blk00000b5c" BEL
+        "fft_instance/blk00000b3f/blk00000b5d" BEL
+        "fft_instance/blk00000b3f/blk00000b5e" BEL
+        "fft_instance/blk00000b3f/blk00000b5f" BEL
+        "fft_instance/blk00000b3f/blk00000b60" BEL
+        "fft_instance/blk00000b3f/blk00000b61" BEL
+        "fft_instance/blk00000b3f/blk00000b62" BEL
+        "fft_instance/blk00000b3f/blk00000b63" BEL
+        "fft_instance/blk00000b3f/blk00000b64" PIN
+        "fft_instance/blk00000b3f/blk00000b65_pins<26>" PIN
+        "fft_instance/blk00000b3f/blk00000b65_pins<27>" BEL
+        "fft_instance/blk00000b66/blk00000b68" BEL
+        "fft_instance/blk00000b66/blk00000b69" BEL
+        "fft_instance/blk00000b66/blk00000b6a" BEL
+        "fft_instance/blk00000b66/blk00000b6b" BEL
+        "fft_instance/blk00000b66/blk00000b6c" BEL
+        "fft_instance/blk00000b66/blk00000b6d" BEL
+        "fft_instance/blk00000b66/blk00000b6e" BEL
+        "fft_instance/blk00000b66/blk00000b6f" BEL
+        "fft_instance/blk00000b66/blk00000b70" BEL
+        "fft_instance/blk00000b66/blk00000b71" BEL
+        "fft_instance/blk00000b66/blk00000b72" BEL
+        "fft_instance/blk00000b66/blk00000b73" BEL
+        "fft_instance/blk00000b66/blk00000b74" BEL
+        "fft_instance/blk00000b66/blk00000b75" BEL
+        "fft_instance/blk00000b66/blk00000b76" BEL
+        "fft_instance/blk00000b66/blk00000b77" BEL
+        "fft_instance/blk00000b66/blk00000b78" BEL
+        "fft_instance/blk00000b66/blk00000b79" BEL
+        "fft_instance/blk00000b66/blk00000b7a" BEL
+        "fft_instance/blk00000b66/blk00000b7b" BEL
+        "fft_instance/blk00000b66/blk00000b7c" BEL
+        "fft_instance/blk00000b66/blk00000b7d" BEL
+        "fft_instance/blk00000b66/blk00000b7e" BEL
+        "fft_instance/blk00000b66/blk00000b7f" BEL
+        "fft_instance/blk00000b66/blk00000b80" BEL
+        "fft_instance/blk00000b66/blk00000b81" BEL
+        "fft_instance/blk00000b66/blk00000b82" BEL
+        "fft_instance/blk00000b66/blk00000b83" BEL
+        "fft_instance/blk00000b66/blk00000b84" BEL
+        "fft_instance/blk00000b66/blk00000b85" BEL
+        "fft_instance/blk00000b66/blk00000b86" BEL
+        "fft_instance/blk00000b66/blk00000b87" BEL
+        "fft_instance/blk00000b66/blk00000b88" BEL
+        "fft_instance/blk00000b66/blk00000b89" BEL
+        "fft_instance/blk00000b66/blk00000b8a" BEL
+        "fft_instance/blk00000b66/blk00000b8b" PIN
+        "fft_instance/blk00000b66/blk00000b8c_pins<26>" PIN
+        "fft_instance/blk00000b66/blk00000b8c_pins<27>" BEL
+        "fft_instance/blk00000b8d/blk00000b8e/blk00000b91" BEL
+        "fft_instance/blk00000b8d/blk00000b8e/blk00000b92" BEL
+        "fft_instance/blk00000b93/blk00000b94/blk00000b97" BEL
+        "fft_instance/blk00000b93/blk00000b94/blk00000b98" BEL
+        "fft_instance/blk00000b99/blk00000b9a/blk00000b9d" BEL
+        "fft_instance/blk00000b99/blk00000b9a/blk00000b9e" BEL
+        "fft_instance/blk00000b9f/blk00000ba0/blk00000ba3" BEL
+        "fft_instance/blk00000b9f/blk00000ba0/blk00000ba4" BEL
+        "fft_instance/blk00000ba5/blk00000ba6/blk00000ba9" BEL
+        "fft_instance/blk00000ba5/blk00000ba6/blk00000baa" BEL
+        "fft_instance/blk00000bab" BEL "fft_instance/blk00000bac" BEL
+        "fft_instance/blk00000bad" BEL "fft_instance/blk00000bae" BEL
+        "fft_instance/blk00000baf" BEL "fft_instance/blk00000bb0" BEL
+        "fft_instance/blk00000bb1" BEL "fft_instance/blk00000bb2" BEL
+        "fft_instance/blk00000bb3" BEL "fft_instance/blk00000bb4" BEL
+        "fft_instance/blk00000bb5" BEL "fft_instance/blk00000bb6" BEL
+        "fft_instance/blk00000bb7" BEL "fft_instance/blk00000bb8" BEL
+        "fft_instance/blk00000bb9" BEL "fft_instance/blk00000bba" BEL
+        "fft_instance/blk00000bbb" BEL "fft_instance/blk00000bbc" BEL
+        "fft_instance/blk00000bbd" BEL "fft_instance/blk00000bbe" BEL
+        "fft_instance/blk00000bbf" BEL "fft_instance/blk00000bc0" BEL
+        "fft_instance/blk00000bc1" BEL "fft_instance/blk00000bc2" BEL
+        "fft_instance/blk00000bd1" BEL "fft_instance/blk00000bd2" BEL
+        "fft_instance/blk00000bd3" BEL "fft_instance/blk00000bd4" BEL
+        "fft_instance/blk00000bd5" BEL "fft_instance/blk00000bd6" BEL
+        "fft_instance/blk00000bd7" BEL "fft_instance/blk00000bd8" BEL
+        "fft_instance/blk00000bd9" BEL "fft_instance/blk00000bda" BEL
+        "fft_instance/blk00000bdb" BEL "fft_instance/blk00000bdc" BEL
+        "fft_instance/blk00000bdd" BEL "fft_instance/blk00000bde" BEL
+        "fft_instance/blk00000bdf" BEL "fft_instance/blk00000be0" BEL
+        "fft_instance/blk00000be1" BEL "fft_instance/blk00000be2" BEL
+        "fft_instance/blk00000be3" BEL "fft_instance/blk00000be4" BEL
+        "fft_instance/blk00000be5" BEL "fft_instance/blk00000be6" BEL
+        "fft_instance/blk00000be7" BEL "fft_instance/blk00000be8" BEL
+        "fft_instance/blk00000be9" BEL "fft_instance/blk00000beb" BEL
+        "fft_instance/blk00000bec" BEL "fft_instance/blk00000bed" BEL
+        "fft_instance/blk00000bf5" BEL "fft_instance/blk00000bf6" BEL
+        "fft_instance/blk00000bf7" BEL "fft_instance/blk00000bf8" BEL
+        "fft_instance/blk00000bf9" BEL "fft_instance/blk00000bfa" BEL
+        "fft_instance/blk00000bfb" BEL "fft_instance/blk00000bfc" BEL
+        "fft_instance/blk00000bfd" BEL "fft_instance/blk00000bfe" BEL
+        "fft_instance/blk00000bff" BEL "fft_instance/blk00000c00" BEL
+        "fft_instance/blk00000c01" BEL "fft_instance/blk00000c02" BEL
+        "fft_instance/blk00000c03" BEL "fft_instance/blk00000c04" BEL
+        "fft_instance/blk00000c05" BEL "fft_instance/blk00000c06" BEL
+        "fft_instance/blk00000c07" BEL "fft_instance/blk00000c08" BEL
+        "fft_instance/blk00000c09" BEL "fft_instance/blk00000c0a" BEL
+        "fft_instance/blk00000c0b" BEL "fft_instance/blk00000c0d" BEL
+        "fft_instance/blk00000c0e" BEL "fft_instance/blk00000c0f" BEL
+        "fft_instance/blk00000c10" BEL "fft_instance/blk00000c11" BEL
+        "fft_instance/blk00000c12" BEL "fft_instance/blk00000c13" BEL
+        "fft_instance/blk00000c53" BEL "fft_instance/blk00000c54" BEL
+        "fft_instance/blk00000c55" BEL "fft_instance/blk00000c56" BEL
+        "fft_instance/blk00000c57" BEL "fft_instance/blk00000c58" BEL
+        "fft_instance/blk00000c59" BEL "fft_instance/blk00000c5a" BEL
+        "fft_instance/blk00000c76" BEL "fft_instance/blk00000c77" BEL
+        "fft_instance/blk00000c78" BEL "fft_instance/blk00000c79" BEL
+        "fft_instance/blk00000c7a" BEL "fft_instance/blk00000c7b" BEL
+        "fft_instance/blk00000c7c" BEL "fft_instance/blk00000c8d" BEL
+        "fft_instance/blk00000c8e" BEL "fft_instance/blk00000c8f" BEL
+        "fft_instance/blk00000c90" BEL
+        "fft_instance/blk00000c9b/blk00000c9c/blk00000c9e" BEL
+        "fft_instance/blk00000c9b/blk00000c9c/blk00000c9f" BEL
+        "fft_instance/blk00000ca0/blk00000ca1/blk00000ca4" BEL
+        "fft_instance/blk00000ca0/blk00000ca1/blk00000ca5" BEL
+        "fft_instance/blk00000ca6/blk00000ca7/blk00000caa" BEL
+        "fft_instance/blk00000ca6/blk00000ca7/blk00000cab" BEL
+        "fft_instance/blk00000cac" BEL "fft_instance/blk00000cad" BEL
+        "fft_instance/blk00000cae" BEL "fft_instance/blk00000caf" BEL
+        "fft_instance/blk00000cb0" BEL "fft_instance/blk00000cb1" BEL
+        "fft_instance/blk00000cb2" BEL "fft_instance/blk00000cb3" BEL
+        "fft_instance/blk00000cb4" BEL "fft_instance/blk00000cb5" BEL
+        "fft_instance/blk00000cb6" BEL "fft_instance/blk00000cb7" BEL
+        "fft_instance/blk00000cb8" BEL "fft_instance/blk00000cb9" BEL
+        "fft_instance/blk00000cba" BEL "fft_instance/blk00000cbb" BEL
+        "fft_instance/blk00000cbc" BEL "fft_instance/blk00000cbd" BEL
+        "fft_instance/blk00000cbe" BEL "fft_instance/blk00000cbf" BEL
+        "fft_instance/blk00000cc0" BEL "fft_instance/blk00000cc1" BEL
+        "fft_instance/blk00000cc2" BEL "fft_instance/blk00000cc3" BEL
+        "fft_instance/blk00000cc4" BEL "fft_instance/blk00000cc5" BEL
+        "fft_instance/blk00000cc6" BEL "fft_instance/blk00000cc7" BEL
+        "fft_instance/blk00000cc8/blk00000cc9/blk00000cca" BEL
+        "fft_instance/blk00000cc8/blk00000cc9/blk00000ccc" BEL
+        "fft_instance/blk00000ccd/blk00000cce/blk00000cd1" BEL
+        "fft_instance/blk00000ccd/blk00000cce/blk00000cd2" BEL
+        "fft_instance/blk00000cd3/blk00000cd4/blk00000cd5" BEL
+        "fft_instance/blk00000cd3/blk00000cd4/blk00000cd8" BEL
+        "fft_instance/blk00000cd9" BEL "fft_instance/blk00000cda" BEL
+        "fft_instance/blk00000cdb" BEL "fft_instance/blk00000cdc" BEL
+        "fft_instance/blk00000cdd" BEL "fft_instance/blk00000cde" BEL
+        "fft_instance/blk00000cdf" BEL "fft_instance/blk00000ce0" BEL
+        "fft_instance/blk00000ce1" BEL "fft_instance/blk00000ce2" BEL
+        "fft_instance/blk00000ce3" BEL "fft_instance/blk00000ce4" BEL
+        "fft_instance/blk00000ce5" BEL "fft_instance/blk00000ce6" BEL
+        "fft_instance/blk00000ce7" BEL "fft_instance/blk00000ce8" BEL
+        "fft_instance/blk00000ce9" BEL "fft_instance/blk00000cea" BEL
+        "fft_instance/blk00000cef" BEL "fft_instance/blk00000cf0" BEL
+        "fft_instance/blk00000cf1" BEL "fft_instance/blk00000cf2" BEL
+        "fft_instance/blk00000cf3" BEL "fft_instance/blk00000cf4" BEL
+        "fft_instance/blk00000cf5" BEL "fft_instance/blk00000cf6" BEL
+        "fft_instance/blk00000cf7" BEL "fft_instance/blk00000cf8" BEL
+        "fft_instance/blk00000cf9" BEL "fft_instance/blk00000cfa" BEL
+        "fft_instance/blk00000cfb" BEL "fft_instance/blk00000cfc" BEL
+        "fft_instance/blk00000cfd" BEL "fft_instance/blk00000cfe" BEL
+        "fft_instance/blk00000cff" BEL "fft_instance/blk00000d00" BEL
+        "fft_instance/blk00000d01" BEL "fft_instance/blk00000d02" BEL
+        "fft_instance/blk00000d03" BEL "fft_instance/blk00000d04" BEL
+        "fft_instance/blk00000d05" BEL "fft_instance/blk00000d06" BEL
+        "fft_instance/blk00000d07" BEL "fft_instance/blk00000d08" BEL
+        "fft_instance/blk00000d09" BEL "fft_instance/blk00000d0a" BEL
+        "fft_instance/blk00000d0b" BEL "fft_instance/blk00000d0d" BEL
+        "fft_instance/blk00000d0e" BEL "fft_instance/blk00000d0f" BEL
+        "fft_instance/blk00000d10" BEL "fft_instance/blk00000d11" BEL
+        "fft_instance/blk00000d12" BEL "fft_instance/blk00000d13" BEL
+        "fft_instance/blk00000d14" BEL "fft_instance/blk00000d15" BEL
+        "fft_instance/blk00000d16" BEL "fft_instance/blk00000d17" BEL
+        "fft_instance/blk00000d18" BEL "fft_instance/blk00000d19" BEL
+        "fft_instance/blk00000d1a" BEL "fft_instance/blk00000d1b" BEL
+        "fft_instance/blk00000d1c" BEL "fft_instance/blk00000d1d" BEL
+        "fft_instance/blk00000d1e/blk00000d2f" BEL
+        "fft_instance/blk00000d1e/blk00000d30" BEL
+        "fft_instance/blk00000d1e/blk00000d31" BEL
+        "fft_instance/blk00000d1e/blk00000d32" BEL
+        "fft_instance/blk00000d1e/blk00000d33" BEL
+        "fft_instance/blk00000d1e/blk00000d34" BEL
+        "fft_instance/blk00000d1e/blk00000d35" BEL
+        "fft_instance/blk00000d1e/blk00000d36" BEL "fft_instance/blk00000d43"
+        BEL "fft_instance/blk00000d44" BEL "fft_instance/blk00000d45" BEL
+        "fft_instance/blk00000d46" BEL "fft_instance/blk00000d4d" BEL
+        "fft_instance/blk00000d4e" BEL "fft_instance/blk00000d4f" BEL
+        "fft_instance/blk00000d50" BEL "fft_instance/blk00000d51" BEL
+        "fft_instance/blk00000d52" BEL "fft_instance/blk00000d5a" BEL
+        "fft_instance/blk00000d5b" BEL "fft_instance/blk00000d5c" BEL
+        "fft_instance/blk00000d5d" BEL "fft_instance/blk00000d5e" BEL
+        "fft_instance/blk00000d5f" BEL "fft_instance/blk00000d60" BEL
+        "fft_instance/blk00000d68" BEL "fft_instance/blk00000d69" BEL
+        "fft_instance/blk00000d6a" BEL "fft_instance/blk00000d6b" BEL
+        "fft_instance/blk00000d6c" BEL "fft_instance/blk00000d6d" BEL
+        "fft_instance/blk00000d6e" BEL "fft_instance/blk00000d76" BEL
+        "fft_instance/blk00000d77" BEL "fft_instance/blk00000d78" BEL
+        "fft_instance/blk00000d80" BEL "fft_instance/blk00000d81" BEL
+        "fft_instance/blk00000d82" BEL "fft_instance/blk00000d8a" BEL
+        "fft_instance/blk00000d8b" BEL "fft_instance/blk00000d8c" BEL
+        "fft_instance/blk00000d8d" BEL "fft_instance/blk00000d8e" BEL
+        "fft_instance/blk00000d8f" BEL "fft_instance/blk00000d90" BEL
+        "fft_instance/blk00000d98" BEL "fft_instance/blk00000d99" BEL
+        "fft_instance/blk00000d9a" BEL "fft_instance/blk00000d9b" BEL
+        "fft_instance/blk00000d9c" BEL "fft_instance/blk00000d9d" BEL
+        "fft_instance/blk00000d9e" BEL "fft_instance/blk00000da6" BEL
+        "fft_instance/blk00000da7" BEL "fft_instance/blk00000da8" BEL
+        "fft_instance/blk00000da9" BEL "fft_instance/blk00000daa" BEL
+        "fft_instance/blk00000dab" BEL "fft_instance/blk00000dac" BEL
+        "fft_instance/blk00000db4" BEL "fft_instance/blk00000db5" BEL
+        "fft_instance/blk00000db6" BEL "fft_instance/blk00000db7" BEL
+        "fft_instance/blk00000db8" BEL "fft_instance/blk00000db9" BEL
+        "fft_instance/blk00000dba" BEL "fft_instance/blk00000dc2" BEL
+        "fft_instance/blk00000dc3" BEL "fft_instance/blk00000dc4" BEL
+        "fft_instance/blk00000dc5" BEL "fft_instance/blk00000dc6" BEL
+        "fft_instance/blk00000dc7" BEL "fft_instance/blk00000dc8" BEL
+        "fft_instance/blk00000dd0" BEL "fft_instance/blk00000dd1" BEL
+        "fft_instance/blk00000dd2" BEL "fft_instance/blk00000dda" BEL
+        "fft_instance/blk00000ddb" BEL "fft_instance/blk00000ddc" BEL
+        "fft_instance/blk00000ddd" BEL "fft_instance/blk00000dde" BEL
+        "fft_instance/blk00000ddf" BEL "fft_instance/blk00000de0" BEL
+        "fft_instance/blk00000de8" BEL "fft_instance/blk00000de9" BEL
+        "fft_instance/blk00000dea" BEL "fft_instance/blk00000deb" BEL
+        "fft_instance/blk00000dec" BEL "fft_instance/blk00000ded" BEL
+        "fft_instance/blk00000dee" BEL "fft_instance/blk00000def" BEL
+        "fft_instance/blk00000df0" BEL "fft_instance/blk00000df1" BEL
+        "fft_instance/blk00000dfb" BEL "fft_instance/blk00000dfc" BEL
+        "fft_instance/blk00000dfd" BEL "fft_instance/blk00000dfe" BEL
+        "fft_instance/blk00000dff" BEL "fft_instance/blk00000e00" BEL
+        "fft_instance/blk00000e01" BEL "fft_instance/blk00000e02" BEL
+        "fft_instance/blk00000e03" BEL "fft_instance/blk00000e04" BEL
+        "fft_instance/blk00000e05" BEL "fft_instance/blk00000e06" BEL
+        "fft_instance/blk00000e07" BEL "fft_instance/blk00000e08" BEL
+        "fft_instance/blk00000e09" BEL "fft_instance/blk00000e0a" BEL
+        "fft_instance/blk00000e0b" BEL "fft_instance/blk00000e0c" BEL
+        "fft_instance/blk00000e0d" BEL "fft_instance/blk00000e0e" BEL
+        "fft_instance/blk00000e0f" BEL "fft_instance/blk00000e10" BEL
+        "fft_instance/blk00000e11" BEL "fft_instance/blk00000e12" BEL
+        "fft_instance/blk00000e13" BEL "fft_instance/blk00000e14" BEL
+        "fft_instance/blk00000e15" BEL "fft_instance/blk00000e16" BEL
+        "fft_instance/blk00000e17" BEL "fft_instance/blk00000e18" BEL
+        "fft_instance/blk00000e19" BEL "fft_instance/blk00000e1a" BEL
+        "fft_instance/blk00000e1b" BEL "fft_instance/blk00000e1c" BEL
+        "fft_instance/blk00000e1d" BEL "fft_instance/blk00000e1e" BEL
+        "fft_instance/blk00000e1f" BEL "fft_instance/blk00000e20" BEL
+        "fft_instance/blk00000e21" BEL "fft_instance/blk00000e22" BEL
+        "fft_instance/blk00000e23" BEL "fft_instance/blk00000e24" BEL
+        "fft_instance/blk00000e25" BEL "fft_instance/blk00000e26" BEL
+        "fft_instance/blk00000e27" BEL "fft_instance/blk00000e28" BEL
+        "fft_instance/blk00000e29" BEL "fft_instance/blk00000e2a" BEL
+        "fft_instance/blk00000e2b" BEL "fft_instance/blk00000e2c" BEL
+        "fft_instance/blk00000e2d" BEL "fft_instance/blk00000e2e" BEL
+        "fft_instance/blk00000e44" BEL "fft_instance/blk00000e45" BEL
+        "fft_instance/blk00000e46" BEL "fft_instance/blk00000e47" BEL
+        "fft_instance/blk00000e48" BEL "fft_instance/blk00000e49" BEL
+        "fft_instance/blk00000e4a" BEL "fft_instance/blk00000e53" BEL
+        "fft_instance/blk00000e54" BEL "fft_instance/blk00000e55" BEL
+        "fft_instance/blk00000e56" BEL "fft_instance/blk00000e57" BEL
+        "fft_instance/blk00000e58" BEL "fft_instance/blk00000e59" BEL
+        "fft_instance/blk00000e5a" BEL "fft_instance/blk00000e5b/blk00000e6e"
+        BEL "fft_instance/blk00000e5b/blk00000e6f" BEL
+        "fft_instance/blk00000e5b/blk00000e70" BEL
+        "fft_instance/blk00000e5b/blk00000e71" BEL
+        "fft_instance/blk00000e5b/blk00000e72" BEL
+        "fft_instance/blk00000e5b/blk00000e73" BEL
+        "fft_instance/blk00000e5b/blk00000e74" BEL
+        "fft_instance/blk00000e5b/blk00000e75" BEL
+        "fft_instance/blk00000e5b/blk00000e76" BEL "fft_instance/blk00000e7f"
+        BEL "fft_instance/blk00000e80" BEL "fft_instance/blk00000e81" BEL
+        "fft_instance/blk00000e82" BEL "fft_instance/blk00000e83" BEL
+        "fft_instance/blk00000e84" BEL "fft_instance/blk00000e85" BEL
+        "fft_instance/blk00000e86" BEL "fft_instance/blk00000e87" BEL
+        "fft_instance/blk00000e88" BEL "fft_instance/blk00000e89" BEL
+        "fft_instance/blk00000e8a" BEL "fft_instance/blk00000e8b" BEL
+        "fft_instance/blk00000e8c" BEL "fft_instance/blk00000e8d" BEL
+        "fft_instance/blk00000e8e" BEL "fft_instance/blk00000e8f" BEL
+        "fft_instance/blk00000e90" BEL "fft_instance/blk00000e91" BEL
+        "fft_instance/blk00000e92" BEL "fft_instance/blk00000e93" BEL
+        "fft_instance/blk00000e94" BEL "fft_instance/blk00000e95" BEL
+        "fft_instance/blk00000e96" BEL "fft_instance/blk00000e97" BEL
+        "fft_instance/blk00000e98" BEL "fft_instance/blk00000e99" BEL
+        "fft_instance/blk00000e9a" BEL "fft_instance/blk00000e9b" BEL
+        "fft_instance/blk00000e9c" BEL "fft_instance/blk00000e9d" BEL
+        "fft_instance/blk00000e9e" BEL "fft_instance/blk00000e9f" BEL
+        "fft_instance/blk00000ea0" BEL "fft_instance/blk00000ea1" BEL
+        "fft_instance/blk00000ea2" BEL "fft_instance/blk00000ea3" BEL
+        "fft_instance/blk00000ea4" BEL "fft_instance/blk00000ea5" BEL
+        "fft_instance/blk00000ea6" BEL "fft_instance/blk00000ea7" BEL
+        "fft_instance/blk00000ea8" BEL "fft_instance/blk00000ea9" BEL
+        "fft_instance/blk00000eaa" BEL "fft_instance/blk00000eab" BEL
+        "fft_instance/blk00000eac" BEL "fft_instance/blk00000ead" BEL
+        "fft_instance/blk00000eae" BEL "fft_instance/blk00000eaf" BEL
+        "fft_instance/blk00000eb0" BEL "fft_instance/blk00000eb1" BEL
+        "fft_instance/blk00000eb2" BEL "fft_instance/blk00000eb3" BEL
+        "fft_instance/blk00000eb4" BEL "fft_instance/blk00000eb5" BEL
+        "fft_instance/blk00000eb6" BEL "fft_instance/blk00000eb7" BEL
+        "fft_instance/blk00000eb8" BEL "fft_instance/blk00000eb9" BEL
+        "fft_instance/blk00000eba" BEL "fft_instance/blk00000ebb" BEL
+        "fft_instance/blk00000ebc" BEL "fft_instance/blk00000ebd" BEL
+        "fft_instance/blk00000ebe" BEL "fft_instance/blk00000ebf" BEL
+        "fft_instance/blk00000ec0" BEL "fft_instance/blk00000ec1" BEL
+        "fft_instance/blk00000ec2" BEL "fft_instance/blk00000ec3" BEL
+        "fft_instance/blk00000ec4" BEL "fft_instance/blk00000ec5" BEL
+        "fft_instance/blk00000ec6" BEL "fft_instance/blk00000ec7" BEL
+        "fft_instance/blk00000ec8" BEL "fft_instance/blk00000ec9" BEL
+        "fft_instance/blk00000eca" BEL "fft_instance/blk00000ecb" BEL
+        "fft_instance/blk00000ecc" BEL "fft_instance/blk00000ecd" BEL
+        "fft_instance/blk00000ece" BEL "fft_instance/blk00000ecf" BEL
+        "fft_instance/blk00000ed0" BEL "fft_instance/blk00000ed1" BEL
+        "fft_instance/blk00000ed2" BEL "fft_instance/blk00000ed3" BEL
+        "fft_instance/blk00000ed4" BEL "fft_instance/blk00000ed5" BEL
+        "fft_instance/blk00000ed6" BEL "fft_instance/blk00000ed7" BEL
+        "fft_instance/blk00000ed8" BEL "fft_instance/blk00000ed9" BEL
+        "fft_instance/blk00000eda" PIN "fft_instance/blk00000edb_pins<20>" PIN
+        "fft_instance/blk00000edb_pins<21>" BEL "fft_instance/blk00000edc" BEL
+        "fft_instance/blk00000edd" BEL "fft_instance/blk00000ede" BEL
+        "fft_instance/blk00000edf" BEL "fft_instance/blk00000ee0" BEL
+        "fft_instance/blk00000ee1" BEL "fft_instance/blk00000ee2" BEL
+        "fft_instance/blk00000ee3" BEL "fft_instance/blk00000ee4" BEL
+        "fft_instance/blk00000ee5" BEL "fft_instance/blk00000ee6" BEL
+        "fft_instance/blk00000ee7" BEL "fft_instance/blk00000ee8" BEL
+        "fft_instance/blk00000ee9" BEL "fft_instance/blk00000eea" BEL
+        "fft_instance/blk00000eeb" BEL "fft_instance/blk00000eec" BEL
+        "fft_instance/blk00000eed" BEL "fft_instance/blk00000f63" BEL
+        "fft_instance/blk00000f64" BEL "fft_instance/blk00000f65" BEL
+        "fft_instance/blk00000f67" BEL "fft_instance/blk00000f68" BEL
+        "fft_instance/blk00000f69" BEL "fft_instance/blk00000f6a" BEL
+        "fft_instance/blk00000f6b" BEL "fft_instance/blk00000f6c" BEL
+        "fft_instance/blk00000f6e" BEL "fft_instance/blk00000f6f" BEL
+        "fft_instance/blk00000f70" BEL "fft_instance/blk00000f71" BEL
+        "fft_instance/blk00000f72" BEL "fft_instance/blk00000fab" BEL
+        "fft_instance/blk00000fac" BEL "fft_instance/blk00000fad" BEL
+        "fft_instance/blk00000fae" PIN "fft_instance/blk00000fb2_pins<20>" PIN
+        "fft_instance/blk00000fb2_pins<21>" PIN
+        "fft_instance/blk00000fb3_pins<20>" PIN
+        "fft_instance/blk00000fb3_pins<21>" BEL "fft_instance/blk00000fb4" BEL
+        "fft_instance/blk00000fb5" BEL "fft_instance/blk00000fb6" BEL
+        "fft_instance/blk00000fb7" BEL "fft_instance/blk00000fb8" BEL
+        "fft_instance/blk00000fb9" BEL "fft_instance/blk00000fba" BEL
+        "fft_instance/blk00000fbb" BEL "fft_instance/blk00000fbc" BEL
+        "fft_instance/blk00000fbd" BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/RST_FULL_GEN"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.rst_d3"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg_d2"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg_d2"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.rst_d2"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/rd_rst_asreg_d1"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/wr_rst_asreg_d1"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.rst_d1"
+        PIN
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram_pins<26>"
+        PIN
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram_pins<27>"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_3"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_2"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_1"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_3"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_2"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_1"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_0"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_3"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_2"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_1"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_3"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_2"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_1"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_0"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_3"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_2"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_1"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_0"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_1"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_2"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].wr_stg_inst/Q_reg_3"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_reg_0"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_reg_1"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_reg_2"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].wr_stg_inst/Q_reg_3"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_0"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_1"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_2"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[1].rd_stg_inst/Q_reg_3"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_reg_0"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_reg_1"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_reg_2"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gsync_stage[2].rd_stg_inst/Q_reg_3"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_3"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_2"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_1"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_bin_0"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_3"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_2"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_1"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_0"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_3"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_2"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_1"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_gc_0"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_3"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_2"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_1"
+        BEL
+        "Inst_uart_comms/Inst_serial_rx_fifo/fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_0"
+        BEL "Inst_mag/your_instance_name/blk00000003" BEL
+        "Inst_mag/your_instance_name/blk00000004" BEL
+        "Inst_mag/your_instance_name/blk00000005" BEL
+        "Inst_mag/your_instance_name/blk00000006" BEL
+        "Inst_mag/your_instance_name/blk00000007" BEL
+        "Inst_mag/your_instance_name/blk00000008" BEL
+        "Inst_mag/your_instance_name/blk00000009" BEL
+        "Inst_mag/your_instance_name/blk0000000a" BEL
+        "Inst_mag/your_instance_name/blk0000000b" BEL
+        "Inst_mag/your_instance_name/blk0000000c" BEL
+        "Inst_mag/your_instance_name/blk0000000d" BEL
+        "Inst_mag/your_instance_name/blk0000000e" BEL
+        "Inst_mag/your_instance_name/blk0000000f" BEL
+        "Inst_mag/your_instance_name/blk00000010" BEL
+        "Inst_mag/your_instance_name/blk00000011" BEL
+        "Inst_mag/your_instance_name/blk00000012" BEL
+        "Inst_mag/your_instance_name/blk00000013" BEL
+        "Inst_mag/your_instance_name/blk00000014" BEL
+        "Inst_mag/your_instance_name/blk00000015" BEL
+        "Inst_mag/your_instance_name/blk00000016" BEL
+        "Inst_mag/your_instance_name/blk00000017" BEL
+        "Inst_mag/your_instance_name/blk00000018" BEL
+        "Inst_mag/your_instance_name/blk00000019" BEL
+        "Inst_mag/your_instance_name/blk0000001a" BEL
+        "Inst_mag/your_instance_name/blk0000001b" BEL
+        "Inst_mag/your_instance_name/blk0000001c" BEL
+        "Inst_mag/your_instance_name/blk0000001d" BEL
+        "Inst_mag/your_instance_name/blk0000001e" BEL
+        "Inst_mag/your_instance_name/blk0000001f" BEL
+        "Inst_mag/your_instance_name/blk00000092" BEL
+        "Inst_mag/your_instance_name/blk00000093" BEL
+        "Inst_mag/your_instance_name/blk00000094" BEL
+        "Inst_mag/your_instance_name/blk00000095" BEL
+        "Inst_mag/your_instance_name/blk00000096" BEL
+        "Inst_mag/your_instance_name/blk00000097" BEL
+        "Inst_mag/your_instance_name/blk00000098" BEL
+        "Inst_mag/your_instance_name/blk00000099" BEL
+        "Inst_mag/your_instance_name/blk000000f9" BEL
+        "Inst_mag/your_instance_name/blk000000fa" BEL
+        "Inst_mag/your_instance_name/blk000000fb" BEL
+        "Inst_mag/your_instance_name/blk000000fc" BEL
+        "Inst_mag/your_instance_name/blk000000fd" BEL
+        "Inst_mag/your_instance_name/blk000000fe" BEL
+        "Inst_mag/your_instance_name/blk000000ff" BEL
+        "Inst_mag/your_instance_name/blk00000100" BEL
+        "Inst_mag/your_instance_name/blk00000101" BEL
+        "Inst_mag/your_instance_name/blk00000102" BEL
+        "Inst_mag/your_instance_name/blk00000103" BEL
+        "Inst_mag/your_instance_name/blk00000104" BEL
+        "Inst_mag/your_instance_name/blk00000105" BEL
+        "Inst_mag/your_instance_name/blk00000106" BEL
+        "Inst_mag/your_instance_name/blk00000107" BEL
+        "Inst_mag/your_instance_name/blk00000108" BEL
+        "Inst_mag/your_instance_name/blk00000127" BEL
+        "Inst_mag/your_instance_name/blk0000013c" BEL
+        "Inst_mag/your_instance_name/blk0000013d" BEL
+        "Inst_mag/your_instance_name/blk0000013e" BEL
+        "Inst_mag/your_instance_name/blk0000013f" BEL
+        "Inst_mag/your_instance_name/blk00000140" BEL
+        "Inst_mag/your_instance_name/blk00000141" BEL
+        "Inst_mag/your_instance_name/blk00000142" BEL
+        "Inst_mag/your_instance_name/blk00000143" BEL
+        "Inst_mag/your_instance_name/blk00000144" BEL
+        "Inst_mag/your_instance_name/blk00000145" BEL
+        "Inst_mag/your_instance_name/blk00000146" BEL
+        "Inst_mag/your_instance_name/blk00000147" BEL
+        "Inst_mag/your_instance_name/blk00000148" BEL
+        "Inst_mag/your_instance_name/blk00000149" BEL
+        "Inst_mag/your_instance_name/blk0000014a" BEL
+        "Inst_mag/your_instance_name/blk0000014b";
+TIMEGRP fm_dcm_mgr_clkfx = BEL "shift_ctr_0" BEL "shift_ctr_1" BEL
+        "shift_ctr_2" BEL "shift_ctr_3" BEL "shift_ctr_4" BEL "beep_counter_0"
+        BEL "beep_counter_1" BEL "beep_counter_2" BEL "beep_counter_3" BEL
+        "beep_counter_4" BEL "beep_counter_5" BEL "beep_counter_6" BEL
+        "beep_counter_7" BEL "beep_counter_8" BEL "beep_counter_9" BEL
+        "beep_counter_10" BEL "beep_counter_11" BEL "beep_counter_12" BEL
+        "beep_counter_13" BEL "beep_counter_14" BEL "beep_counter_15" BEL
+        "beep_counter_16" BEL "beep_counter_17" BEL "beep_counter_18" BEL
+        "beep_counter_19" BEL "phase_accumulator_0" BEL "phase_accumulator_1"
+        BEL "phase_accumulator_2" BEL "phase_accumulator_3" BEL
+        "phase_accumulator_4" BEL "phase_accumulator_5" BEL
+        "phase_accumulator_6" BEL "phase_accumulator_7" BEL
+        "phase_accumulator_8" BEL "phase_accumulator_9" BEL
+        "phase_accumulator_10" BEL "phase_accumulator_11" BEL
+        "phase_accumulator_12" BEL "phase_accumulator_13" BEL
+        "phase_accumulator_14" BEL "phase_accumulator_15" BEL
+        "phase_accumulator_16" BEL "phase_accumulator_17" BEL
+        "phase_accumulator_18" BEL "phase_accumulator_19" BEL
+        "phase_accumulator_20" BEL "phase_accumulator_21" BEL
+        "phase_accumulator_22" BEL "phase_accumulator_23" BEL
+        "phase_accumulator_24" BEL "phase_accumulator_25" BEL
+        "phase_accumulator_26" BEL "phase_accumulator_27" BEL
+        "phase_accumulator_28" BEL "phase_accumulator_29" BEL
+        "phase_accumulator_30" BEL "phase_accumulator_31" BEL
+        "fm_dcm_mgr/clkout1_buf" BEL "message_0" BEL "message_1" BEL
+        "message_2" BEL "message_3" BEL "message_4" BEL "message_5" BEL
+        "message_6" BEL "message_7" BEL "message_8" BEL "message_9" BEL
+        "message_10" BEL "message_11" BEL "message_12" BEL "message_13" BEL
+        "message_14" BEL "message_15" BEL "message_16" BEL "message_17" BEL
+        "message_18" BEL "message_19" BEL "message_20" BEL "message_21" BEL
+        "message_22" BEL "message_23" BEL "message_24" BEL "message_25" BEL
+        "message_26" BEL "message_27" BEL "message_28" BEL "message_29" BEL
+        "message_30" BEL "message_31" BEL "message_32" BEL "message_33";
+PIN fm_dcm_mgr/dcm_sp_inst_pins<3> = BEL "fm_dcm_mgr/dcm_sp_inst" PINNAME
+        CLKIN;
+TIMEGRP dcm_inst_clkout3 = BEL "dcm_inst/clkout4_buf" PIN
+        "fm_dcm_mgr/dcm_sp_inst_pins<3>" BEL "fm_dcm_mgr/clkin1_buf";
+PIN SP6_BUFIO2_INSERT_PLL1_ML_BUFIO2_0_pins<0> = BEL
+        "SP6_BUFIO2_INSERT_PLL1_ML_BUFIO2_0" PINNAME DIVCLK;
+PIN dcm_inst/pll_base_inst/PLL_ADV_pins<2> = BEL
+        "dcm_inst/pll_base_inst/PLL_ADV" PINNAME CLKIN1;
+TIMEGRP sys_clk_pin = PIN "SP6_BUFIO2_INSERT_PLL1_ML_BUFIO2_0_pins<0>" PIN
+        "dcm_inst/pll_base_inst/PLL_ADV_pins<2>";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+TS_dcm_inst_clkout3 = PERIOD TIMEGRP "dcm_inst_clkout3" TS_sys_clk_pin HIGH
+        50%;
+TS_dcm_inst_clkout1 = PERIOD TIMEGRP "dcm_inst_clkout1" TS_sys_clk_pin * 0.8
+        HIGH 50%;
+TS_dcm_inst_clkout0 = PERIOD TIMEGRP "dcm_inst_clkout0" TS_sys_clk_pin HIGH
+        50%;
+TS_dcm_inst_clkout2 = PERIOD TIMEGRP "dcm_inst_clkout2" TS_sys_clk_pin * 0.25
+        HIGH 50%;
+TS_fm_dcm_mgr_clkfx = PERIOD TIMEGRP "fm_dcm_mgr_clkfx" TS_dcm_inst_clkout3 *
+        3.2 HIGH 50%;
+SCHEMATIC END;
+

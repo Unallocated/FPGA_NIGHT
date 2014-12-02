@@ -1,0 +1,24 @@
+Release 14.7 Drc P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Sun Dec  1 00:30:07 2013
+
+drc -z master.ncd master.pcf
+
+WARNING:PhysDesignRules:2212 - Async clocking for BRAM (comp
+   your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/val
+   id.cstr/ramloop[0].ram.r/s6_noinit.ram/TRUE_DP.PRIM9.ram) port(s) with
+   READ_FIRST mode has certain restrictions. Make sure that there is no address
+   collision. A read/write on one port and a write operation from the other port
+   at the same address is not allowed.RAMB8BWER in all configurations, A12-6
+   including A4 cannot be the same. Violating this restriction may result in the
+   incorrect operation of the BRAM.
+INFO:PhysDesignRules:1861 - To achieve optimal frequency synthesis performance
+   with the CLKFX and CLKFX180 outputs of the DCM comp fm_dcm_mgr/dcm_sp_inst,
+   consult the device Data Sheet.
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+DRC detected 0 errors and 2 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
